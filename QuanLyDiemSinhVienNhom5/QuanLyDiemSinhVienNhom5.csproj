@@ -272,5 +272,15 @@
   <ItemGroup>
     <Folder Include="Components\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyDiemSinhVienNhom5.Core\QuanLyDiemSinhVienNhom5.Core.csproj">
+      <Project>{a3db13fd-f823-4698-a402-4e1ad1b4e2fa}</Project>
+      <Name>QuanLyDiemSinhVienNhom5.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuanLyDiemSinhVienNhom5.DataAccess\QuanLyDiemSinhVienNhom5.DataAccess.csproj">
+      <Project>{def281b4-e979-4f07-a026-610ec1350951}</Project>
+      <Name>QuanLyDiemSinhVienNhom5.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
