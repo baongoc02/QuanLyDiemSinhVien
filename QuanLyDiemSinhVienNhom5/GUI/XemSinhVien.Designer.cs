@@ -38,7 +38,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Btn_Them = new System.Windows.Forms.Button();
+            this.Btn_Tim = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,11 +48,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(988, 96);
+            this.label5.Location = new System.Drawing.Point(990, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 24);
+            this.label5.Size = new System.Drawing.Size(34, 24);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Thêm";
+            this.label5.Text = "Tìm";
             // 
             // tableLayoutPanel1
             // 
@@ -127,7 +127,6 @@
             this.MSSV.Name = "MSSV";
             this.MSSV.Size = new System.Drawing.Size(612, 38);
             this.MSSV.TabIndex = 10;
-            this.MSSV.Text = "abc";
             // 
             // textBox2
             // 
@@ -164,21 +163,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
             this.dataGridView1.TabIndex = 24;
             // 
-            // Btn_Them
+            // Btn_Tim
             // 
-            this.Btn_Them.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_Them.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
-            this.Btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Them.FlatAppearance.BorderSize = 0;
-            this.Btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Them.Location = new System.Drawing.Point(945, 88);
-            this.Btn_Them.Name = "Btn_Them";
-            this.Btn_Them.Size = new System.Drawing.Size(40, 38);
-            this.Btn_Them.TabIndex = 26;
-            this.Btn_Them.UseVisualStyleBackColor = false;
-            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
+            this.Btn_Tim.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Tim.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.find_icon;
+            this.Btn_Tim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Tim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Tim.FlatAppearance.BorderSize = 0;
+            this.Btn_Tim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Tim.Location = new System.Drawing.Point(945, 88);
+            this.Btn_Tim.Name = "Btn_Tim";
+            this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Tim.TabIndex = 26;
+            this.Btn_Tim.UseVisualStyleBackColor = false;
             // 
             // XemSinhVien
             // 
@@ -186,7 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.Btn_Them);
+            this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "XemSinhVien";
@@ -209,7 +207,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox MSSV;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button Btn_Them;
+        private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
