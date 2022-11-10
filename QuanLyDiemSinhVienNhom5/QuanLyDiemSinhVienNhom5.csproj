@@ -70,6 +70,12 @@
     <Compile Include="GUI\KetQuaHocTapSinhVien.Designer.cs">
       <DependentUpon>KetQuaHocTapSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhoaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhoaInfo.Designer.cs">
+      <DependentUpon>KhoaInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KetQuaHocTapSinhVien.resx">
       <DependentUpon>KetQuaHocTapSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhoaInfo.resx">
+      <DependentUpon>KhoaInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
