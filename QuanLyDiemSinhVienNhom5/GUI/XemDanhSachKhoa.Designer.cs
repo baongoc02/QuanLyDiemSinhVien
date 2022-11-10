@@ -30,17 +30,17 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtHeDaoTao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.MSSV = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaKhoa = new System.Windows.Forms.TextBox();
+            this.txtTenKhoa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.Btn_Them = new System.Windows.Forms.Button();
+            this.Btn_Tim = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button = new System.Windows.Forms.Button();
+            this.Btn_Them = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +51,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtHeDaoTao, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.MSSV, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtMaKhoa, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtTenKhoa, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -77,14 +77,14 @@
             this.label2.Text = "Mã khoa:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // txtHeDaoTao
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(233, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(612, 38);
-            this.textBox3.TabIndex = 14;
+            this.txtHeDaoTao.BackColor = System.Drawing.Color.Honeydew;
+            this.txtHeDaoTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeDaoTao.Location = new System.Drawing.Point(233, 95);
+            this.txtHeDaoTao.Name = "txtHeDaoTao";
+            this.txtHeDaoTao.Size = new System.Drawing.Size(612, 38);
+            this.txtHeDaoTao.TabIndex = 14;
             // 
             // label4
             // 
@@ -110,23 +110,23 @@
             this.label3.Text = "Tên khoa:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MSSV
+            // txtMaKhoa
             // 
-            this.MSSV.BackColor = System.Drawing.Color.Honeydew;
-            this.MSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MSSV.Location = new System.Drawing.Point(233, 3);
-            this.MSSV.Name = "MSSV";
-            this.MSSV.Size = new System.Drawing.Size(612, 38);
-            this.MSSV.TabIndex = 10;
+            this.txtMaKhoa.BackColor = System.Drawing.Color.Honeydew;
+            this.txtMaKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKhoa.Location = new System.Drawing.Point(233, 3);
+            this.txtMaKhoa.Name = "txtMaKhoa";
+            this.txtMaKhoa.Size = new System.Drawing.Size(612, 38);
+            this.txtMaKhoa.TabIndex = 10;
             // 
-            // textBox2
+            // txtTenKhoa
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(233, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(612, 38);
-            this.textBox2.TabIndex = 13;
+            this.txtTenKhoa.BackColor = System.Drawing.Color.Honeydew;
+            this.txtTenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhoa.Location = new System.Drawing.Point(233, 49);
+            this.txtTenKhoa.Name = "txtTenKhoa";
+            this.txtTenKhoa.Size = new System.Drawing.Size(612, 38);
+            this.txtTenKhoa.TabIndex = 13;
             // 
             // label1
             // 
@@ -165,20 +165,20 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "Tìm";
             // 
-            // Btn_Them
+            // Btn_Tim
             // 
-            this.Btn_Them.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_Them.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.find_icon;
-            this.Btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Them.FlatAppearance.BorderSize = 0;
-            this.Btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Them.Location = new System.Drawing.Point(945, 88);
-            this.Btn_Them.Name = "Btn_Them";
-            this.Btn_Them.Size = new System.Drawing.Size(40, 40);
-            this.Btn_Them.TabIndex = 33;
-            this.Btn_Them.UseVisualStyleBackColor = false;
+            this.Btn_Tim.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Tim.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.find_icon;
+            this.Btn_Tim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Tim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Tim.FlatAppearance.BorderSize = 0;
+            this.Btn_Tim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Tim.Location = new System.Drawing.Point(945, 88);
+            this.Btn_Tim.Name = "Btn_Tim";
+            this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Tim.TabIndex = 33;
+            this.Btn_Tim.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -191,29 +191,29 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Thêm";
             // 
-            // button
+            // Btn_Them
             // 
-            this.button.BackColor = System.Drawing.SystemColors.Control;
-            this.button.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
-            this.button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button.FlatAppearance.BorderSize = 0;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button.Location = new System.Drawing.Point(945, 134);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(40, 40);
-            this.button.TabIndex = 44;
-            this.button.UseVisualStyleBackColor = false;
+            this.Btn_Them.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Them.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
+            this.Btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Them.FlatAppearance.BorderSize = 0;
+            this.Btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Them.Location = new System.Drawing.Point(945, 134);
+            this.Btn_Them.Name = "Btn_Them";
+            this.Btn_Them.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Them.TabIndex = 44;
+            this.Btn_Them.UseVisualStyleBackColor = false;
             // 
             // XemDanhSachKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.Btn_Them);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -231,16 +231,16 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtHeDaoTao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox MSSV;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaKhoa;
+        private System.Windows.Forms.TextBox txtTenKhoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button Btn_Them;
+        private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button Btn_Them;
     }
 }

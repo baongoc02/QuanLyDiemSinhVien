@@ -32,18 +32,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cbMaKhoa = new System.Windows.Forms.ComboBox();
+            this.txtNgayThanhLap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenKhoa = new System.Windows.Forms.TextBox();
+            this.cbHeDaoTao = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Btn_Del = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Btn_Sua = new System.Windows.Forms.Button();
+            this.Btn_Xoa = new System.Windows.Forms.Button();
+            this.Btn_Huy = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,14 +88,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.10672F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.89328F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbMaKhoa, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtNgayThanhLap, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtTenKhoa, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbHeDaoTao, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(49, 168);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -117,24 +117,24 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 288);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
-            // comboBox1
+            // cbMaKhoa
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 164);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(292, 29);
-            this.comboBox1.TabIndex = 36;
+            this.cbMaKhoa.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbMaKhoa.FormattingEnabled = true;
+            this.cbMaKhoa.Location = new System.Drawing.Point(211, 20);
+            this.cbMaKhoa.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.cbMaKhoa.Name = "cbMaKhoa";
+            this.cbMaKhoa.Size = new System.Drawing.Size(292, 29);
+            this.cbMaKhoa.TabIndex = 44;
             // 
-            // textBox8
+            // txtNgayThanhLap
             // 
-            this.textBox8.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(211, 236);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(292, 28);
-            this.textBox8.TabIndex = 20;
+            this.txtNgayThanhLap.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayThanhLap.Location = new System.Drawing.Point(211, 236);
+            this.txtNgayThanhLap.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.txtNgayThanhLap.Name = "txtNgayThanhLap";
+            this.txtNgayThanhLap.Size = new System.Drawing.Size(292, 28);
+            this.txtNgayThanhLap.TabIndex = 20;
             // 
             // label2
             // 
@@ -184,14 +184,24 @@
             this.label5.Text = "Ngày thành lập:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtTenKhoa
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(211, 92);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 28);
-            this.textBox1.TabIndex = 13;
+            this.txtTenKhoa.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhoa.Location = new System.Drawing.Point(211, 92);
+            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.txtTenKhoa.Name = "txtTenKhoa";
+            this.txtTenKhoa.Size = new System.Drawing.Size(292, 28);
+            this.txtTenKhoa.TabIndex = 13;
+            // 
+            // cbHeDaoTao
+            // 
+            this.cbHeDaoTao.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbHeDaoTao.FormattingEnabled = true;
+            this.cbHeDaoTao.Location = new System.Drawing.Point(211, 164);
+            this.cbHeDaoTao.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.cbHeDaoTao.Name = "cbHeDaoTao";
+            this.cbHeDaoTao.Size = new System.Drawing.Size(292, 29);
+            this.cbHeDaoTao.TabIndex = 36;
             // 
             // label1
             // 
@@ -204,64 +214,55 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Thông tin khoa";
             // 
-            // button1
+            // Btn_Sua
             // 
-            this.button1.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(276, 611);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 43);
-            this.button1.TabIndex = 40;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Sua.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
+            this.Btn_Sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Sua.FlatAppearance.BorderSize = 0;
+            this.Btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Sua.Location = new System.Drawing.Point(276, 611);
+            this.Btn_Sua.Name = "Btn_Sua";
+            this.Btn_Sua.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Sua.TabIndex = 40;
+            this.Btn_Sua.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Btn_Xoa
             // 
-            this.button3.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Delete_btn;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(150, 611);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(52, 43);
-            this.button3.TabIndex = 39;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Btn_Xoa.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Delete_btn;
+            this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Xoa.FlatAppearance.BorderSize = 0;
+            this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Xoa.Location = new System.Drawing.Point(150, 611);
+            this.Btn_Xoa.Name = "Btn_Xoa";
+            this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
+            this.Btn_Xoa.TabIndex = 39;
+            this.Btn_Xoa.UseVisualStyleBackColor = true;
             // 
-            // Btn_Del
+            // Btn_Huy
             // 
-            this.Btn_Del.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
-            this.Btn_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Del.FlatAppearance.BorderSize = 0;
-            this.Btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Del.Location = new System.Drawing.Point(396, 611);
-            this.Btn_Del.Name = "Btn_Del";
-            this.Btn_Del.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Del.TabIndex = 38;
-            this.Btn_Del.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(211, 20);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(292, 29);
-            this.comboBox2.TabIndex = 44;
+            this.Btn_Huy.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
+            this.Btn_Huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Huy.FlatAppearance.BorderSize = 0;
+            this.Btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Huy.Location = new System.Drawing.Point(396, 611);
+            this.Btn_Huy.Name = "Btn_Huy";
+            this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Huy.TabIndex = 38;
+            this.Btn_Huy.UseVisualStyleBackColor = true;
             // 
             // KhoaInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(602, 753);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.Btn_Del);
+            this.Controls.Add(this.Btn_Sua);
+            this.Controls.Add(this.Btn_Xoa);
+            this.Controls.Add(this.Btn_Huy);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "KhoaInfo";
@@ -278,18 +279,18 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button Btn_Del;
+        private System.Windows.Forms.Button Btn_Sua;
+        private System.Windows.Forms.Button Btn_Xoa;
+        private System.Windows.Forms.Button Btn_Huy;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox cbHeDaoTao;
+        private System.Windows.Forms.TextBox txtNgayThanhLap;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenKhoa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbMaKhoa;
     }
 }

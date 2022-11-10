@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemSinhVien));
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.MSSV = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMSSV = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.button = new System.Windows.Forms.Button();
+            this.Btn_Them = new System.Windows.Forms.Button();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Btn_Import = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,12 +64,12 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbKhoa, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.MSSV, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtMSSV, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtHoTen, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -78,6 +78,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 137);
             this.tableLayoutPanel1.TabIndex = 27;
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.BackColor = System.Drawing.Color.Honeydew;
+            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(233, 95);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(612, 39);
+            this.cbKhoa.TabIndex = 50;
             // 
             // label2
             // 
@@ -115,23 +125,23 @@
             this.label3.Text = "Họ tên:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MSSV
+            // txtMSSV
             // 
-            this.MSSV.BackColor = System.Drawing.Color.Honeydew;
-            this.MSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MSSV.Location = new System.Drawing.Point(233, 3);
-            this.MSSV.Name = "MSSV";
-            this.MSSV.Size = new System.Drawing.Size(612, 38);
-            this.MSSV.TabIndex = 10;
+            this.txtMSSV.BackColor = System.Drawing.Color.Honeydew;
+            this.txtMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMSSV.Location = new System.Drawing.Point(233, 3);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.Size = new System.Drawing.Size(612, 38);
+            this.txtMSSV.TabIndex = 10;
             // 
-            // textBox2
+            // txtHoTen
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(233, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(612, 38);
-            this.textBox2.TabIndex = 13;
+            this.txtHoTen.BackColor = System.Drawing.Color.Honeydew;
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(233, 49);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(612, 38);
+            this.txtHoTen.TabIndex = 13;
             // 
             // label1
             // 
@@ -170,20 +180,20 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Thêm";
             // 
-            // button
+            // Btn_Them
             // 
-            this.button.BackColor = System.Drawing.SystemColors.Control;
-            this.button.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
-            this.button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button.FlatAppearance.BorderSize = 0;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button.Location = new System.Drawing.Point(945, 134);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(40, 40);
-            this.button.TabIndex = 44;
-            this.button.UseVisualStyleBackColor = false;
+            this.Btn_Them.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Them.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
+            this.Btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Them.FlatAppearance.BorderSize = 0;
+            this.Btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Them.Location = new System.Drawing.Point(945, 134);
+            this.Btn_Them.Name = "Btn_Them";
+            this.Btn_Them.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Them.TabIndex = 44;
+            this.Btn_Them.UseVisualStyleBackColor = false;
             // 
             // Btn_Tim
             // 
@@ -211,39 +221,29 @@
             this.label7.TabIndex = 49;
             this.label7.Text = "Import";
             // 
-            // button1
+            // Btn_Import
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(945, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 48;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(233, 95);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(612, 39);
-            this.comboBox2.TabIndex = 50;
+            this.Btn_Import.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Import.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Import.BackgroundImage")));
+            this.Btn_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Import.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Import.FlatAppearance.BorderSize = 0;
+            this.Btn_Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Import.Location = new System.Drawing.Point(945, 180);
+            this.Btn_Import.Name = "Btn_Import";
+            this.Btn_Import.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Import.TabIndex = 48;
+            this.Btn_Import.UseVisualStyleBackColor = false;
             // 
             // XemSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_Import);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button);
+            this.Controls.Add(this.Btn_Them);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Btn_Tim);
@@ -266,15 +266,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox MSSV;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMSSV;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button Btn_Them;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button Btn_Import;
+        private System.Windows.Forms.ComboBox cbKhoa;
     }
 }

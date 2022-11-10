@@ -31,18 +31,18 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Btn_Del = new System.Windows.Forms.Button();
+            this.Btn_Sua = new System.Windows.Forms.Button();
+            this.Btn_Xoa = new System.Windows.Forms.Button();
+            this.Btn_Huy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDiemGiuaKy = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDiemCuoiKy = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,42 +80,42 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "Xóa";
             // 
-            // button2
+            // Btn_Sua
             // 
-            this.button2.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(276, 651);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 43);
-            this.button2.TabIndex = 31;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_Sua.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
+            this.Btn_Sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Sua.FlatAppearance.BorderSize = 0;
+            this.Btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Sua.Location = new System.Drawing.Point(276, 651);
+            this.Btn_Sua.Name = "Btn_Sua";
+            this.Btn_Sua.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Sua.TabIndex = 31;
+            this.Btn_Sua.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Btn_Xoa
             // 
-            this.button1.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Delete_btn;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(151, 651);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 43);
-            this.button1.TabIndex = 30;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Xoa.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Delete_btn;
+            this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Xoa.FlatAppearance.BorderSize = 0;
+            this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Xoa.Location = new System.Drawing.Point(151, 651);
+            this.Btn_Xoa.Name = "Btn_Xoa";
+            this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
+            this.Btn_Xoa.TabIndex = 30;
+            this.Btn_Xoa.UseVisualStyleBackColor = true;
             // 
-            // Btn_Del
+            // Btn_Huy
             // 
-            this.Btn_Del.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
-            this.Btn_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Del.FlatAppearance.BorderSize = 0;
-            this.Btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Del.Location = new System.Drawing.Point(397, 651);
-            this.Btn_Del.Name = "Btn_Del";
-            this.Btn_Del.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Del.TabIndex = 29;
-            this.Btn_Del.UseVisualStyleBackColor = true;
+            this.Btn_Huy.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
+            this.Btn_Huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Huy.FlatAppearance.BorderSize = 0;
+            this.Btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Huy.Location = new System.Drawing.Point(397, 651);
+            this.Btn_Huy.Name = "Btn_Huy";
+            this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Huy.TabIndex = 29;
+            this.Btn_Huy.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -128,32 +128,32 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Kết quả học tập";
             // 
-            // textBox3
+            // txtDiemGiuaKy
             // 
-            this.textBox3.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(211, 295);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(292, 28);
-            this.textBox3.TabIndex = 15;
+            this.txtDiemGiuaKy.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemGiuaKy.Location = new System.Drawing.Point(211, 295);
+            this.txtDiemGiuaKy.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
+            this.txtDiemGiuaKy.Name = "txtDiemGiuaKy";
+            this.txtDiemGiuaKy.Size = new System.Drawing.Size(292, 28);
+            this.txtDiemGiuaKy.TabIndex = 15;
             // 
-            // textBox1
+            // txtHoTen
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(211, 171);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 28);
-            this.textBox1.TabIndex = 13;
+            this.txtHoTen.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(211, 171);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(292, 28);
+            this.txtHoTen.TabIndex = 13;
             // 
-            // textBox2
+            // txtMSSV
             // 
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(211, 47);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 28);
-            this.textBox2.TabIndex = 14;
+            this.txtMSSV.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMSSV.Location = new System.Drawing.Point(211, 47);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.Size = new System.Drawing.Size(292, 28);
+            this.txtMSSV.TabIndex = 14;
             // 
             // label5
             // 
@@ -203,14 +203,14 @@
             this.label2.Text = "Mã số sinh viên:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox8
+            // txtDiemCuoiKy
             // 
-            this.textBox8.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(211, 419);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(292, 28);
-            this.textBox8.TabIndex = 20;
+            this.txtDiemCuoiKy.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemCuoiKy.Location = new System.Drawing.Point(211, 419);
+            this.txtDiemCuoiKy.Margin = new System.Windows.Forms.Padding(3, 47, 3, 3);
+            this.txtDiemCuoiKy.Name = "txtDiemCuoiKy";
+            this.txtDiemCuoiKy.Size = new System.Drawing.Size(292, 28);
+            this.txtDiemCuoiKy.TabIndex = 20;
             // 
             // tableLayoutPanel1
             // 
@@ -220,14 +220,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.10672F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.89328F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtDiemCuoiKy, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtMSSV, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtHoTen, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtDiemGiuaKy, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(48, 137);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -258,9 +258,9 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Btn_Del);
+            this.Controls.Add(this.Btn_Sua);
+            this.Controls.Add(this.Btn_Xoa);
+            this.Controls.Add(this.Btn_Huy);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "KetQuaHocTapSinhVien";
@@ -277,18 +277,18 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button Btn_Del;
+        private System.Windows.Forms.Button Btn_Sua;
+        private System.Windows.Forms.Button Btn_Xoa;
+        private System.Windows.Forms.Button Btn_Huy;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDiemGiuaKy;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDiemCuoiKy;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

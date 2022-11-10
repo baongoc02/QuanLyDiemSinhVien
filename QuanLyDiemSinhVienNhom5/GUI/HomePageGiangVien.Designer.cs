@@ -40,14 +40,14 @@
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbNamHoc = new System.Windows.Forms.ComboBox();
+            this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbLopHoc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMonHoc = new System.Windows.Forms.TextBox();
             this.Btn_Them = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusStudent = new System.Windows.Forms.ToolStripStatusLabel();
@@ -86,13 +86,13 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(172, 28);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(172, 28);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // panel2
@@ -179,14 +179,14 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbNamHoc, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbHocKy, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbLopHoc, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtMonHoc, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -197,25 +197,25 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 173);
             this.tableLayoutPanel1.TabIndex = 50;
             // 
-            // comboBox3
+            // cbNamHoc
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(233, 132);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(612, 39);
-            this.comboBox3.TabIndex = 36;
+            this.cbNamHoc.BackColor = System.Drawing.Color.Honeydew;
+            this.cbNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbNamHoc.FormattingEnabled = true;
+            this.cbNamHoc.Location = new System.Drawing.Point(233, 132);
+            this.cbNamHoc.Name = "cbNamHoc";
+            this.cbNamHoc.Size = new System.Drawing.Size(612, 39);
+            this.cbNamHoc.TabIndex = 36;
             // 
-            // comboBox2
+            // cbHocKy
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(233, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(612, 39);
-            this.comboBox2.TabIndex = 36;
+            this.cbHocKy.BackColor = System.Drawing.Color.Honeydew;
+            this.cbHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbHocKy.FormattingEnabled = true;
+            this.cbHocKy.Location = new System.Drawing.Point(233, 89);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Size = new System.Drawing.Size(612, 39);
+            this.cbHocKy.TabIndex = 36;
             // 
             // label1
             // 
@@ -229,15 +229,15 @@
             this.label1.Text = "Năm học:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // cbLopHoc
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(233, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(612, 39);
-            this.comboBox1.TabIndex = 35;
+            this.cbLopHoc.BackColor = System.Drawing.Color.Honeydew;
+            this.cbLopHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbLopHoc.FormattingEnabled = true;
+            this.cbLopHoc.Location = new System.Drawing.Point(233, 46);
+            this.cbLopHoc.Name = "cbLopHoc";
+            this.cbLopHoc.Size = new System.Drawing.Size(612, 39);
+            this.cbLopHoc.TabIndex = 35;
             // 
             // label2
             // 
@@ -248,7 +248,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(224, 43);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Môn:";
+            this.label2.Text = "Môn học:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -275,14 +275,14 @@
             this.label3.Text = "Lớp:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtMonHoc
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(233, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(612, 38);
-            this.textBox1.TabIndex = 10;
+            this.txtMonHoc.BackColor = System.Drawing.Color.Honeydew;
+            this.txtMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonHoc.Location = new System.Drawing.Point(233, 3);
+            this.txtMonHoc.Name = "txtMonHoc";
+            this.txtMonHoc.Size = new System.Drawing.Size(612, 38);
+            this.txtMonHoc.TabIndex = 10;
             // 
             // Btn_Them
             // 
@@ -385,12 +385,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMonHoc;
         private System.Windows.Forms.Button Btn_Them;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbNamHoc;
+        private System.Windows.Forms.ComboBox cbHocKy;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbLopHoc;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

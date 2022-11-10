@@ -28,48 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbHocKy = new System.Windows.Forms.ComboBox();
+            this.txtGiangVien = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtMon = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Btn_Them = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Btn_Tim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(988, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 24);
-            this.label5.TabIndex = 43;
-            this.label5.Text = "Thêm";
-            // 
-            // button
-            // 
-            this.button.BackColor = System.Drawing.SystemColors.Control;
-            this.button.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
-            this.button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button.FlatAppearance.BorderSize = 0;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button.Location = new System.Drawing.Point(945, 88);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(40, 38);
-            this.button.TabIndex = 41;
-            this.button.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -102,14 +78,14 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.cbHocKy, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtGiangVien, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtMon, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtMaLop, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(54, 64);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -121,24 +97,24 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(862, 176);
             this.tableLayoutPanel2.TabIndex = 44;
             // 
-            // comboBox2
+            // cbHocKy
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(233, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(612, 39);
-            this.comboBox2.TabIndex = 45;
+            this.cbHocKy.BackColor = System.Drawing.Color.Honeydew;
+            this.cbHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbHocKy.FormattingEnabled = true;
+            this.cbHocKy.Location = new System.Drawing.Point(233, 47);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Size = new System.Drawing.Size(612, 39);
+            this.cbHocKy.TabIndex = 45;
             // 
-            // textBox4
+            // txtGiangVien
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(233, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(612, 38);
-            this.textBox4.TabIndex = 27;
+            this.txtGiangVien.BackColor = System.Drawing.Color.Honeydew;
+            this.txtGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiangVien.Location = new System.Drawing.Point(233, 135);
+            this.txtGiangVien.Name = "txtGiangVien";
+            this.txtGiangVien.Size = new System.Drawing.Size(612, 38);
+            this.txtGiangVien.TabIndex = 27;
             // 
             // label6
             // 
@@ -164,14 +140,14 @@
             this.label7.Text = "Mã lớp:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // txtMon
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(233, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(612, 38);
-            this.textBox5.TabIndex = 14;
+            this.txtMon.BackColor = System.Drawing.Color.Honeydew;
+            this.txtMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMon.Location = new System.Drawing.Point(233, 91);
+            this.txtMon.Name = "txtMon";
+            this.txtMon.Size = new System.Drawing.Size(612, 38);
+            this.txtMon.TabIndex = 14;
             // 
             // label8
             // 
@@ -197,22 +173,76 @@
             this.label9.Text = "Học kỳ:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // txtMaLop
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Honeydew;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(233, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(612, 38);
-            this.textBox6.TabIndex = 10;
+            this.txtMaLop.BackColor = System.Drawing.Color.Honeydew;
+            this.txtMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(233, 3);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(612, 38);
+            this.txtMaLop.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.Location = new System.Drawing.Point(985, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 24);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Thêm";
+            // 
+            // Btn_Them
+            // 
+            this.Btn_Them.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Them.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
+            this.Btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Them.FlatAppearance.BorderSize = 0;
+            this.Btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Them.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Them.Location = new System.Drawing.Point(942, 110);
+            this.Btn_Them.Name = "Btn_Them";
+            this.Btn_Them.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Them.TabIndex = 48;
+            this.Btn_Them.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.Location = new System.Drawing.Point(987, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 24);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Tìm";
+            // 
+            // Btn_Tim
+            // 
+            this.Btn_Tim.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Tim.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.find_icon;
+            this.Btn_Tim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Tim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Tim.FlatAppearance.BorderSize = 0;
+            this.Btn_Tim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Tim.Location = new System.Drawing.Point(942, 64);
+            this.Btn_Tim.Name = "Btn_Tim";
+            this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Tim.TabIndex = 46;
+            this.Btn_Tim.UseVisualStyleBackColor = false;
             // 
             // XemLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Btn_Them);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "XemLopHoc";
@@ -226,19 +256,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtGiangVien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMon;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtMaLop;
+        private System.Windows.Forms.ComboBox cbHocKy;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Btn_Them;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Btn_Tim;
     }
 }
