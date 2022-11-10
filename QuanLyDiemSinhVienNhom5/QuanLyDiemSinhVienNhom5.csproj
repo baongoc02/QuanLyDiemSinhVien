@@ -121,11 +121,17 @@
     <Compile Include="GUI\XemHocKy.Designer.cs">
       <DependentUpon>XemHocKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\XemKetQuaHocTap.cs">
+    <Compile Include="GUI\XemKetQuaHocTapPageAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\XemKetQuaHocTap.Designer.cs">
-      <DependentUpon>XemKetQuaHocTap.cs</DependentUpon>
+    <Compile Include="GUI\XemKetQuaHocTapPageAdmin.Designer.cs">
+      <DependentUpon>XemKetQuaHocTapPageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\XemKetQuaHocTapPageStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\XemKetQuaHocTapPageStudent.Designer.cs">
+      <DependentUpon>XemKetQuaHocTapPageStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\XemLopHoc.cs">
       <SubType>UserControl</SubType>
@@ -189,8 +195,8 @@
     <EmbeddedResource Include="GUI\XemHocKy.resx">
       <DependentUpon>XemHocKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\XemKetQuaHocTap.resx">
-      <DependentUpon>XemKetQuaHocTap.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\XemKetQuaHocTapPageAdmin.resx">
+      <DependentUpon>XemKetQuaHocTapPageAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XemLopHoc.resx">
       <DependentUpon>XemLopHoc.cs</DependentUpon>
@@ -271,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\find-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
