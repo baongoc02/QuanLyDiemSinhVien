@@ -39,6 +39,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -178,10 +180,38 @@
             this.Btn_Them.TabIndex = 33;
             this.Btn_Them.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Indigo;
+            this.label6.Location = new System.Drawing.Point(988, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Thêm";
+            // 
+            // button
+            // 
+            this.button.BackColor = System.Drawing.SystemColors.Control;
+            this.button.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
+            this.button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button.FlatAppearance.BorderSize = 0;
+            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button.Location = new System.Drawing.Point(945, 134);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(40, 40);
+            this.button.TabIndex = 44;
+            this.button.UseVisualStyleBackColor = false;
+            // 
             // XemDanhSachKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Btn_Them);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -210,5 +240,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Btn_Them;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button;
     }
 }
