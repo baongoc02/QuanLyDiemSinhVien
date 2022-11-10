@@ -50,8 +50,12 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Btn_Del = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -330,28 +334,75 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Thông tin giảng viên";
             // 
-            // button2
+            // label12
             // 
-            this.button2.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(276, 638);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 43);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = true;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Indigo;
+            this.label12.Location = new System.Drawing.Point(452, 648);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "Hủy";
             // 
-            // label13
+            // label14
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(328, 648);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 24);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Đóng";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Indigo;
+            this.label14.Location = new System.Drawing.Point(327, 648);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 24);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Sửa";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Indigo;
+            this.label15.Location = new System.Drawing.Point(210, 648);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 24);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Xóa";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(274, 638);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 43);
+            this.button1.TabIndex = 44;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Delete_btn;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(155, 638);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(52, 43);
+            this.button3.TabIndex = 43;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Del
+            // 
+            this.Btn_Del.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
+            this.Btn_Del.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Del.FlatAppearance.BorderSize = 0;
+            this.Btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Del.Location = new System.Drawing.Point(401, 638);
+            this.Btn_Del.Name = "Btn_Del";
+            this.Btn_Del.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Del.TabIndex = 42;
+            this.Btn_Del.UseVisualStyleBackColor = true;
             // 
             // GiangVienInfo
             // 
@@ -359,8 +410,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(602, 753);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Btn_Del);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "GiangVienInfo";
@@ -373,8 +428,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label2;
@@ -397,6 +450,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Btn_Del;
     }
 }
