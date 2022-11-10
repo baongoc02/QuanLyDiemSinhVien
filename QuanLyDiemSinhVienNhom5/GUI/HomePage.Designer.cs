@@ -34,28 +34,28 @@
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Btn_DSKhoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.Btn_DSNamHoc = new System.Windows.Forms.ToolStripMenuItem();
-            this.Btn_DSHocKy = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_DSGiangVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_DSMonHoc = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_DSSinhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêĐiểmTheoLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.xemHocKy1 = new QuanLyDiemSinhVienNhom5.GUI.XemHocKy();
             this.xemNamHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemNamHoc();
             this.xemDanhSachKhoa1 = new QuanLyDiemSinhVienNhom5.GUI.XemDanhSachKhoa();
             this.thongKeDiem1 = new QuanLyDiemSinhVienNhom5.GUI.ThongKeDiem();
-            this.xemKetQuaHocTap1 = new QuanLyDiemSinhVienNhom5.GUI.XemKetQuaHocTap();
+            this.xemKetQuaHocTap1 = new QuanLyDiemSinhVienNhom5.GUI.XemKetQuaHocTapPageAdmin();
             this.xemLopHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemLopHoc();
             this.xemMonHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemMonHoc();
             this.xemGiangVien1 = new QuanLyDiemSinhVienNhom5.GUI.XemGiangVien();
             this.xemSinhVien1 = new QuanLyDiemSinhVienNhom5.GUI.XemSinhVien();
+            this.Btn_XemNamHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.Btn_XemHocKy = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.Btn_ThongKeDiem = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.Btn_KetQuaHocTap = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.Btn_LopHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_MonHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_GiangVien = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_SinhVien = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.xemHocKy1 = new QuanLyDiemSinhVienNhom5.GUI.XemHocKy();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,7 +71,7 @@
             this.thốngKêToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1332, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1332, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +81,7 @@
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
@@ -100,32 +100,40 @@
             // 
             this.danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Btn_DSKhoa,
-            this.Btn_DSNamHoc,
-            this.Btn_DSHocKy});
+            this.Btn_DSGiangVien,
+            this.Btn_DSMonHoc,
+            this.Btn_DSSinhVien});
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(89, 25);
             this.danhMụcToolStripMenuItem.Text = "Danh mục";
             // 
             // Btn_DSKhoa
             // 
             this.Btn_DSKhoa.Name = "Btn_DSKhoa";
-            this.Btn_DSKhoa.Size = new System.Drawing.Size(221, 26);
+            this.Btn_DSKhoa.Size = new System.Drawing.Size(237, 26);
             this.Btn_DSKhoa.Text = "Danh sách khoa";
             this.Btn_DSKhoa.Click += new System.EventHandler(this.Btn_DSKhoa_Click);
             // 
-            // Btn_DSNamHoc
+            // Btn_DSGiangVien
             // 
-            this.Btn_DSNamHoc.Name = "Btn_DSNamHoc";
-            this.Btn_DSNamHoc.Size = new System.Drawing.Size(221, 26);
-            this.Btn_DSNamHoc.Text = "Danh sách năm học";
-            this.Btn_DSNamHoc.Click += new System.EventHandler(this.Btn_DSNamHoc_Click);
+            this.Btn_DSGiangVien.Name = "Btn_DSGiangVien";
+            this.Btn_DSGiangVien.Size = new System.Drawing.Size(237, 26);
+            this.Btn_DSGiangVien.Text = "Danh sách giảng viên ";
+            this.Btn_DSGiangVien.Click += new System.EventHandler(this.Btn_DSGiangVien_Click);
             // 
-            // Btn_DSHocKy
+            // Btn_DSMonHoc
             // 
-            this.Btn_DSHocKy.Name = "Btn_DSHocKy";
-            this.Btn_DSHocKy.Size = new System.Drawing.Size(221, 26);
-            this.Btn_DSHocKy.Text = "Danh sách học kỳ";
-            this.Btn_DSHocKy.Click += new System.EventHandler(this.Btn_DSHocKy_Click);
+            this.Btn_DSMonHoc.Name = "Btn_DSMonHoc";
+            this.Btn_DSMonHoc.Size = new System.Drawing.Size(237, 26);
+            this.Btn_DSMonHoc.Text = "Danh sách môn học";
+            this.Btn_DSMonHoc.Click += new System.EventHandler(this.Btn_DSMonHoc_Click);
+            // 
+            // Btn_DSSinhVien
+            // 
+            this.Btn_DSSinhVien.Name = "Btn_DSSinhVien";
+            this.Btn_DSSinhVien.Size = new System.Drawing.Size(237, 26);
+            this.Btn_DSSinhVien.Text = "Danh sách sinh viên";
+            this.Btn_DSSinhVien.Click += new System.EventHandler(this.Btn_DSSinhVien_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -133,7 +141,7 @@
             this.thốngKêĐiểmTheoLớpToolStripMenuItem,
             this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // thốngKêĐiểmTheoLớpToolStripMenuItem
@@ -154,12 +162,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.Btn_XemNamHoc);
+            this.panel1.Controls.Add(this.Btn_XemHocKy);
             this.panel1.Controls.Add(this.Btn_ThongKeDiem);
             this.panel1.Controls.Add(this.Btn_KetQuaHocTap);
             this.panel1.Controls.Add(this.Btn_LopHoc);
-            this.panel1.Controls.Add(this.Btn_MonHoc);
-            this.panel1.Controls.Add(this.Btn_GiangVien);
-            this.panel1.Controls.Add(this.Btn_SinhVien);
             this.panel1.Location = new System.Drawing.Point(12, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 750);
@@ -183,6 +190,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1130, 750);
             this.panel2.TabIndex = 3;
+            // 
+            // xemHocKy1
+            // 
+            this.xemHocKy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemHocKy1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemHocKy1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemHocKy1.Location = new System.Drawing.Point(0, 0);
+            this.xemHocKy1.Name = "xemHocKy1";
+            this.xemHocKy1.Size = new System.Drawing.Size(1130, 750);
+            this.xemHocKy1.TabIndex = 8;
             // 
             // xemNamHoc1
             // 
@@ -263,6 +280,36 @@
             this.xemSinhVien1.Size = new System.Drawing.Size(1130, 750);
             this.xemSinhVien1.TabIndex = 0;
             // 
+            // Btn_XemNamHoc
+            // 
+            this.Btn_XemNamHoc.BackColor = System.Drawing.Color.DarkOrange;
+            this.Btn_XemNamHoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_XemNamHoc.FlatAppearance.BorderSize = 0;
+            this.Btn_XemNamHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_XemNamHoc.ForeColor = System.Drawing.Color.White;
+            this.Btn_XemNamHoc.Location = new System.Drawing.Point(13, 224);
+            this.Btn_XemNamHoc.Name = "Btn_XemNamHoc";
+            this.Btn_XemNamHoc.Size = new System.Drawing.Size(140, 50);
+            this.Btn_XemNamHoc.TabIndex = 8;
+            this.Btn_XemNamHoc.Text = "Xem năm học";
+            this.Btn_XemNamHoc.UseVisualStyleBackColor = false;
+            this.Btn_XemNamHoc.Click += new System.EventHandler(this.Btn_XemNamHoc_Click);
+            // 
+            // Btn_XemHocKy
+            // 
+            this.Btn_XemHocKy.BackColor = System.Drawing.Color.DarkOrange;
+            this.Btn_XemHocKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_XemHocKy.FlatAppearance.BorderSize = 0;
+            this.Btn_XemHocKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_XemHocKy.ForeColor = System.Drawing.Color.White;
+            this.Btn_XemHocKy.Location = new System.Drawing.Point(13, 294);
+            this.Btn_XemHocKy.Name = "Btn_XemHocKy";
+            this.Btn_XemHocKy.Size = new System.Drawing.Size(140, 50);
+            this.Btn_XemHocKy.TabIndex = 7;
+            this.Btn_XemHocKy.Text = "Xem học kỳ";
+            this.Btn_XemHocKy.UseVisualStyleBackColor = false;
+            this.Btn_XemHocKy.Click += new System.EventHandler(this.Btn_XemHocKy_Click);
+            // 
             // Btn_ThongKeDiem
             // 
             this.Btn_ThongKeDiem.BackColor = System.Drawing.Color.DarkOrange;
@@ -270,7 +317,7 @@
             this.Btn_ThongKeDiem.FlatAppearance.BorderSize = 0;
             this.Btn_ThongKeDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ThongKeDiem.ForeColor = System.Drawing.Color.White;
-            this.Btn_ThongKeDiem.Location = new System.Drawing.Point(11, 367);
+            this.Btn_ThongKeDiem.Location = new System.Drawing.Point(13, 85);
             this.Btn_ThongKeDiem.Name = "Btn_ThongKeDiem";
             this.Btn_ThongKeDiem.Size = new System.Drawing.Size(140, 50);
             this.Btn_ThongKeDiem.TabIndex = 6;
@@ -285,7 +332,7 @@
             this.Btn_KetQuaHocTap.FlatAppearance.BorderSize = 0;
             this.Btn_KetQuaHocTap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_KetQuaHocTap.ForeColor = System.Drawing.Color.White;
-            this.Btn_KetQuaHocTap.Location = new System.Drawing.Point(11, 302);
+            this.Btn_KetQuaHocTap.Location = new System.Drawing.Point(13, 15);
             this.Btn_KetQuaHocTap.Name = "Btn_KetQuaHocTap";
             this.Btn_KetQuaHocTap.Size = new System.Drawing.Size(140, 50);
             this.Btn_KetQuaHocTap.TabIndex = 5;
@@ -300,68 +347,13 @@
             this.Btn_LopHoc.FlatAppearance.BorderSize = 0;
             this.Btn_LopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_LopHoc.ForeColor = System.Drawing.Color.White;
-            this.Btn_LopHoc.Location = new System.Drawing.Point(11, 231);
+            this.Btn_LopHoc.Location = new System.Drawing.Point(13, 154);
             this.Btn_LopHoc.Name = "Btn_LopHoc";
             this.Btn_LopHoc.Size = new System.Drawing.Size(140, 50);
             this.Btn_LopHoc.TabIndex = 4;
             this.Btn_LopHoc.Text = "Xem lớp học";
             this.Btn_LopHoc.UseVisualStyleBackColor = false;
             this.Btn_LopHoc.Click += new System.EventHandler(this.Btn_LopHoc_Click);
-            // 
-            // Btn_MonHoc
-            // 
-            this.Btn_MonHoc.BackColor = System.Drawing.Color.DarkOrange;
-            this.Btn_MonHoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_MonHoc.FlatAppearance.BorderSize = 0;
-            this.Btn_MonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_MonHoc.ForeColor = System.Drawing.Color.White;
-            this.Btn_MonHoc.Location = new System.Drawing.Point(11, 160);
-            this.Btn_MonHoc.Name = "Btn_MonHoc";
-            this.Btn_MonHoc.Size = new System.Drawing.Size(140, 50);
-            this.Btn_MonHoc.TabIndex = 2;
-            this.Btn_MonHoc.Text = "Xem môn học";
-            this.Btn_MonHoc.UseVisualStyleBackColor = false;
-            this.Btn_MonHoc.Click += new System.EventHandler(this.Btn_MonHoc_Click);
-            // 
-            // Btn_GiangVien
-            // 
-            this.Btn_GiangVien.BackColor = System.Drawing.Color.DarkOrange;
-            this.Btn_GiangVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_GiangVien.FlatAppearance.BorderSize = 0;
-            this.Btn_GiangVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_GiangVien.ForeColor = System.Drawing.Color.White;
-            this.Btn_GiangVien.Location = new System.Drawing.Point(11, 90);
-            this.Btn_GiangVien.Name = "Btn_GiangVien";
-            this.Btn_GiangVien.Size = new System.Drawing.Size(140, 50);
-            this.Btn_GiangVien.TabIndex = 3;
-            this.Btn_GiangVien.Text = "Xem giảng viên";
-            this.Btn_GiangVien.UseVisualStyleBackColor = false;
-            this.Btn_GiangVien.Click += new System.EventHandler(this.Btn_GiangVien_Click);
-            // 
-            // Btn_SinhVien
-            // 
-            this.Btn_SinhVien.BackColor = System.Drawing.Color.DarkOrange;
-            this.Btn_SinhVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_SinhVien.FlatAppearance.BorderSize = 0;
-            this.Btn_SinhVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SinhVien.ForeColor = System.Drawing.Color.White;
-            this.Btn_SinhVien.Location = new System.Drawing.Point(11, 21);
-            this.Btn_SinhVien.Name = "Btn_SinhVien";
-            this.Btn_SinhVien.Size = new System.Drawing.Size(140, 50);
-            this.Btn_SinhVien.TabIndex = 2;
-            this.Btn_SinhVien.Text = "Xem sinh viên";
-            this.Btn_SinhVien.UseVisualStyleBackColor = false;
-            this.Btn_SinhVien.Click += new System.EventHandler(this.Btn_SinhVien_Click);
-            // 
-            // xemHocKy1
-            // 
-            this.xemHocKy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemHocKy1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemHocKy1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemHocKy1.Location = new System.Drawing.Point(0, 0);
-            this.xemHocKy1.Name = "xemHocKy1";
-            this.xemHocKy1.Size = new System.Drawing.Size(1130, 750);
-            this.xemHocKy1.TabIndex = 8;
             // 
             // HomePage
             // 
@@ -391,27 +383,27 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Btn_DSKhoa;
-        private System.Windows.Forms.ToolStripMenuItem Btn_DSNamHoc;
-        private System.Windows.Forms.ToolStripMenuItem Btn_DSHocKy;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêĐiểmTheoLớpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêĐiểmTheoHọcKỳToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private RoundedButton Btn_GiangVien;
-        private RoundedButton Btn_SinhVien;
         private XemSinhVien xemSinhVien1;
         private XemGiangVien xemGiangVien1;
-        private RoundedButton Btn_MonHoc;
         private RoundedButton Btn_ThongKeDiem;
         private RoundedButton Btn_KetQuaHocTap;
         private RoundedButton Btn_LopHoc;
         private XemMonHoc xemMonHoc1;
         private XemLopHoc xemLopHoc1;
-        private XemKetQuaHocTap xemKetQuaHocTap1;
+        private XemKetQuaHocTapPageAdmin xemKetQuaHocTap1;
         private ThongKeDiem thongKeDiem1;
         private XemDanhSachKhoa xemDanhSachKhoa1;
         private XemNamHoc xemNamHoc1;
         private XemHocKy xemHocKy1;
+        private System.Windows.Forms.ToolStripMenuItem Btn_DSGiangVien;
+        private System.Windows.Forms.ToolStripMenuItem Btn_DSMonHoc;
+        private System.Windows.Forms.ToolStripMenuItem Btn_DSSinhVien;
+        private RoundedButton Btn_XemNamHoc;
+        private RoundedButton Btn_XemHocKy;
     }
 }
