@@ -33,16 +33,17 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemGiảngViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemMônHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemLớpHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemKếtQuảHọcTậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_DSKhoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_DSNamHoc = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_DSHocKy = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêĐiểmTheoLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.xemNamHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemNamHoc();
+            this.xemDanhSachKhoa1 = new QuanLyDiemSinhVienNhom5.GUI.XemDanhSachKhoa();
+            this.thongKeDiem1 = new QuanLyDiemSinhVienNhom5.GUI.ThongKeDiem();
             this.xemKetQuaHocTap1 = new QuanLyDiemSinhVienNhom5.GUI.XemKetQuaHocTap();
             this.xemLopHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemLopHoc();
             this.xemMonHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemMonHoc();
@@ -54,7 +55,7 @@
             this.Btn_MonHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.Btn_GiangVien = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.Btn_SinhVien = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.thongKeDiem1 = new QuanLyDiemSinhVienNhom5.GUI.ThongKeDiem();
+            this.xemHocKy1 = new QuanLyDiemSinhVienNhom5.GUI.XemHocKy();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,44 +99,33 @@
             // danhMụcToolStripMenuItem
             // 
             this.danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xemGiảngViênToolStripMenuItem,
-            this.xemSinhViênToolStripMenuItem,
-            this.xemMônHọcToolStripMenuItem,
-            this.xemLớpHọcToolStripMenuItem,
-            this.xemKếtQuảHọcTậpToolStripMenuItem});
+            this.Btn_DSKhoa,
+            this.Btn_DSNamHoc,
+            this.Btn_DSHocKy});
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
             this.danhMụcToolStripMenuItem.Text = "Danh mục";
             // 
-            // xemGiảngViênToolStripMenuItem
+            // Btn_DSKhoa
             // 
-            this.xemGiảngViênToolStripMenuItem.Name = "xemGiảngViênToolStripMenuItem";
-            this.xemGiảngViênToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.xemGiảngViênToolStripMenuItem.Text = "Xem giảng viên";
+            this.Btn_DSKhoa.Name = "Btn_DSKhoa";
+            this.Btn_DSKhoa.Size = new System.Drawing.Size(221, 26);
+            this.Btn_DSKhoa.Text = "Danh sách khoa";
+            this.Btn_DSKhoa.Click += new System.EventHandler(this.Btn_DSKhoa_Click);
             // 
-            // xemSinhViênToolStripMenuItem
+            // Btn_DSNamHoc
             // 
-            this.xemSinhViênToolStripMenuItem.Name = "xemSinhViênToolStripMenuItem";
-            this.xemSinhViênToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.xemSinhViênToolStripMenuItem.Text = "Xem sinh viên";
+            this.Btn_DSNamHoc.Name = "Btn_DSNamHoc";
+            this.Btn_DSNamHoc.Size = new System.Drawing.Size(221, 26);
+            this.Btn_DSNamHoc.Text = "Danh sách năm học";
+            this.Btn_DSNamHoc.Click += new System.EventHandler(this.Btn_DSNamHoc_Click);
             // 
-            // xemMônHọcToolStripMenuItem
+            // Btn_DSHocKy
             // 
-            this.xemMônHọcToolStripMenuItem.Name = "xemMônHọcToolStripMenuItem";
-            this.xemMônHọcToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.xemMônHọcToolStripMenuItem.Text = "Xem môn học";
-            // 
-            // xemLớpHọcToolStripMenuItem
-            // 
-            this.xemLớpHọcToolStripMenuItem.Name = "xemLớpHọcToolStripMenuItem";
-            this.xemLớpHọcToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.xemLớpHọcToolStripMenuItem.Text = "Xem lớp học";
-            // 
-            // xemKếtQuảHọcTậpToolStripMenuItem
-            // 
-            this.xemKếtQuảHọcTậpToolStripMenuItem.Name = "xemKếtQuảHọcTậpToolStripMenuItem";
-            this.xemKếtQuảHọcTậpToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.xemKếtQuảHọcTậpToolStripMenuItem.Text = "Xem kết quả học tập";
+            this.Btn_DSHocKy.Name = "Btn_DSHocKy";
+            this.Btn_DSHocKy.Size = new System.Drawing.Size(221, 26);
+            this.Btn_DSHocKy.Text = "Danh sách học kỳ";
+            this.Btn_DSHocKy.Click += new System.EventHandler(this.Btn_DSHocKy_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -180,6 +170,9 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.xemHocKy1);
+            this.panel2.Controls.Add(this.xemNamHoc1);
+            this.panel2.Controls.Add(this.xemDanhSachKhoa1);
             this.panel2.Controls.Add(this.thongKeDiem1);
             this.panel2.Controls.Add(this.xemKetQuaHocTap1);
             this.panel2.Controls.Add(this.xemLopHoc1);
@@ -190,6 +183,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1130, 750);
             this.panel2.TabIndex = 3;
+            // 
+            // xemNamHoc1
+            // 
+            this.xemNamHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemNamHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemNamHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemNamHoc1.Location = new System.Drawing.Point(0, 0);
+            this.xemNamHoc1.Name = "xemNamHoc1";
+            this.xemNamHoc1.Size = new System.Drawing.Size(1130, 750);
+            this.xemNamHoc1.TabIndex = 7;
+            // 
+            // xemDanhSachKhoa1
+            // 
+            this.xemDanhSachKhoa1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemDanhSachKhoa1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemDanhSachKhoa1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemDanhSachKhoa1.Location = new System.Drawing.Point(0, 0);
+            this.xemDanhSachKhoa1.Name = "xemDanhSachKhoa1";
+            this.xemDanhSachKhoa1.Size = new System.Drawing.Size(1130, 750);
+            this.xemDanhSachKhoa1.TabIndex = 6;
+            // 
+            // thongKeDiem1
+            // 
+            this.thongKeDiem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.thongKeDiem1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.thongKeDiem1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thongKeDiem1.Location = new System.Drawing.Point(0, 0);
+            this.thongKeDiem1.Name = "thongKeDiem1";
+            this.thongKeDiem1.Size = new System.Drawing.Size(1130, 750);
+            this.thongKeDiem1.TabIndex = 5;
             // 
             // xemKetQuaHocTap1
             // 
@@ -330,15 +353,15 @@
             this.Btn_SinhVien.UseVisualStyleBackColor = false;
             this.Btn_SinhVien.Click += new System.EventHandler(this.Btn_SinhVien_Click);
             // 
-            // thongKeDiem1
+            // xemHocKy1
             // 
-            this.thongKeDiem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.thongKeDiem1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.thongKeDiem1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thongKeDiem1.Location = new System.Drawing.Point(0, 0);
-            this.thongKeDiem1.Name = "thongKeDiem1";
-            this.thongKeDiem1.Size = new System.Drawing.Size(1130, 750);
-            this.thongKeDiem1.TabIndex = 5;
+            this.xemHocKy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemHocKy1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemHocKy1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemHocKy1.Location = new System.Drawing.Point(0, 0);
+            this.xemHocKy1.Name = "xemHocKy1";
+            this.xemHocKy1.Size = new System.Drawing.Size(1130, 750);
+            this.xemHocKy1.TabIndex = 8;
             // 
             // HomePage
             // 
@@ -367,11 +390,9 @@
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemGiảngViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemSinhViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemMônHọcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemLớpHọcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemKếtQuảHọcTậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Btn_DSKhoa;
+        private System.Windows.Forms.ToolStripMenuItem Btn_DSNamHoc;
+        private System.Windows.Forms.ToolStripMenuItem Btn_DSHocKy;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêĐiểmTheoLớpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêĐiểmTheoHọcKỳToolStripMenuItem;
@@ -389,5 +410,8 @@
         private XemLopHoc xemLopHoc1;
         private XemKetQuaHocTap xemKetQuaHocTap1;
         private ThongKeDiem thongKeDiem1;
+        private XemDanhSachKhoa xemDanhSachKhoa1;
+        private XemNamHoc xemNamHoc1;
+        private XemHocKy xemHocKy1;
     }
 }

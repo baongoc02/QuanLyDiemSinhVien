@@ -103,11 +103,23 @@
     <Compile Include="GUI\ThongKeDiem.Designer.cs">
       <DependentUpon>ThongKeDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\XemDanhSachKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\XemDanhSachKhoa.Designer.cs">
+      <DependentUpon>XemDanhSachKhoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\XemGiangVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\XemGiangVien.Designer.cs">
       <DependentUpon>XemGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\XemHocKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\XemHocKy.Designer.cs">
+      <DependentUpon>XemHocKy.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\XemKetQuaHocTap.cs">
       <SubType>UserControl</SubType>
@@ -126,6 +138,12 @@
     </Compile>
     <Compile Include="GUI\XemMonHoc.Designer.cs">
       <DependentUpon>XemMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\XemNamHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\XemNamHoc.Designer.cs">
+      <DependentUpon>XemNamHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\XemSinhVien.cs">
       <SubType>UserControl</SubType>
@@ -162,8 +180,14 @@
     <EmbeddedResource Include="GUI\ThongKeDiem.resx">
       <DependentUpon>ThongKeDiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XemDanhSachKhoa.resx">
+      <DependentUpon>XemDanhSachKhoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\XemGiangVien.resx">
       <DependentUpon>XemGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XemHocKy.resx">
+      <DependentUpon>XemHocKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XemKetQuaHocTap.resx">
       <DependentUpon>XemKetQuaHocTap.cs</DependentUpon>
@@ -173,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XemMonHoc.resx">
       <DependentUpon>XemMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XemNamHoc.resx">
+      <DependentUpon>XemNamHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XemSinhVien.resx">
       <DependentUpon>XemSinhVien.cs</DependentUpon>

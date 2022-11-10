@@ -31,7 +31,9 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             xemLopHoc1.Visible = false;
             xemKetQuaHocTap1.Visible = false;
             thongKeDiem1.Visible = false;
-
+            xemDanhSachKhoa1.Visible = false;
+            xemNamHoc1.Visible = false;
+            xemHocKy1.Visible = false;
         }
 
         private void Btn_GiangVien_Click(object sender, EventArgs e)
@@ -62,6 +64,24 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             thongKeDiem1.Visible = true;
             thongKeDiem1.BringToFront();
+        }
+
+        private void Btn_DSKhoa_Click(object sender, EventArgs e)
+        {
+            xemDanhSachKhoa1.Visible = true;
+            xemDanhSachKhoa1.BringToFront();
+        }
+
+        private void Btn_DSNamHoc_Click(object sender, EventArgs e)
+        {
+            xemNamHoc1.Visible = true;
+            xemNamHoc1.BringToFront();
+        }
+
+        private void Btn_DSHocKy_Click(object sender, EventArgs e)
+        {
+            xemHocKy1.Visible = true;
+            xemHocKy1.BringToFront();
         }
     }
 }
