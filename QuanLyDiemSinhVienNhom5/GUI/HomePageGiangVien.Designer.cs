@@ -1,6 +1,6 @@
 ﻿namespace QuanLyDiemSinhVienNhom5.GUI
 {
-    partial class HompageGiangVien
+    partial class HomePageGiangVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HompageGiangVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageGiangVien));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +69,7 @@
             this.hệThốngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1332, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1332, 32);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,28 +78,27 @@
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
+            this.hệThốngToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(93, 28);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.Btn_Import);
             this.panel2.Controls.Add(this.label6);
@@ -125,7 +124,7 @@
             // 
             // Btn_Import
             // 
-            this.Btn_Import.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Import.BackColor = System.Drawing.Color.Azure;
             this.Btn_Import.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Import.BackgroundImage")));
             this.Btn_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Import.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -151,7 +150,7 @@
             // 
             // Btn_Tim
             // 
-            this.Btn_Tim.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Tim.BackColor = System.Drawing.Color.Azure;
             this.Btn_Tim.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.find_icon;
             this.Btn_Tim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Tim.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -287,7 +286,7 @@
             // 
             // Btn_Them
             // 
-            this.Btn_Them.BackColor = System.Drawing.SystemColors.Control;
+            this.Btn_Them.BackColor = System.Drawing.Color.Azure;
             this.Btn_Them.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_Add_icon;
             this.Btn_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Them.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -341,16 +340,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(1259, 531);
             this.dataGridView1.TabIndex = 0;
             // 
-            // HompageGiangVien
+            // HomePageGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1332, 813);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "HompageGiangVien";
+            this.Name = "HomePageGiangVien";
             this.Text = "HompageStudent";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
