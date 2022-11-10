@@ -52,17 +52,17 @@
     <Compile Include="GUI\GiangVienInfo.Designer.cs">
       <DependentUpon>GiangVienInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HomePage.cs">
+    <Compile Include="GUI\HomePageAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="GUI\HomePageAdmin.Designer.cs">
+      <DependentUpon>HomePageAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HompageStudent.cs">
+    <Compile Include="GUI\HomePageGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HompageStudent.Designer.cs">
-      <DependentUpon>HompageStudent.cs</DependentUpon>
+    <Compile Include="GUI\HomePageGiangVien.Designer.cs">
+      <DependentUpon>HomePageGiangVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KetQuaHocTapSinhVien.cs">
       <SubType>Form</SubType>
@@ -127,12 +127,6 @@
     <Compile Include="GUI\XemKetQuaHocTapPageAdmin.Designer.cs">
       <DependentUpon>XemKetQuaHocTapPageAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\XemKetQuaHocTapPageStudent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\XemKetQuaHocTapPageStudent.Designer.cs">
-      <DependentUpon>XemKetQuaHocTapPageStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\XemLopHoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,11 +156,11 @@
     <EmbeddedResource Include="GUI\GiangVienInfo.resx">
       <DependentUpon>GiangVienInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\HomePageAdmin.resx">
+      <DependentUpon>HomePageAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HompageStudent.resx">
-      <DependentUpon>HompageStudent.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\HomePageGiangVien.resx">
+      <DependentUpon>HomePageGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KetQuaHocTapSinhVien.resx">
       <DependentUpon>KetQuaHocTapSinhVien.cs</DependentUpon>
@@ -234,52 +228,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\background-011.png" />
+    <Resource Include="resources\background-011.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Button-Add-icon1.png" />
+    <Resource Include="resources\Button-Add-icon1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Button-DeleteIcon1.png" />
+    <Resource Include="resources\Button-DeleteIcon1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Delete-btn1.png" />
+    <Resource Include="resources\Delete-btn1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Delete-btn.png" />
+    <Resource Include="resources\Delete-btn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Update-Btn.png" />
+    <Resource Include="resources\Update-Btn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Update-Btn1.png" />
+    <Resource Include="resources\Update-Btn1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\images.jfif" />
+    <Resource Include="resources\images.jfif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\updateIcon.jfif" />
+    <Resource Include="resources\updateIcon.jfif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\Update-btn-icon.jfif" />
+    <Resource Include="resources\Update-btn-icon.jfif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\updateIconBtn.jfif" />
+    <Resource Include="resources\updateIconBtn.jfif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\LoginForm-01.png" />
+    <Resource Include="resources\LoginForm-01.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\backgroundnewVersion-01.png" />
+    <Resource Include="resources\backgroundnewVersion-01.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\LoginBtn.jpg" />
+    <Resource Include="resources\LoginBtn.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\find-icon.png" />
+    <Resource Include="resources\find-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\icons8-import-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
