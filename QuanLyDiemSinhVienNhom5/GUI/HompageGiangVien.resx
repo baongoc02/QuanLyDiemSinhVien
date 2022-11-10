@@ -120,6 +120,21 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Btn_Import.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAUFJREFUaEPt
+        mk1qAkEQRieYE+QOHkMM+Vm5cOM2i5wiu/y48kI5QhZeQPQGWWUjkSBI8n0zFPQiq+6uLgrrwYPpBtt+
+        MOrMYAdGcAN/DXyDxVxBLnaCX43cQ77nOyxGAj77URvuYQQIEZBBBKREQAYRkGIRMIYr+NiPCrEIqEoE
+        WKMZsICT4VAPrYBnyHXX/UgRjYAXyDW/4ZQTmtQOeIWy+RtOaFMzIN38LSdaUCtANn+AzTZPagTw3lY2
+        f8eJlpQGmG6elAQsIV/7A2ecsCA3QDZPj/C/pw+afsALeL4BRM5/l6eQ4PpDLKS/Ae6+RgXXP2SC60sJ
+        4QlKhLuLOSG9nL7mhCYaAURuaLb9SBGtAPIA58OhHpoBTYgAaywC3D9ajKfTKRGQQQSkREAGEZAiAW7/
+        7HEJd5ALtpb3DQV03R8F/VdCXLvKrAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

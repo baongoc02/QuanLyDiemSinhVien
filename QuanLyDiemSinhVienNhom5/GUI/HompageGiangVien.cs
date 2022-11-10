@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVienNhom5.GUI
 {
-    public partial class HompageStudent : Form
+    public partial class HompageGiangVien : Form
     {
-        public HompageStudent()
+        public HompageGiangVien()
         {
             InitializeComponent();
         }
