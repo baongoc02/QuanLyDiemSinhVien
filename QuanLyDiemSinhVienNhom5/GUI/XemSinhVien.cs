@@ -17,9 +17,5 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InitializeComponent();
         }
 
-        private void Btn_Them_Click(object sender, EventArgs e)
-        {
-            MSSV.Text = "def";
-        }
     }
 }
