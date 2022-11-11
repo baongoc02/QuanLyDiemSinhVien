@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A3DB13FD-F823-4698-A402-4E1AD1B4E2FA}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuanLyDiemSinhVienNhom5.Core</RootNamespace>
-    <AssemblyName>QuanLyDiemSinhVienNhom5.Core</AssemblyName>
+    <ProjectGuid>{BE8401A1-9E4F-4764-A764-B62803EE5ABE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>QuanLyDiemSinhVienNhom5.Test</RootNamespace>
+    <AssemblyName>QuanLyDiemSinhVienNhom5.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,25 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\GiangVienService.cs" />
-    <Compile Include="Services\HocKyService.cs" />
-    <Compile Include="Services\KetQuaHocTapService.cs" />
-    <Compile Include="Services\KhoaService.cs" />
-    <Compile Include="Services\LopService.cs" />
-    <Compile Include="Services\MonHocService.cs" />
-    <Compile Include="Services\NamHocService.cs" />
-    <Compile Include="Services\SinhVienService.cs" />
-    <Compile Include="ViewModel\GiangVienViewModel.cs" />
-    <Compile Include="ViewModel\HocKyViewModel.cs" />
-    <Compile Include="ViewModel\KetQuaHocTapViewModel.cs" />
-    <Compile Include="ViewModel\KhoaViewModel.cs" />
-    <Compile Include="ViewModel\LopViewModel.cs" />
-    <Compile Include="ViewModel\MonHocViewModel.cs" />
-    <Compile Include="ViewModel\NamHocViewModel.cs" />
-    <Compile Include="ViewModel\SinhVienViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyDiemSinhVienNhom5.Core\QuanLyDiemSinhVienNhom5.Core.csproj">
+      <Project>{a3db13fd-f823-4698-a402-4e1ad1b4e2fa}</Project>
+      <Name>QuanLyDiemSinhVienNhom5.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QuanLyDiemSinhVienNhom5.DataAccess\QuanLyDiemSinhVienNhom5.DataAccess.csproj">
       <Project>{def281b4-e979-4f07-a026-610ec1350951}</Project>
       <Name>QuanLyDiemSinhVienNhom5.DataAccess</Name>
