@@ -33,9 +33,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.sinhVienDAO.Create(sinhVien);
                 this.OnSuccess("Tạo sinh viên thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 
@@ -46,9 +47,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.sinhVienDAO.Update(maSinhVien, sinhVien);
                 this.OnSuccess("Cập nhật sinh viên thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 

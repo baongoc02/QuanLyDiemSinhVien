@@ -33,9 +33,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.ketQuaHocTapDAO.Create(ketQuaHocTap);
                 this.OnSuccess("Tạo kết quả học tập thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 
@@ -46,9 +47,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.ketQuaHocTapDAO.Update(maSinhVien, maLop, ketQuaHocTap);
                 this.OnSuccess("Cập nhật kết quả học tập thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 

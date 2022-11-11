@@ -33,9 +33,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.hocKyDAO.Create(hocKy);
                 this.OnSuccess("Tạo học kỳ thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 
@@ -46,9 +47,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.hocKyDAO.Update(maHocKy, hocKy);
                 this.OnSuccess("Cập nhật học kỳ thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 

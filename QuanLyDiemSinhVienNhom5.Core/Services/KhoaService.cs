@@ -33,9 +33,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.khoaDAO.Create(khoa);
                 this.OnSuccess("Tạo khoa thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 
@@ -46,9 +47,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.khoaDAO.Update(maKhoa, khoa);
                 this.OnSuccess("Cập nhật khoa thành công");
             }
-            catch
+            catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
             }
         }
 
