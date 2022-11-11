@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class NamHocService
+    public class NamHocService : BaseService
     {
         private readonly NamHocDAO namHocDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(NamHoc namHoc)
         {
-            this.namHocDAO.Create(namHoc);
+            try
+            {
+                if (this.CheckNamHocExists(namHoc.MaNamHoc))
+                {
+                    this.OnError("Đã tồn tại năm học này trên hệ thống");
+                    return;
+                }
+                this.namHocDAO.Create(namHoc);
+                this.OnSuccess("Tạo năm học thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maNamHoc, NamHoc namHoc)
         {
-            this.namHocDAO.Update(maNamHoc, namHoc);
+            try
+            {
+                this.namHocDAO.Update(maNamHoc, namHoc);
+                this.OnSuccess("Cập nhật năm học thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maNamHoc)
+        public bool CheckNamHocExists(string maNamHoc)
         {
             return this.namHocDAO.CheckNamHocExistsByPrimaryKey(maNamHoc);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maNamHoc)
         {
-            this.namHocDAO.Delete(maNamHoc);
+            try
+            {
+                this.namHocDAO.Delete(maNamHoc);
+                this.OnSuccess("Xóa năm học thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa năm học, do có dữ liệu liên quan");
+            }
         }
     }
 }

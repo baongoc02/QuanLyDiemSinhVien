@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class LopService
+    public class LopService : BaseService
     {
         private readonly LopDAO lopDAO;
 
@@ -23,12 +23,33 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(Lop lop)
         {
-            this.lopDAO.Create(lop);
+            try
+            {
+                if (this.CheckLopExists(lop.MaLop))
+                {
+                    this.OnError("Đã tồn tại lớp này trên hệ thống");
+                    return;
+                }
+                this.lopDAO.Create(lop);
+                this.OnSuccess("Tạo lớp thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maLop, Lop lop)
         {
-            this.lopDAO.Update(maLop, lop);
+            try
+            {
+                this.lopDAO.Update(maLop, lop);
+                this.OnSuccess("Cập nhật lớp thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public bool CheckLopExists(string maLop)
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maLop)
         {
-            this.lopDAO.Delete(maLop);
+            try
+            {
+                this.lopDAO.Delete(maLop);
+                this.OnSuccess("Xóa lớp thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa lớp, do có dữ liệu liên quan");
+            }
         }
     }
 }

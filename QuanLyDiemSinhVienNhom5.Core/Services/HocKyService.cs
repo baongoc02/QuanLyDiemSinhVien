@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class HocKyService
+    public class HocKyService : BaseService
     {
         private readonly HocKyDAO hocKyDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(HocKy hocKy)
         {
-            this.hocKyDAO.Create(hocKy);
+            try
+            {
+                if (this.CheckHocKyExists(hocKy.MaHocKy))
+                {
+                    this.OnError("Đã tồn tại học kỳ này trên hệ thống");
+                    return;
+                }
+                this.hocKyDAO.Create(hocKy);
+                this.OnSuccess("Tạo học kỳ thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maHocKy, HocKy hocKy)
         {
-            this.hocKyDAO.Update(maHocKy, hocKy);
+            try
+            {
+                this.hocKyDAO.Update(maHocKy, hocKy);
+                this.OnSuccess("Cập nhật học kỳ thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maHocKy)
+        public bool CheckHocKyExists(string maHocKy)
         {
             return this.hocKyDAO.CheckHocKyExistsByPrimaryKey(maHocKy);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maHocKy)
         {
-            this.hocKyDAO.Delete(maHocKy);
+            try
+            {
+                this.hocKyDAO.Delete(maHocKy);
+                this.OnSuccess("Xóa học kỳ thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa học kỳ, do có dữ liệu liên quan");
+            }
         }
     }
 }

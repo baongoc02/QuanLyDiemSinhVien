@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class SinhVienService
+    public class SinhVienService : BaseService
     {
         private readonly SinhVienDAO sinhVienDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(SinhVien sinhVien)
         {
-            this.sinhVienDAO.Create(sinhVien);
+            try
+            {
+                if (this.CheckSinhVienExists(sinhVien.MaSinhVien))
+                {
+                    this.OnError("Đã tồn tại sinh viên này trên hệ thống");
+                    return;
+                }
+                this.sinhVienDAO.Create(sinhVien);
+                this.OnSuccess("Tạo sinh viên thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maSinhVien, SinhVien sinhVien)
         {
-            this.sinhVienDAO.Update(maSinhVien, sinhVien);
+            try
+            {
+                this.sinhVienDAO.Update(maSinhVien, sinhVien);
+                this.OnSuccess("Cập nhật sinh viên thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maSinhVien)
+        public bool CheckSinhVienExists(string maSinhVien)
         {
             return this.sinhVienDAO.CheckSinhVienExistsByPrimaryKey(maSinhVien);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maSinhVien)
         {
-            this.sinhVienDAO.Delete(maSinhVien);
+            try
+            {
+                this.sinhVienDAO.Delete(maSinhVien);
+                this.OnSuccess("Xóa sinh viên thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa sinh viên, do có dữ liệu liên quan");
+            }
         }
     }
 }

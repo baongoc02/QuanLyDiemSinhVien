@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class MonHocService
+    public class MonHocService : BaseService
     {
         private readonly MonHocDAO monHocDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(MonHoc monHoc)
         {
-            this.monHocDAO.Create(monHoc);
+            try
+            {
+                if (this.CheckMonHocExists(monHoc.MaMonHoc))
+                {
+                    this.OnError("Đã tồn tại môn học này trên hệ thống");
+                    return;
+                }
+                this.monHocDAO.Create(monHoc);
+                this.OnSuccess("Tạo môn học thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maMonHoc, MonHoc monHoc)
         {
-            this.monHocDAO.Update(maMonHoc, monHoc);
+            try
+            {
+                this.monHocDAO.Update(maMonHoc, monHoc);
+                this.OnSuccess("Cập nhật môn học thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maMonHoc)
+        public bool CheckMonHocExists(string maMonHoc)
         {
             return this.monHocDAO.CheckMonHocExistsByPrimaryKey(maMonHoc);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maMonHoc)
         {
-            this.monHocDAO.Delete(maMonHoc);
+            try
+            {
+                this.monHocDAO.Delete(maMonHoc);
+                this.OnSuccess("Xóa môn học thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa môn học, do có dữ liệu liên quan");
+            }
         }
     }
 }

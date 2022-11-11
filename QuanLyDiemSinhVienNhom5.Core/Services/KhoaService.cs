@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class KhoaService
+    public class KhoaService : BaseService
     {
         private readonly KhoaDAO khoaDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(Khoa khoa)
         {
-            this.khoaDAO.Create(khoa);
+            try
+            {
+                if (this.CheckKhoaExists(khoa.MaKhoa))
+                {
+                    this.OnError("Đã tồn tại khoa này trên hệ thống");
+                    return;
+                }
+                this.khoaDAO.Create(khoa);
+                this.OnSuccess("Tạo khoa thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maKhoa, Khoa khoa)
         {
-            this.khoaDAO.Update(maKhoa, khoa);
+            try
+            {
+                this.khoaDAO.Update(maKhoa, khoa);
+                this.OnSuccess("Cập nhật khoa thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maKhoa)
+        public bool CheckKhoaExists(string maKhoa)
         {
             return this.khoaDAO.CheckKhoaExistsByPrimaryKey(maKhoa);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maKhoa)
         {
-            this.khoaDAO.Delete(maKhoa);
+            try
+            {
+                this.khoaDAO.Delete(maKhoa);
+                this.OnSuccess("Xóa khoa thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa khoa, do có dữ liệu liên quan");
+            }
         }
     }
 }

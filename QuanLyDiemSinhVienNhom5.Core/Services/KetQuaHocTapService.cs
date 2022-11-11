@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class KetQuaHocTapService
+    public class KetQuaHocTapService : BaseService
     {
         private readonly KetQuaHocTapDAO ketQuaHocTapDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(KetQuaHocTap ketQuaHocTap)
         {
-            this.ketQuaHocTapDAO.Create(ketQuaHocTap);
+            try
+            {
+                if (this.CheckKetQuaHocTapExists(ketQuaHocTap.MaSinhVien, ketQuaHocTap.MaLop))
+                {
+                    this.OnError("Đã tồn tại kết quả học tập này trên hệ thống");
+                    return;
+                }
+                this.ketQuaHocTapDAO.Create(ketQuaHocTap);
+                this.OnSuccess("Tạo kết quả học tập thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maSinhVien, string maLop, KetQuaHocTap ketQuaHocTap)
         {
-            this.ketQuaHocTapDAO.Update(maSinhVien, maLop, ketQuaHocTap);
+            try
+            {
+                this.ketQuaHocTapDAO.Update(maSinhVien, maLop, ketQuaHocTap);
+                this.OnSuccess("Cập nhật kết quả học tập thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maSinhVien, string maLop)
+        public bool CheckKetQuaHocTapExists(string maSinhVien, string maLop)
         {
             return this.ketQuaHocTapDAO.CheckKetQuaHocTapExistsByPrimaryKey(maSinhVien, maLop);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maSinhVien, string maLop)
         {
-            this.ketQuaHocTapDAO.Delete(maSinhVien, maLop);
+            try
+            {
+                this.ketQuaHocTapDAO.Delete(maSinhVien, maLop);
+                this.OnSuccess("Xóa kết quả học tập thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa kết quả học tập, do có dữ liệu liên quan");
+            }
         }
     }
 }

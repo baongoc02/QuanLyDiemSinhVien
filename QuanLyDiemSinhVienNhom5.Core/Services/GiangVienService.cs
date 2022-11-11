@@ -12,7 +12,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
 namespace QuanLyDiemSinhVienNhom5.Core.Services
 {
-    public class GiangVienService
+    public class GiangVienService : BaseService
     {
         private readonly GiangVienDAO giangVienDAO;
 
@@ -23,15 +23,36 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Create(GiangVien giangVien)
         {
-            this.giangVienDAO.Create(giangVien);
+            try
+            {
+                if (this.CheckGiangVienExists(giangVien.MaGiangVien))
+                {
+                    this.OnError("Đã tồn tại giảng viên này trên hệ thống");
+                    return;
+                }
+                this.giangVienDAO.Create(giangVien);
+                this.OnSuccess("Tạo giảng viên thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
         public void Update(string maGiangVien, GiangVien giangVien)
         {
-            this.giangVienDAO.Update(maGiangVien, giangVien);
+            try
+            {
+                this.giangVienDAO.Update(maGiangVien, giangVien);
+                this.OnSuccess("Cập nhật giảng viên thành công");
+            }
+            catch
+            {
+                this.OnError("Lỗi hệ thống");
+            }
         }
 
-        public bool CheckLopExists(string maGiangVien)
+        public bool CheckGiangVienExists(string maGiangVien)
         {
             return this.giangVienDAO.CheckGiangVienExistsByPrimaryKey(maGiangVien);
         }
@@ -50,7 +71,15 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
 
         public void Delete(string maGiangVien)
         {
-            this.giangVienDAO.Delete(maGiangVien);
+            try
+            {
+                this.giangVienDAO.Delete(maGiangVien);
+                this.OnSuccess("Xóa giảng viên thành công");
+            }
+            catch
+            {
+                this.OnError("Không thể xóa giảng viên, do có dữ liệu liên quan");
+            }
         }
     }
 }
