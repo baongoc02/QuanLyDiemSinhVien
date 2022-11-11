@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVienNhom5.GUI
 {
-    public partial class HomePage : Form
+    public partial class HomePageAdmin : Form
     {
-        public HomePage()
+        public HomePageAdmin()
         {
             InitializeComponent();
-        }
-
-        private void Btn_SinhVien_Click(object sender, EventArgs e)
-        {
-            xemSinhVien1.Visible = true;
-            xemSinhVien1.BringToFront();
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -34,18 +28,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             xemDanhSachKhoa1.Visible = false;
             xemNamHoc1.Visible = false;
             xemHocKy1.Visible = false;
-        }
-
-        private void Btn_GiangVien_Click(object sender, EventArgs e)
-        {
-            xemGiangVien1.Visible = true;
-            xemGiangVien1.BringToFront();
-        }
-
-        private void Btn_MonHoc_Click(object sender, EventArgs e)
-        {
-            xemMonHoc1.Visible = true;
-            xemMonHoc1.BringToFront();
         }
 
         private void Btn_LopHoc_Click(object sender, EventArgs e)
@@ -72,13 +54,31 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             xemDanhSachKhoa1.BringToFront();
         }
 
-        private void Btn_DSNamHoc_Click(object sender, EventArgs e)
+        private void Btn_DSGiangVien_Click(object sender, EventArgs e)
+        {
+            xemGiangVien1.Visible = true;
+            xemGiangVien1.BringToFront();
+        }
+
+        private void Btn_DSMonHoc_Click(object sender, EventArgs e)
+        {
+            xemMonHoc1.Visible = true;
+            xemMonHoc1.BringToFront();
+        }
+
+        private void Btn_DSSinhVien_Click(object sender, EventArgs e)
+        {
+            xemSinhVien1.Visible = true;
+            xemSinhVien1.BringToFront();
+        }
+
+        private void Btn_XemNamHoc_Click(object sender, EventArgs e)
         {
             xemNamHoc1.Visible = true;
             xemNamHoc1.BringToFront();
         }
 
-        private void Btn_DSHocKy_Click(object sender, EventArgs e)
+        private void Btn_XemHocKy_Click(object sender, EventArgs e)
         {
             xemHocKy1.Visible = true;
             xemHocKy1.BringToFront();
