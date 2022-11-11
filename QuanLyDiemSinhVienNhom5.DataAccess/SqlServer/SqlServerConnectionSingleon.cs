@@ -44,7 +44,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.SqlServer
             try
             {
                 var connString = BuildDefaultConnectionString(username, password);
-                using (var connection = new SqlConnection())
+                using (var connection = new SqlConnection(connString))
                 {
                     var query = "SELECT 1";
                     var command = new SqlCommand(query, connection);
