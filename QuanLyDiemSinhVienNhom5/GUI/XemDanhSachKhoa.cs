@@ -29,6 +29,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void LoadDSKhoa(IEnumerable<KhoaViewModel> khoaViewModels)
         {
+            this.InfoKhoa_gridview.SelectionChanged -= this.InfoKhoa_gridview_SelectionChanged;
             InfoKhoa_gridview.Columns.Clear();
             InfoKhoa_gridview.DataSource = khoaViewModels;
 
@@ -38,6 +39,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InfoKhoa_gridview.Columns[nameof(KhoaViewModel.NgayThanhLap)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             InfoKhoa_gridview.AllowUserToResizeColumns = true;
+            //this.InfoKhoa_gridview.SelectionChanged += this.InfoKhoa_gridview_SelectionChanged;
         }
 
         private void LoadGridView()
@@ -50,7 +52,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemDanhSachKhoa_Load(object sender, EventArgs e)
         {
-
             LoadGridView();
         }
 
@@ -59,6 +60,20 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             KhoaService khoaService = new KhoaService();
             List<KhoaViewModel> khoaViewModels = khoaService.Search(txtMaKhoa.Text, txtTenKhoa.Text, txtHeDaoTao.Text);
             LoadDSKhoa(khoaViewModels);
+        }
+
+        private void InfoKhoa_gridview_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void InfoKhoa_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (InfoKhoa_gridview.SelectedRows.Count == 1)
+            {
+                var data = (InfoKhoa_gridview.SelectedRows[0].DataBoundItem as KhoaViewModel);
+                MessageBox.Show(data.MaKhoa);
+            }
         }
     }
 }

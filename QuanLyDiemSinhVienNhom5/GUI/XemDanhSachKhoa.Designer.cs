@@ -151,8 +151,10 @@
             this.InfoKhoa_gridview.Name = "InfoKhoa_gridview";
             this.InfoKhoa_gridview.RowHeadersWidth = 51;
             this.InfoKhoa_gridview.RowTemplate.Height = 24;
+            this.InfoKhoa_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.InfoKhoa_gridview.Size = new System.Drawing.Size(1029, 482);
             this.InfoKhoa_gridview.TabIndex = 29;
+            this.InfoKhoa_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InfoKhoa_gridview_CellClick);
             // 
             // label5
             // 

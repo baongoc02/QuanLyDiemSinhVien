@@ -14,6 +14,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class XemKetQuaHocTapPageAdmin : UserControl
     {
+        private readonly KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
+        private readonly LopService lopService = new LopService();
         public XemKetQuaHocTapPageAdmin()
         {
             InitializeComponent();
@@ -41,7 +43,17 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void XemKetQuaHocTapPageAdmin_Load(object sender, EventArgs e)
         {
+            cbMaLop.DataSource = lopService.ListAll();
+            cbMaLop.DisplayMember = nameof(LopViewModel.MaLop);
+            cbMaLop.ValueMember = nameof(LopViewModel.MaLop);
+
             LoadGridView();
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            List<KetQuaHocTapViewModel> ketQuaHocTapViewModels = ketQuaHocTapService.Search(txtMSSV.Text, cbMaLop.SelectedValue.ToString());
+            LoadDSKetQuaHocTap(ketQuaHocTapViewModels);
         }
     }
 }

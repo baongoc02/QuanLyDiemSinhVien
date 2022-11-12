@@ -33,8 +33,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMonHoc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,20 +62,19 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.cbMaLop, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtMonHoc, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMSSV, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 137);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 89);
             this.tableLayoutPanel1.TabIndex = 42;
             // 
             // cbMaLop
@@ -85,7 +82,7 @@
             this.cbMaLop.BackColor = System.Drawing.Color.Honeydew;
             this.cbMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
             this.cbMaLop.FormattingEnabled = true;
-            this.cbMaLop.Location = new System.Drawing.Point(233, 49);
+            this.cbMaLop.Location = new System.Drawing.Point(233, 47);
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(612, 39);
             this.cbMaLop.TabIndex = 48;
@@ -97,40 +94,19 @@
             this.label2.ForeColor = System.Drawing.Color.Indigo;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 46);
+            this.label2.Size = new System.Drawing.Size(224, 44);
             this.label2.TabIndex = 15;
             this.label2.Text = "Mã số sinh viên:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtMonHoc
-            // 
-            this.txtMonHoc.BackColor = System.Drawing.Color.Honeydew;
-            this.txtMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonHoc.Location = new System.Drawing.Point(233, 95);
-            this.txtMonHoc.Name = "txtMonHoc";
-            this.txtMonHoc.Size = new System.Drawing.Size(612, 38);
-            this.txtMonHoc.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(3, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 45);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Môn học:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(3, 46);
+            this.label3.Location = new System.Drawing.Point(3, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(224, 46);
+            this.label3.Size = new System.Drawing.Size(224, 45);
             this.label3.TabIndex = 16;
             this.label3.Text = "Mã lớp:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,6 +171,7 @@
             this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
             this.Btn_Tim.TabIndex = 44;
             this.Btn_Tim.UseVisualStyleBackColor = false;
+            this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
             // 
             // Btn_Them
             // 
@@ -267,8 +244,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMonHoc;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Button Btn_Them;

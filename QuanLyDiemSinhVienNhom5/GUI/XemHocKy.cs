@@ -12,8 +12,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVienNhom5.GUI
 {
+
     public partial class XemHocKy : UserControl
     {
+        private readonly HocKyService hocKyService = new HocKyService();
+        private readonly NamHocService namHocService = new NamHocService();
         public XemHocKy()
         {
             InitializeComponent();
@@ -40,17 +43,26 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         public void LoadGridView()
         {
-            HocKyService hocKyService = new HocKyService();
             List<HocKyViewModel> hocKyViewModels = new List<HocKyViewModel>();
             hocKyViewModels = hocKyService.ListAll();
-            LoadDSHocKy(hocKyViewModels);   
+            LoadDSHocKy(hocKyViewModels);
         }
 
 
         [DesignOnly(true)]
         private void XemHocKy_Load(object sender, EventArgs e)
         {
-                LoadGridView();
+            cbNamHoc.DataSource = namHocService.ListAll();
+            cbNamHoc.DisplayMember = nameof(NamHocViewModel.TenNamHoc);
+            cbNamHoc.ValueMember = nameof(NamHocViewModel.MaNamHoc);
+
+            LoadGridView();
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            List<HocKyViewModel> hocKyViewModels = hocKyService.Search(txtHocKy.Text, "", cbNamHoc.SelectedValue.ToString());
+            LoadDSHocKy(hocKyViewModels);
         }
     }
 }
