@@ -10,7 +10,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 {
-    public class LopDAO
+    public class LopDAO : BaseDAO
     {
         public LopDAO()
         {
@@ -34,7 +34,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@ngayKetThuc", lop.NgayKetThuc));
                 command.Parameters.Add(new SqlParameter("@gioiHan", lop.GioiHan));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
 
@@ -55,7 +62,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@ngayKetThuc", lop.NgayKetThuc));
                 command.Parameters.Add(new SqlParameter("@gioiHan", lop.GioiHan));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
 
@@ -156,7 +170,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 command.Parameters.Add(new SqlParameter("@maLop", maLop));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
     }
