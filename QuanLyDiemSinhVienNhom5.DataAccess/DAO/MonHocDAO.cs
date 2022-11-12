@@ -60,12 +60,12 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new MonHoc()
                         {
-                          MaMonHoc = Convert.ToString(u["MaMonHoc"]),
-                          TenMonHoc = Convert.ToString(u["TenMonHoc"]),
-                          MoTa = Convert.ToString(u["MoTa"]),
-                          STC = Convert.ToInt32(u["STC"]),
-                          LoaiHocPhan = Convert.ToString(u["LoaiHocPhan"]),
-                          MaKhoa = Convert.ToString(u["MaKhoa"])
+                          MaMonHoc = Convert.ToString(u["MonHocMaMonHoc"]),
+                          TenMonHoc = Convert.ToString(u["MonHocTenMonHoc"]),
+                          MoTa = Convert.ToString(u["MonHocMoTa"]),
+                          STC = Convert.ToInt32(u["MonHocSTC"]),
+                          LoaiHocPhan = Convert.ToString(u["MonHocLoaiHocPhan"]),
+                          MaKhoa = Convert.ToString(u["MonHocMaKhoa"])
                         });
 
             return result.ToList();

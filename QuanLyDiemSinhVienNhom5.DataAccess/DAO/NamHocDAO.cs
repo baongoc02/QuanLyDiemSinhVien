@@ -52,8 +52,8 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new NamHoc()
                         {
-                          MaNamHoc = Convert.ToString(u["MaNamHoc"]),
-                          TenNamHoc = Convert.ToString(u["TenNamHoc"])
+                          MaNamHoc = Convert.ToString(u["NamHocMaNamHoc"]),
+                          TenNamHoc = Convert.ToString(u["NamHocTenNamHoc"])
                         });
 
             return result.ToList();
