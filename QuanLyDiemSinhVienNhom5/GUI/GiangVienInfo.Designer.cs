@@ -352,9 +352,9 @@
             this.label14.ForeColor = System.Drawing.Color.Indigo;
             this.label14.Location = new System.Drawing.Point(327, 648);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 24);
+            this.label14.Size = new System.Drawing.Size(70, 24);
             this.label14.TabIndex = 46;
-            this.label14.Text = "Sửa";
+            this.label14.Text = "Xác nhận";
             // 
             // label15
             // 

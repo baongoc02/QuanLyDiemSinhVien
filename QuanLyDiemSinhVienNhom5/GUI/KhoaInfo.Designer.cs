@@ -52,7 +52,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(447, 621);
+            this.label12.Location = new System.Drawing.Point(452, 621);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 24);
             this.label12.TabIndex = 43;
@@ -65,16 +65,16 @@
             this.label10.ForeColor = System.Drawing.Color.Indigo;
             this.label10.Location = new System.Drawing.Point(329, 621);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 24);
+            this.label10.Size = new System.Drawing.Size(70, 24);
             this.label10.TabIndex = 42;
-            this.label10.Text = "Sửa";
+            this.label10.Text = "Xác nhận";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(205, 621);
+            this.label13.Location = new System.Drawing.Point(202, 621);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 24);
             this.label13.TabIndex = 41;
@@ -232,7 +232,7 @@
             this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Xoa.FlatAppearance.BorderSize = 0;
             this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Xoa.Location = new System.Drawing.Point(150, 611);
+            this.Btn_Xoa.Location = new System.Drawing.Point(147, 611);
             this.Btn_Xoa.Name = "Btn_Xoa";
             this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
             this.Btn_Xoa.TabIndex = 39;
@@ -245,7 +245,7 @@
             this.Btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Huy.FlatAppearance.BorderSize = 0;
             this.Btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Huy.Location = new System.Drawing.Point(396, 611);
+            this.Btn_Huy.Location = new System.Drawing.Point(401, 611);
             this.Btn_Huy.Name = "Btn_Huy";
             this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
             this.Btn_Huy.TabIndex = 38;

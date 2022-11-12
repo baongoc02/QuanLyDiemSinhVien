@@ -32,6 +32,8 @@
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Huy = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbHocKy = new System.Windows.Forms.ComboBox();
+            this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.txtGiangVien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbMaLop = new System.Windows.Forms.ComboBox();
-            this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Xoa.FlatAppearance.BorderSize = 0;
             this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Xoa.Location = new System.Drawing.Point(152, 653);
+            this.Btn_Xoa.Location = new System.Drawing.Point(149, 653);
             this.Btn_Xoa.Name = "Btn_Xoa";
             this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
             this.Btn_Xoa.TabIndex = 14;
@@ -86,7 +86,7 @@
             this.Btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_Huy.FlatAppearance.BorderSize = 0;
             this.Btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Huy.Location = new System.Drawing.Point(398, 653);
+            this.Btn_Huy.Location = new System.Drawing.Point(403, 653);
             this.Btn_Huy.Name = "Btn_Huy";
             this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
             this.Btn_Huy.TabIndex = 13;
@@ -134,6 +134,26 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(505, 475);
             this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // cbHocKy
+            // 
+            this.cbHocKy.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbHocKy.FormattingEnabled = true;
+            this.cbHocKy.Location = new System.Drawing.Point(210, 74);
+            this.cbHocKy.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Size = new System.Drawing.Size(292, 29);
+            this.cbHocKy.TabIndex = 45;
+            // 
+            // cbMaLop
+            // 
+            this.cbMaLop.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbMaLop.FormattingEnabled = true;
+            this.cbMaLop.Location = new System.Drawing.Point(210, 15);
+            this.cbMaLop.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.cbMaLop.Name = "cbMaLop";
+            this.cbMaLop.Size = new System.Drawing.Size(292, 29);
+            this.cbMaLop.TabIndex = 44;
             // 
             // txtGiangVien
             // 
@@ -301,7 +321,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(449, 663);
+            this.label12.Location = new System.Drawing.Point(454, 663);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 24);
             this.label12.TabIndex = 29;
@@ -314,40 +334,20 @@
             this.label11.ForeColor = System.Drawing.Color.Indigo;
             this.label11.Location = new System.Drawing.Point(330, 663);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 24);
+            this.label11.Size = new System.Drawing.Size(70, 24);
             this.label11.TabIndex = 28;
-            this.label11.Text = "Sửa";
+            this.label11.Text = "Xác nhận";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Indigo;
-            this.label10.Location = new System.Drawing.Point(207, 663);
+            this.label10.Location = new System.Drawing.Point(204, 663);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 24);
             this.label10.TabIndex = 27;
             this.label10.Text = "Xóa";
-            // 
-            // cbMaLop
-            // 
-            this.cbMaLop.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.cbMaLop.FormattingEnabled = true;
-            this.cbMaLop.Location = new System.Drawing.Point(210, 15);
-            this.cbMaLop.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.cbMaLop.Name = "cbMaLop";
-            this.cbMaLop.Size = new System.Drawing.Size(292, 29);
-            this.cbMaLop.TabIndex = 44;
-            // 
-            // cbHocKy
-            // 
-            this.cbHocKy.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.cbHocKy.FormattingEnabled = true;
-            this.cbHocKy.Location = new System.Drawing.Point(210, 74);
-            this.cbHocKy.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.cbHocKy.Name = "cbHocKy";
-            this.cbHocKy.Size = new System.Drawing.Size(292, 29);
-            this.cbHocKy.TabIndex = 45;
             // 
             // LopHocInfo
             // 
