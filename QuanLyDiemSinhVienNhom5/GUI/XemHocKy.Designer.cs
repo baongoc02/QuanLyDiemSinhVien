@@ -34,13 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.HocKy_gridview = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.Btn_Them = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.Btn_Them = new System.Windows.Forms.Button();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HocKy_gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,20 +116,22 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Danh sách học kỳ";
             // 
-            // dataGridView1
+            // HocKy_gridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.HocKy_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
-            this.dataGridView1.TabIndex = 29;
+            this.HocKy_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.HocKy_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HocKy_gridview.CausesValidation = false;
+            this.HocKy_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HocKy_gridview.ColumnHeadersVisible = false;
+            this.HocKy_gridview.Location = new System.Drawing.Point(54, 243);
+            this.HocKy_gridview.Name = "HocKy_gridview";
+            this.HocKy_gridview.RowHeadersWidth = 51;
+            this.HocKy_gridview.RowTemplate.Height = 24;
+            this.HocKy_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.HocKy_gridview.TabIndex = 29;
             // 
             // label6
             // 
@@ -141,6 +143,17 @@
             this.label6.Size = new System.Drawing.Size(46, 24);
             this.label6.TabIndex = 53;
             this.label6.Text = "Thêm";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Indigo;
+            this.label4.Location = new System.Drawing.Point(993, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 24);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Tìm";
             // 
             // Btn_Them
             // 
@@ -156,17 +169,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 52;
             this.Btn_Them.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(993, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 24);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Tìm";
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // Btn_Tim
             // 
@@ -193,12 +196,13 @@
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.HocKy_gridview);
             this.Name = "XemHocKy";
             this.Size = new System.Drawing.Size(1130, 750);
+            this.Load += new System.EventHandler(this.XemHocKy_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HocKy_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +212,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView HocKy_gridview;
         private System.Windows.Forms.ComboBox cbNamHoc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;

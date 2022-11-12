@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaGiangVien = new System.Windows.Forms.TextBox();
             this.ttxHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.InfoGiangVien_gridview = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoGiangVien_gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -64,6 +65,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 137);
             this.tableLayoutPanel1.TabIndex = 32;
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.BackColor = System.Drawing.Color.Honeydew;
+            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(233, 95);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(612, 39);
+            this.cbKhoa.TabIndex = 51;
             // 
             // label2
             // 
@@ -130,20 +141,30 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Danh sách giảng viên";
             // 
-            // dataGridView1
+            // InfoGiangVien_gridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.InfoGiangVien_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
-            this.dataGridView1.TabIndex = 29;
+            this.InfoGiangVien_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.InfoGiangVien_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InfoGiangVien_gridview.CausesValidation = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InfoGiangVien_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.InfoGiangVien_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InfoGiangVien_gridview.Location = new System.Drawing.Point(54, 243);
+            this.InfoGiangVien_gridview.Name = "InfoGiangVien_gridview";
+            this.InfoGiangVien_gridview.RowHeadersVisible = false;
+            this.InfoGiangVien_gridview.RowHeadersWidth = 51;
+            this.InfoGiangVien_gridview.RowTemplate.Height = 24;
+            this.InfoGiangVien_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.InfoGiangVien_gridview.TabIndex = 29;
             // 
             // label6
             // 
@@ -196,16 +217,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 44;
             this.Btn_Them.UseVisualStyleBackColor = false;
-            // 
-            // cbKhoa
-            // 
-            this.cbKhoa.BackColor = System.Drawing.Color.Honeydew;
-            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(233, 95);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(612, 39);
-            this.cbKhoa.TabIndex = 51;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // XemGiangVien
             // 
@@ -218,12 +230,13 @@
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.InfoGiangVien_gridview);
             this.Name = "XemGiangVien";
             this.Size = new System.Drawing.Size(1130, 750);
+            this.Load += new System.EventHandler(this.XemGiangVien_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoGiangVien_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +250,7 @@
         private System.Windows.Forms.TextBox txtMaGiangVien;
         private System.Windows.Forms.TextBox ttxHoTen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView InfoGiangVien_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label5;

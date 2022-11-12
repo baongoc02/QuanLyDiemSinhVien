@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaMon = new System.Windows.Forms.TextBox();
             this.txtTenMon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MonHoc_gridview = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonHoc_gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -64,6 +64,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 137);
             this.tableLayoutPanel1.TabIndex = 37;
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.BackColor = System.Drawing.Color.Honeydew;
+            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(233, 95);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(612, 39);
+            this.cbKhoa.TabIndex = 46;
             // 
             // label2
             // 
@@ -130,20 +140,20 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Danh sách môn học";
             // 
-            // dataGridView1
+            // MonHoc_gridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MonHoc_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
-            this.dataGridView1.TabIndex = 34;
+            this.MonHoc_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.MonHoc_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MonHoc_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MonHoc_gridview.Location = new System.Drawing.Point(54, 243);
+            this.MonHoc_gridview.Name = "MonHoc_gridview";
+            this.MonHoc_gridview.RowHeadersWidth = 51;
+            this.MonHoc_gridview.RowTemplate.Height = 24;
+            this.MonHoc_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.MonHoc_gridview.TabIndex = 34;
             // 
             // label6
             // 
@@ -196,16 +206,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 44;
             this.Btn_Them.UseVisualStyleBackColor = false;
-            // 
-            // cbKhoa
-            // 
-            this.cbKhoa.BackColor = System.Drawing.Color.Honeydew;
-            this.cbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(233, 95);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(612, 39);
-            this.cbKhoa.TabIndex = 46;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // XemMonHoc
             // 
@@ -217,12 +218,13 @@
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.MonHoc_gridview);
             this.Name = "XemMonHoc";
             this.Size = new System.Drawing.Size(1130, 750);
+            this.Load += new System.EventHandler(this.XemMonHoc_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MonHoc_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,7 +238,7 @@
         private System.Windows.Forms.TextBox txtMaMon;
         private System.Windows.Forms.TextBox txtTenMon;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MonHoc_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label5;

@@ -41,7 +41,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtMaGiangVien = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.txtHocHam = new System.Windows.Forms.TextBox();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.cbKhoa = new System.Windows.Forms.ComboBox();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -77,7 +77,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtMaGiangVien, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtHoTen, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtNgaySinh, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtCMND, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtQueQuan, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtGioiTinh, 1, 4);
@@ -85,6 +84,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtHocHam, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.txtSoDienThoai, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cbKhoa, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.dtNgaySinh, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(48, 106);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -171,7 +171,7 @@
             this.txtHocVi.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtHocVi.Name = "txtHocVi";
             this.txtHocVi.Size = new System.Drawing.Size(311, 28);
-            this.txtHocVi.TabIndex = 21;
+            this.txtHocVi.TabIndex = 9;
             // 
             // label5
             // 
@@ -229,7 +229,7 @@
             this.txtMaGiangVien.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtMaGiangVien.Name = "txtMaGiangVien";
             this.txtMaGiangVien.Size = new System.Drawing.Size(311, 28);
-            this.txtMaGiangVien.TabIndex = 14;
+            this.txtMaGiangVien.TabIndex = 1;
             // 
             // txtHoTen
             // 
@@ -239,17 +239,7 @@
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(311, 28);
-            this.txtHoTen.TabIndex = 13;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNgaySinh.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Location = new System.Drawing.Point(191, 104);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(311, 28);
-            this.txtNgaySinh.TabIndex = 15;
+            this.txtHoTen.TabIndex = 2;
             // 
             // txtCMND
             // 
@@ -259,7 +249,7 @@
             this.txtCMND.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(311, 28);
-            this.txtCMND.TabIndex = 22;
+            this.txtCMND.TabIndex = 7;
             // 
             // txtQueQuan
             // 
@@ -269,7 +259,7 @@
             this.txtQueQuan.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(311, 28);
-            this.txtQueQuan.TabIndex = 23;
+            this.txtQueQuan.TabIndex = 6;
             // 
             // txtGioiTinh
             // 
@@ -279,7 +269,7 @@
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(311, 28);
-            this.txtGioiTinh.TabIndex = 24;
+            this.txtGioiTinh.TabIndex = 5;
             // 
             // label9
             // 
@@ -301,7 +291,7 @@
             this.txtHocHam.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtHocHam.Name = "txtHocHam";
             this.txtHocHam.Size = new System.Drawing.Size(311, 28);
-            this.txtHocHam.TabIndex = 26;
+            this.txtHocHam.TabIndex = 8;
             // 
             // txtSoDienThoai
             // 
@@ -311,7 +301,7 @@
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(311, 28);
-            this.txtSoDienThoai.TabIndex = 20;
+            this.txtSoDienThoai.TabIndex = 4;
             // 
             // cbKhoa
             // 
@@ -321,7 +311,16 @@
             this.cbKhoa.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(311, 29);
-            this.cbKhoa.TabIndex = 48;
+            this.cbKhoa.TabIndex = 10;
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgaySinh.Location = new System.Drawing.Point(191, 104);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(311, 28);
+            this.dtNgaySinh.TabIndex = 3;
             // 
             // label1
             // 
@@ -341,9 +340,9 @@
             this.label12.ForeColor = System.Drawing.Color.Indigo;
             this.label12.Location = new System.Drawing.Point(452, 648);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.Size = new System.Drawing.Size(43, 24);
             this.label12.TabIndex = 47;
-            this.label12.Text = "Hủy";
+            this.label12.Text = "Đóng";
             // 
             // label14
             // 
@@ -376,8 +375,9 @@
             this.Btn_Sua.Location = new System.Drawing.Point(274, 638);
             this.Btn_Sua.Name = "Btn_Sua";
             this.Btn_Sua.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Sua.TabIndex = 44;
+            this.Btn_Sua.TabIndex = 11;
             this.Btn_Sua.UseVisualStyleBackColor = true;
+            this.Btn_Sua.Click += new System.EventHandler(this.Btn_Sua_Click);
             // 
             // Btn_Xoa
             // 
@@ -390,6 +390,7 @@
             this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
             this.Btn_Xoa.TabIndex = 43;
             this.Btn_Xoa.UseVisualStyleBackColor = true;
+            this.Btn_Xoa.Click += new System.EventHandler(this.Btn_Xoa_Click);
             // 
             // Btn_Huy
             // 
@@ -403,6 +404,7 @@
             this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
             this.Btn_Huy.TabIndex = 42;
             this.Btn_Huy.UseVisualStyleBackColor = true;
+            this.Btn_Huy.Click += new System.EventHandler(this.Btn_Huy_Click);
             // 
             // GiangVienInfo
             // 
@@ -420,6 +422,7 @@
             this.Controls.Add(this.label1);
             this.Name = "GiangVienInfo";
             this.Text = "GiangVienInfo";
+            this.Load += new System.EventHandler(this.GiangVienInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -440,7 +443,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaGiangVien;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.TextBox txtHocVi;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtQueQuan;
@@ -456,5 +458,6 @@
         private System.Windows.Forms.Button Btn_Xoa;
         private System.Windows.Forms.Button Btn_Huy;
         private System.Windows.Forms.ComboBox cbKhoa;
+        private System.Windows.Forms.DateTimePicker dtNgaySinh;
     }
 }
