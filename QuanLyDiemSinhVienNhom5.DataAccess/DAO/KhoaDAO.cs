@@ -56,10 +56,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new Khoa()
                         {
-                          MaKhoa = Convert.ToString(u["MaKhoa"]),
-                          TenKhoa = Convert.ToString(u["TenKhoa"]),
-                          HeDaoTao = Convert.ToString(u["HeDaoTao"]),
-                          NgayThanhLap = Convert.ToDateTime(u["NgayThanhLap"])
+                          MaKhoa = Convert.ToString(u["KhoaMaKhoa"]),
+                          TenKhoa = Convert.ToString(u["KhoaTenKhoa"]),
+                          HeDaoTao = Convert.ToString(u["KhoaHeDaoTao"]),
+                          NgayThanhLap = Convert.ToDateTime(u["KhoaNgayThanhLap"])
                         });
 
             return result.ToList();

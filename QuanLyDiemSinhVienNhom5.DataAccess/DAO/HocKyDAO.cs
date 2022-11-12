@@ -58,11 +58,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new HocKy()
                         {
-                          MaHocKy = Convert.ToString(u["MaHocKy"]),
-                          TenHocKy = Convert.ToString(u["TenHocKy"]),
-                          NgayBatDau = Convert.ToDateTime(u["NgayBatDau"]),
-                          NgayKetThuc = Convert.ToDateTime(u["NgayKetThuc"]),
-                          MaNamHoc = Convert.ToString(u["MaNamHoc"])
+                          MaHocKy = Convert.ToString(u["HocKyMaHocKy"]),
+                          TenHocKy = Convert.ToString(u["HocKyTenHocKy"]),
+                          NgayBatDau = Convert.ToDateTime(u["HocKyNgayBatDau"]),
+                          NgayKetThuc = Convert.ToDateTime(u["HocKyNgayKetThuc"]),
+                          MaNamHoc = Convert.ToString(u["HocKyMaNamHoc"])
                         });
 
             return result.ToList();

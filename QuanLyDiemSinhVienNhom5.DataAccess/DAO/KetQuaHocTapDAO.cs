@@ -56,10 +56,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new KetQuaHocTap()
                         {
-                          MaSinhVien = Convert.ToString(u["MaSinhVien"]),
-                          MaLop = Convert.ToString(u["MaLop"]),
-                          DiemGiuaKy = (float)Convert.ToDouble(u["DiemGiuaKy"]),
-                          DiemCuoiKy = (float)Convert.ToDouble(u["DiemCuoiKy"])
+                          MaSinhVien = Convert.ToString(u["KetQuaHocTapMaSinhVien"]),
+                          MaLop = Convert.ToString(u["KetQuaHocTapMaLop"]),
+                          DiemGiuaKy = (float)Convert.ToDouble(u["KetQuaHocTapDiemGiuaKy"]),
+                          DiemCuoiKy = (float)Convert.ToDouble(u["KetQuaHocTapDiemCuoiKy"])
                         });
 
             return result.ToList();

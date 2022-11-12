@@ -64,14 +64,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new Lop()
                         {
-                          MaLop = Convert.ToString(u["MaLop"]),
-                          MaHocKy = Convert.ToString(u["MaHocKy"]),
-                          MaMonHoc = Convert.ToString(u["MaMonHoc"]),
-                          MaGiangVien = Convert.ToString(u["MaGiangVien"]),
-                          LichHoc = Convert.ToString(u["LichHoc"]),
-                          NgayBatDau = Convert.ToDateTime(u["NgayBatDau"]),
-                          NgayKetThuc = Convert.ToDateTime(u["NgayKetThuc"]),
-                          GioiHan = Convert.ToInt32(u["GioiHan"])
+                          MaLop = Convert.ToString(u["LopMaLop"]),
+                          MaHocKy = Convert.ToString(u["LopMaHocKy"]),
+                          MaMonHoc = Convert.ToString(u["LopMaMonHoc"]),
+                          MaGiangVien = Convert.ToString(u["LopMaGiangVien"]),
+                          LichHoc = Convert.ToString(u["LopLichHoc"]),
+                          NgayBatDau = Convert.ToDateTime(u["LopNgayBatDau"]),
+                          NgayKetThuc = Convert.ToDateTime(u["LopNgayKetThuc"]),
+                          GioiHan = Convert.ToInt32(u["LopGioiHan"])
                         });
 
             return result.ToList();

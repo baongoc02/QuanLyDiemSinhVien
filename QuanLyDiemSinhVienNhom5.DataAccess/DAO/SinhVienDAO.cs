@@ -64,14 +64,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var result = dTable.AsEnumerable()
                         .Select(u => new SinhVien()
                         {
-                          MaSinhVien = Convert.ToString(u["MaSinhVien"]),
-                          HoTen = Convert.ToString(u["HoTen"]),
-                          NgaySinh = Convert.ToDateTime(u["NgaySinh"]),
-                          GioiTinh = Convert.ToString(u["GioiTinh"]),
-                          CMND = Convert.ToString(u["CMND"]),
-                          SDT = Convert.ToString(u["SDT"]),
-                          QueQuan = Convert.ToString(u["QueQuan"]),
-                          MaKhoa = Convert.ToString(u["MaKhoa"])
+                          MaSinhVien = Convert.ToString(u["SinhVienMaSinhVien"]),
+                          HoTen = Convert.ToString(u["SinhVienHoTen"]),
+                          NgaySinh = Convert.ToDateTime(u["SinhVienNgaySinh"]),
+                          GioiTinh = Convert.ToString(u["SinhVienGioiTinh"]),
+                          CMND = Convert.ToString(u["SinhVienCMND"]),
+                          SDT = Convert.ToString(u["SinhVienSDT"]),
+                          QueQuan = Convert.ToString(u["SinhVienQueQuan"]),
+                          MaKhoa = Convert.ToString(u["SinhVienMaKhoa"])
                         });
 
             return result.ToList();
