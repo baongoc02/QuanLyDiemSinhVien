@@ -138,15 +138,15 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 List<string> where = new List<string>();
 
-                where.Add("[MaGiangVien] LIKE CONCAT('%', @maGiangVien, '%')}");
-                where.Add("[HoTen] LIKE CONCAT('%', @hoTen, '%')}");
-                where.Add("[GioiTinh] LIKE CONCAT('%', @gioiTinh, '%')}");
-                where.Add("[CMND] LIKE CONCAT('%', @cMND, '%')}");
-                where.Add("[SDT] LIKE CONCAT('%', @sDT, '%')}");
-                where.Add("[QueQuan] LIKE CONCAT('%', @queQuan, '%')}");
-                where.Add("[HocHam] LIKE CONCAT('%', @hocHam, '%')}");
-                where.Add("[HocVi] LIKE CONCAT('%', @hocVi, '%')}");
-                where.Add("[MaKhoa] = @maKhoa");
+                where.Add("[GiangVienMaGiangVien] LIKE CONCAT('%', @maGiangVien, '%')");
+                where.Add("[GiangVienHoTen] LIKE CONCAT('%', @hoTen, '%')");
+                where.Add("[GiangVienGioiTinh] LIKE CONCAT('%', @gioiTinh, '%')");
+                where.Add("[GiangVienCMND] LIKE CONCAT('%', @cMND, '%')");
+                where.Add("[GiangVienSDT] LIKE CONCAT('%', @sDT, '%')");
+                where.Add("[GiangVienQueQuan] LIKE CONCAT('%', @queQuan, '%')");
+                where.Add("[GiangVienHocHam] LIKE CONCAT('%', @hocHam, '%')");
+                where.Add("[GiangVienHocVi] LIKE CONCAT('%', @hocVi, '%')");
+                where.Add("[GiangVienMaKhoa] = @maKhoa");
 
                 command.Parameters.Add(new SqlParameter("@maGiangVien", maGiangVien));
                 command.Parameters.Add(new SqlParameter("@hoTen", hoTen));

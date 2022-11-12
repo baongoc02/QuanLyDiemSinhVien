@@ -132,13 +132,13 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 List<string> where = new List<string>();
 
-                where.Add("[MaSinhVien] LIKE CONCAT('%', @maSinhVien, '%')}");
-                where.Add("[HoTen] LIKE CONCAT('%', @hoTen, '%')}");
-                where.Add("[GioiTinh] LIKE CONCAT('%', @gioiTinh, '%')}");
-                where.Add("[CMND] LIKE CONCAT('%', @cMND, '%')}");
-                where.Add("[SDT] LIKE CONCAT('%', @sDT, '%')}");
-                where.Add("[QueQuan] LIKE CONCAT('%', @queQuan, '%')}");
-                where.Add("[MaKhoa] = @maKhoa");
+                where.Add("[SinhVienMaSinhVien] LIKE CONCAT('%', @maSinhVien, '%')");
+                where.Add("[SinhVienHoTen] LIKE CONCAT('%', @hoTen, '%')");
+                where.Add("[SinhVienGioiTinh] LIKE CONCAT('%', @gioiTinh, '%')");
+                where.Add("[SinhVienCMND] LIKE CONCAT('%', @cMND, '%')");
+                where.Add("[SinhVienSDT] LIKE CONCAT('%', @sDT, '%')");
+                where.Add("[SinhVienQueQuan] LIKE CONCAT('%', @queQuan, '%')");
+                where.Add("[SinhVienMaKhoa] = @maKhoa");
 
                 command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
                 command.Parameters.Add(new SqlParameter("@hoTen", hoTen));

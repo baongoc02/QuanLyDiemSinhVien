@@ -121,8 +121,8 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 List<string> where = new List<string>();
 
-                where.Add("[MaSinhVien] = @maSinhVien");
-                where.Add("[MaLop] = @maLop");
+                where.Add("[KetQuaHocTapMaSinhVien] = @maSinhVien");
+                where.Add("[KetQuaHocTapMaLop] = @maLop");
 
                 command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
                 command.Parameters.Add(new SqlParameter("@maLop", maLop));

@@ -132,11 +132,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 List<string> where = new List<string>();
 
-                where.Add("[MaLop] LIKE CONCAT('%', @maLop, '%')}");
-                where.Add("[MaHocKy] = @maHocKy");
-                where.Add("[MaMonHoc] = @maMonHoc");
-                where.Add("[MaGiangVien] = @maGiangVien");
-                where.Add("[LichHoc] LIKE CONCAT('%', @lichHoc, '%')}");
+                where.Add("[LopMaLop] LIKE CONCAT('%', @maLop, '%')");
+                where.Add("[LopMaHocKy] = @maHocKy");
+                where.Add("[LopMaMonHoc] = @maMonHoc");
+                where.Add("[LopMaGiangVien] = @maGiangVien");
+                where.Add("[LopLichHoc] LIKE CONCAT('%', @lichHoc, '%')");
 
                 command.Parameters.Add(new SqlParameter("@maLop", maLop));
                 command.Parameters.Add(new SqlParameter("@maHocKy", maHocKy));
