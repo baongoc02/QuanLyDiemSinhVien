@@ -24,14 +24,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             GiangVienInfo giangVienInfo = new GiangVienInfo();
             giangVienInfo.ShowDialog();
 
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            LoadGridView();
         }
         private void LoadDSGiangVien(IEnumerable<GiangVienViewModel> giangVienViewModels)
         {
@@ -56,18 +49,12 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             LoadDSGiangVien(giangVienViewModels);
         }
 
-
+        [DesignOnly(true)]
         private void XemGiangVien_Load(object sender, EventArgs e)
         {
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                throw;
-                MessageBox.Show(ex.Message);
-            }
+
+            LoadGridView();
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class GiangVienViewModel
     {
-        [Browsable(false)]
+        [DisplayName("MaGiangVien")]
         public string MaGiangVien { get; set; }
         [DisplayName("H? và tên")]
         public string FullName => $"{this.HocHam}. {this.HocVi}. {this.HoTen}";

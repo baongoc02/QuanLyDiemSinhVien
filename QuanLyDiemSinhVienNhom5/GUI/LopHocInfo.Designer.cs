@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_Sua = new System.Windows.Forms.Button();
+            this.Btn_XacNhan = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
-            this.Btn_Huy = new System.Windows.Forms.Button();
+            this.Btn_Dong = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbHocKy = new System.Windows.Forms.ComboBox();
-            this.cbMaLop = new System.Windows.Forms.ComboBox();
-            this.txtGiangVien = new System.Windows.Forms.TextBox();
+            this.cbMonHoc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,29 +42,31 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtMonHoc = new System.Windows.Forms.TextBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.txtGioiHan = new System.Windows.Forms.TextBox();
-            this.txtNgayKetThuc = new System.Windows.Forms.TextBox();
-            this.txtNgayBatDau = new System.Windows.Forms.TextBox();
             this.txtLichHoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cbGiangVien = new System.Windows.Forms.ComboBox();
+            this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Btn_Sua
+            // Btn_XacNhan
             // 
-            this.Btn_Sua.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
-            this.Btn_Sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Sua.FlatAppearance.BorderSize = 0;
-            this.Btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Sua.Location = new System.Drawing.Point(277, 653);
-            this.Btn_Sua.Name = "Btn_Sua";
-            this.Btn_Sua.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Sua.TabIndex = 15;
-            this.Btn_Sua.UseVisualStyleBackColor = true;
+            this.Btn_XacNhan.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
+            this.Btn_XacNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_XacNhan.FlatAppearance.BorderSize = 0;
+            this.Btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_XacNhan.Location = new System.Drawing.Point(277, 653);
+            this.Btn_XacNhan.Name = "Btn_XacNhan";
+            this.Btn_XacNhan.Size = new System.Drawing.Size(49, 43);
+            this.Btn_XacNhan.TabIndex = 15;
+            this.Btn_XacNhan.UseVisualStyleBackColor = true;
+            this.Btn_XacNhan.Click += new System.EventHandler(this.Btn_XacNhan_Click);
             // 
             // Btn_Xoa
             // 
@@ -73,24 +74,26 @@
             this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Xoa.FlatAppearance.BorderSize = 0;
             this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Xoa.Location = new System.Drawing.Point(149, 653);
+            this.Btn_Xoa.Location = new System.Drawing.Point(134, 653);
             this.Btn_Xoa.Name = "Btn_Xoa";
             this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
             this.Btn_Xoa.TabIndex = 14;
             this.Btn_Xoa.UseVisualStyleBackColor = true;
+            this.Btn_Xoa.Click += new System.EventHandler(this.Btn_Xoa_Click);
             // 
-            // Btn_Huy
+            // Btn_Dong
             // 
-            this.Btn_Huy.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
-            this.Btn_Huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Huy.FlatAppearance.BorderSize = 0;
-            this.Btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Huy.Location = new System.Drawing.Point(403, 653);
-            this.Btn_Huy.Name = "Btn_Huy";
-            this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Huy.TabIndex = 13;
-            this.Btn_Huy.UseVisualStyleBackColor = true;
+            this.Btn_Dong.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
+            this.Btn_Dong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Dong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Dong.FlatAppearance.BorderSize = 0;
+            this.Btn_Dong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Dong.Location = new System.Drawing.Point(424, 653);
+            this.Btn_Dong.Name = "Btn_Dong";
+            this.Btn_Dong.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Dong.TabIndex = 13;
+            this.Btn_Dong.UseVisualStyleBackColor = true;
+            this.Btn_Dong.Click += new System.EventHandler(this.Btn_Dong_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -98,9 +101,11 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.10672F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.89328F));
+            this.tableLayoutPanel1.Controls.Add(this.dtNgayBatDau, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.dtNgayKetThuc, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.cbGiangVien, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbMonHoc, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cbHocKy, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbMaLop, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtGiangVien, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
@@ -109,11 +114,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.txtMonHoc, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtGioiHan, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.txtNgayKetThuc, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txtNgayBatDau, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtLichHoc, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtMaLop, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(49, 128);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -145,24 +148,15 @@
             this.cbHocKy.Size = new System.Drawing.Size(292, 29);
             this.cbHocKy.TabIndex = 45;
             // 
-            // cbMaLop
+            // cbMonHoc
             // 
-            this.cbMaLop.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.cbMaLop.FormattingEnabled = true;
-            this.cbMaLop.Location = new System.Drawing.Point(210, 15);
-            this.cbMaLop.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.cbMaLop.Name = "cbMaLop";
-            this.cbMaLop.Size = new System.Drawing.Size(292, 29);
-            this.cbMaLop.TabIndex = 44;
-            // 
-            // txtGiangVien
-            // 
-            this.txtGiangVien.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiangVien.Location = new System.Drawing.Point(210, 192);
-            this.txtGiangVien.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.txtGiangVien.Name = "txtGiangVien";
-            this.txtGiangVien.Size = new System.Drawing.Size(292, 28);
-            this.txtGiangVien.TabIndex = 20;
+            this.cbMonHoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbMonHoc.FormattingEnabled = true;
+            this.cbMonHoc.Location = new System.Drawing.Point(210, 133);
+            this.cbMonHoc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.cbMonHoc.Name = "cbMonHoc";
+            this.cbMonHoc.Size = new System.Drawing.Size(292, 29);
+            this.cbMonHoc.TabIndex = 44;
             // 
             // label2
             // 
@@ -260,14 +254,14 @@
             this.label9.Text = "Giới hạn:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtMonHoc
+            // txtMaLop
             // 
-            this.txtMonHoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonHoc.Location = new System.Drawing.Point(210, 133);
-            this.txtMonHoc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.txtMonHoc.Name = "txtMonHoc";
-            this.txtMonHoc.Size = new System.Drawing.Size(292, 28);
-            this.txtMonHoc.TabIndex = 15;
+            this.txtMaLop.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(210, 15);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(292, 28);
+            this.txtMaLop.TabIndex = 15;
             // 
             // txtGioiHan
             // 
@@ -277,24 +271,6 @@
             this.txtGioiHan.Name = "txtGioiHan";
             this.txtGioiHan.Size = new System.Drawing.Size(292, 28);
             this.txtGioiHan.TabIndex = 21;
-            // 
-            // txtNgayKetThuc
-            // 
-            this.txtNgayKetThuc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayKetThuc.Location = new System.Drawing.Point(210, 369);
-            this.txtNgayKetThuc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.txtNgayKetThuc.Name = "txtNgayKetThuc";
-            this.txtNgayKetThuc.Size = new System.Drawing.Size(292, 28);
-            this.txtNgayKetThuc.TabIndex = 22;
-            // 
-            // txtNgayBatDau
-            // 
-            this.txtNgayBatDau.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayBatDau.Location = new System.Drawing.Point(210, 310);
-            this.txtNgayBatDau.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.txtNgayBatDau.Name = "txtNgayBatDau";
-            this.txtNgayBatDau.Size = new System.Drawing.Size(292, 28);
-            this.txtNgayBatDau.TabIndex = 23;
             // 
             // txtLichHoc
             // 
@@ -321,11 +297,11 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(454, 663);
+            this.label12.Location = new System.Drawing.Point(475, 663);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.Size = new System.Drawing.Size(43, 24);
             this.label12.TabIndex = 29;
-            this.label12.Text = "Hủy";
+            this.label12.Text = "Đóng";
             // 
             // label11
             // 
@@ -343,11 +319,39 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Indigo;
-            this.label10.Location = new System.Drawing.Point(204, 663);
+            this.label10.Location = new System.Drawing.Point(190, 663);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 24);
             this.label10.TabIndex = 27;
             this.label10.Text = "Xóa";
+            // 
+            // cbGiangVien
+            // 
+            this.cbGiangVien.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbGiangVien.FormattingEnabled = true;
+            this.cbGiangVien.Location = new System.Drawing.Point(210, 192);
+            this.cbGiangVien.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.cbGiangVien.Name = "cbGiangVien";
+            this.cbGiangVien.Size = new System.Drawing.Size(292, 29);
+            this.cbGiangVien.TabIndex = 45;
+            // 
+            // dtNgayBatDau
+            // 
+            this.dtNgayBatDau.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgayBatDau.Location = new System.Drawing.Point(210, 310);
+            this.dtNgayBatDau.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.dtNgayBatDau.Name = "dtNgayBatDau";
+            this.dtNgayBatDau.Size = new System.Drawing.Size(292, 28);
+            this.dtNgayBatDau.TabIndex = 30;
+            // 
+            // dtNgayKetThuc
+            // 
+            this.dtNgayKetThuc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgayKetThuc.Location = new System.Drawing.Point(210, 369);
+            this.dtNgayKetThuc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.dtNgayKetThuc.Name = "dtNgayKetThuc";
+            this.dtNgayKetThuc.Size = new System.Drawing.Size(292, 28);
+            this.dtNgayKetThuc.TabIndex = 31;
             // 
             // LopHocInfo
             // 
@@ -358,13 +362,14 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.Btn_Sua);
+            this.Controls.Add(this.Btn_XacNhan);
             this.Controls.Add(this.Btn_Xoa);
-            this.Controls.Add(this.Btn_Huy);
+            this.Controls.Add(this.Btn_Dong);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "LopHocInfo";
             this.Text = "LopHocInfo";
+            this.Load += new System.EventHandler(this.LopHocInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -374,11 +379,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Btn_Sua;
+        private System.Windows.Forms.Button Btn_XacNhan;
         private System.Windows.Forms.Button Btn_Xoa;
-        private System.Windows.Forms.Button Btn_Huy;
+        private System.Windows.Forms.Button Btn_Dong;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txtGiangVien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -387,16 +391,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtMonHoc;
+        private System.Windows.Forms.TextBox txtMaLop;
         private System.Windows.Forms.TextBox txtGioiHan;
-        private System.Windows.Forms.TextBox txtNgayKetThuc;
-        private System.Windows.Forms.TextBox txtNgayBatDau;
         private System.Windows.Forms.TextBox txtLichHoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbHocKy;
-        private System.Windows.Forms.ComboBox cbMaLop;
+        private System.Windows.Forms.ComboBox cbMonHoc;
+        private System.Windows.Forms.ComboBox cbGiangVien;
+        private System.Windows.Forms.DateTimePicker dtNgayBatDau;
+        private System.Windows.Forms.DateTimePicker dtNgayKetThuc;
     }
 }

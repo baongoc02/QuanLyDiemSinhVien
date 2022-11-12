@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.txtSoTinChi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.Btn_XacNhan = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Dong = new System.Windows.Forms.Button();
-            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +89,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(505, 417);
             this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // txtMaMonHoc
+            // 
+            this.txtMaMonHoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMonHoc.Location = new System.Drawing.Point(210, 20);
+            this.txtMaMonHoc.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.txtMaMonHoc.Name = "txtMaMonHoc";
+            this.txtMaMonHoc.Size = new System.Drawing.Size(292, 28);
+            this.txtMaMonHoc.TabIndex = 42;
             // 
             // cbKhoa
             // 
@@ -224,7 +233,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(446, 657);
+            this.label12.Location = new System.Drawing.Point(456, 657);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 24);
             this.label12.TabIndex = 41;
@@ -246,7 +255,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(204, 657);
+            this.label13.Location = new System.Drawing.Point(197, 657);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 24);
             this.label13.TabIndex = 39;
@@ -271,7 +280,7 @@
             this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Xoa.FlatAppearance.BorderSize = 0;
             this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Xoa.Location = new System.Drawing.Point(149, 647);
+            this.Btn_Xoa.Location = new System.Drawing.Point(142, 647);
             this.Btn_Xoa.Name = "Btn_Xoa";
             this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
             this.Btn_Xoa.TabIndex = 37;
@@ -285,21 +294,12 @@
             this.btn_Dong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Dong.FlatAppearance.BorderSize = 0;
             this.btn_Dong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Dong.Location = new System.Drawing.Point(395, 647);
+            this.btn_Dong.Location = new System.Drawing.Point(405, 647);
             this.btn_Dong.Name = "btn_Dong";
             this.btn_Dong.Size = new System.Drawing.Size(49, 43);
             this.btn_Dong.TabIndex = 36;
             this.btn_Dong.UseVisualStyleBackColor = true;
             this.btn_Dong.Click += new System.EventHandler(this.btn_Dong_Click);
-            // 
-            // txtMaMonHoc
-            // 
-            this.txtMaMonHoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMonHoc.Location = new System.Drawing.Point(210, 20);
-            this.txtMaMonHoc.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.Size = new System.Drawing.Size(292, 28);
-            this.txtMaMonHoc.TabIndex = 42;
             // 
             // MonHocInfo
             // 

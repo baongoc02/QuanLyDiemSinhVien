@@ -46,16 +46,11 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             LoadDSHocKy(hocKyViewModels);   
         }
 
+
+        [DesignOnly(true)]
         private void XemHocKy_Load(object sender, EventArgs e)
         {
-            try
-            {
                 LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }

@@ -24,14 +24,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             KhoaInfo khoaInfo = new KhoaInfo();
             khoaInfo.ShowDialog();
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            LoadGridView();
         }
 
         private void LoadDSKhoa(IEnumerable<KhoaViewModel> khoaViewModels)
@@ -50,22 +43,22 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void LoadGridView()
         {
             KhoaService khoaService = new KhoaService();
-            List<KhoaViewModel> khoaViewModels  = new List<KhoaViewModel>();
-            khoaViewModels = khoaService.ListAll();
+            List<KhoaViewModel> khoaViewModels = khoaService.ListAll();
             LoadDSKhoa(khoaViewModels);
         }
 
+        [DesignOnly(true)]
         private void XemDanhSachKhoa_Load(object sender, EventArgs e)
         {
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                throw;
-                MessageBox.Show(ex.Message);
-            }
+
+            LoadGridView();
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            KhoaService khoaService = new KhoaService();
+            List<KhoaViewModel> khoaViewModels = khoaService.Search(txtMaKhoa.Text, txtTenKhoa.Text, txtHeDaoTao.Text);
+            LoadDSKhoa(khoaViewModels);
         }
     }
 }

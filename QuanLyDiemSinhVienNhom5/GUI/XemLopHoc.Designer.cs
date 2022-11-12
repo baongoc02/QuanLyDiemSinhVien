@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Lop_gridview = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.txtGiangVien = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@
             this.Btn_Them = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lop_gridview)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,20 +58,20 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Danh sách lớp học";
             // 
-            // dataGridView1
+            // Lop_gridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Lop_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
-            this.dataGridView1.TabIndex = 39;
+            this.Lop_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.Lop_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Lop_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Lop_gridview.Location = new System.Drawing.Point(54, 243);
+            this.Lop_gridview.Name = "Lop_gridview";
+            this.Lop_gridview.RowHeadersWidth = 51;
+            this.Lop_gridview.RowTemplate.Height = 24;
+            this.Lop_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.Lop_gridview.TabIndex = 39;
             // 
             // tableLayoutPanel2
             // 
@@ -207,6 +207,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 48;
             this.Btn_Them.UseVisualStyleBackColor = false;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // label3
             // 
@@ -244,10 +245,11 @@
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Lop_gridview);
             this.Name = "XemLopHoc";
             this.Size = new System.Drawing.Size(1130, 750);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.XemLopHoc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Lop_gridview)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -257,7 +259,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Lop_gridview;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txtGiangVien;
         private System.Windows.Forms.Label label6;
