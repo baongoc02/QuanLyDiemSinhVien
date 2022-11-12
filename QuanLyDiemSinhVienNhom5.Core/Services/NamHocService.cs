@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDiemSinhVienNhom5.DataAccess.Base;
 using QuanLyDiemSinhVienNhom5.DataAccess.DAO;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
 using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
@@ -33,6 +34,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.namHocDAO.Create(namHoc);
                 this.OnSuccess("Tạo năm học thành công");
             }
+            catch (DataAccessException e)
+            {
+                this.OnError(e.Message);
+            }
             catch (Exception e)
             {
                 this.OnError("Lỗi hệ thống");
@@ -46,6 +51,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             {
                 this.namHocDAO.Update(maNamHoc, namHoc);
                 this.OnSuccess("Cập nhật năm học thành công");
+            }
+            catch (DataAccessException e)
+            {
+                this.OnError(e.Message);
             }
             catch (Exception e)
             {
@@ -77,6 +86,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             {
                 this.namHocDAO.Delete(maNamHoc);
                 this.OnSuccess("Xóa năm học thành công");
+            }
+            catch (DataAccessException e)
+            {
+                this.OnError(e.Message);
             }
             catch
             {
