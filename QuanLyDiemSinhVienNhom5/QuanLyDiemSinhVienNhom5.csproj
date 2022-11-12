@@ -52,6 +52,12 @@
     <Compile Include="GUI\GiangVienInfo.Designer.cs">
       <DependentUpon>GiangVienInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HocKyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HocKyInfo.Designer.cs">
+      <DependentUpon>HocKyInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HomePageAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="GUI\MonHocInfo.Designer.cs">
       <DependentUpon>MonHocInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NamHocInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NamHocInfo.Designer.cs">
+      <DependentUpon>NamHocInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\RoundedButton.cs">
       <SubType>Component</SubType>
@@ -162,6 +174,9 @@
     <EmbeddedResource Include="GUI\GiangVienInfo.resx">
       <DependentUpon>GiangVienInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HocKyInfo.resx">
+      <DependentUpon>HocKyInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HomePageAdmin.resx">
       <DependentUpon>HomePageAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MonHocInfo.resx">
       <DependentUpon>MonHocInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NamHocInfo.resx">
+      <DependentUpon>NamHocInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SinhVienInfo.resx">
       <DependentUpon>SinhVienInfo.cs</DependentUpon>

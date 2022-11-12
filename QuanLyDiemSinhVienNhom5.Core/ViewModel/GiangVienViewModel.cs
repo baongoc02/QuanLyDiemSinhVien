@@ -10,23 +10,25 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class GiangVienViewModel
     {
-        [DisplayName("MaGiangVien")]
+        [Browsable(false)]
         public string MaGiangVien { get; set; }
-        [DisplayName("HoTen")]
+        [DisplayName("H? và tên")]
+        public string FullName => $"{this.HocHam}. {this.HocVi}. {this.HoTen}";
+        [Browsable(false)]
         public string HoTen { get; set; }
         [DisplayName("NgaySinh")]
         public DateTime NgaySinh { get; set; }
         [DisplayName("GioiTinh")]
         public string GioiTinh { get; set; }
-        [DisplayName("CMND")]
+        [Browsable(false)]
         public string CMND { get; set; }
-        [DisplayName("SDT")]
+        [Browsable(false)]
         public string SDT { get; set; }
-        [DisplayName("QueQuan")]
+        [Browsable(false)]
         public string QueQuan { get; set; }
-        [DisplayName("HocHam")]
+        [Browsable(false)]
         public string HocHam { get; set; }
-        [DisplayName("HocVi")]
+        [Browsable(false)]
         public string HocVi { get; set; }
         [DisplayName("MaKhoa")]
         public string MaKhoa { get; set; }

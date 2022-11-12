@@ -34,13 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NamHoc_gridview = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NamHoc_gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,20 +116,20 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Danh sách năm học";
             // 
-            // dataGridView1
+            // NamHoc_gridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.NamHoc_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
-            this.dataGridView1.TabIndex = 29;
+            this.NamHoc_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.NamHoc_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NamHoc_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NamHoc_gridview.Location = new System.Drawing.Point(54, 243);
+            this.NamHoc_gridview.Name = "NamHoc_gridview";
+            this.NamHoc_gridview.RowHeadersWidth = 51;
+            this.NamHoc_gridview.RowTemplate.Height = 24;
+            this.NamHoc_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.NamHoc_gridview.TabIndex = 29;
             // 
             // label6
             // 
@@ -156,6 +156,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 48;
             this.Btn_Them.UseVisualStyleBackColor = false;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // label4
             // 
@@ -193,11 +194,12 @@
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.NamHoc_gridview);
             this.Name = "XemNamHoc";
             this.Size = new System.Drawing.Size(1130, 750);
+            this.Load += new System.EventHandler(this.XemNamHoc_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NamHoc_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +210,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView NamHoc_gridview;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
