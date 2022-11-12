@@ -10,7 +10,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 {
-    public class KetQuaHocTapDAO
+    public class KetQuaHocTapDAO : BaseDAO
     {
         public KetQuaHocTapDAO()
         {
@@ -30,7 +30,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@diemGiuaKy", ketQuaHocTap.DiemGiuaKy));
                 command.Parameters.Add(new SqlParameter("@diemCuoiKy", ketQuaHocTap.DiemCuoiKy));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
 
@@ -47,7 +54,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@diemGiuaKy", ketQuaHocTap.DiemGiuaKy));
                 command.Parameters.Add(new SqlParameter("@diemCuoiKy", ketQuaHocTap.DiemCuoiKy));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
 
@@ -140,7 +154,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
                 command.Parameters.Add(new SqlParameter("@maLop", maLop));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
     }

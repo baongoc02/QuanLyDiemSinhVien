@@ -10,7 +10,7 @@ using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 {
-    public class SinhVienDAO
+    public class SinhVienDAO : BaseDAO
     {
         public SinhVienDAO()
         {
@@ -34,7 +34,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@queQuan", sinhVien.QueQuan));
                 command.Parameters.Add(new SqlParameter("@maKhoa", sinhVien.MaKhoa));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
 
@@ -55,7 +62,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@queQuan", sinhVien.QueQuan));
                 command.Parameters.Add(new SqlParameter("@maKhoa", sinhVien.MaKhoa));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
 
@@ -160,7 +174,14 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
 
-                command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
             }
         }
     }
