@@ -123,9 +123,9 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 List<string> where = new List<string>();
 
-                where.Add("[MaHocKy] LIKE CONCAT('%', @maHocKy, '%')}");
-                where.Add("[TenHocKy] LIKE CONCAT('%', @tenHocKy, '%')}");
-                where.Add("[MaNamHoc] = @maNamHoc");
+                where.Add("[HocKyMaHocKy] LIKE CONCAT('%', @maHocKy, '%')");
+                where.Add("[HocKyTenHocKy] LIKE CONCAT('%', @tenHocKy, '%')");
+                where.Add("[HocKyMaNamHoc] = @maNamHoc");
 
                 command.Parameters.Add(new SqlParameter("@maHocKy", maHocKy));
                 command.Parameters.Add(new SqlParameter("@tenHocKy", tenHocKy));

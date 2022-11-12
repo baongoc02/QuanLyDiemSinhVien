@@ -120,9 +120,9 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
                 List<string> where = new List<string>();
 
-                where.Add("[MaKhoa] LIKE CONCAT('%', @maKhoa, '%')}");
-                where.Add("[TenKhoa] LIKE CONCAT('%', @tenKhoa, '%')}");
-                where.Add("[HeDaoTao] LIKE CONCAT('%', @heDaoTao, '%')}");
+                where.Add("[KhoaMaKhoa] LIKE CONCAT('%', @maKhoa, '%')");
+                where.Add("[KhoaTenKhoa] LIKE CONCAT('%', @tenKhoa, '%')");
+                where.Add("[KhoaHeDaoTao] LIKE CONCAT('%', @heDaoTao, '%')");
 
                 command.Parameters.Add(new SqlParameter("@maKhoa", maKhoa));
                 command.Parameters.Add(new SqlParameter("@tenKhoa", tenKhoa));
