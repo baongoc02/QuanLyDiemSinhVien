@@ -44,7 +44,29 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemLopHoc_Load(object sender, EventArgs e)
         {
+            HocKyService hocKyService = new HocKyService();
+            cbHocKy.DataSource = hocKyService.ListAll();
+            cbHocKy.DisplayMember = nameof(HocKyViewModel.TenHocKy);
+            cbHocKy.ValueMember = nameof(HocKyViewModel.MaHocKy);
+
+            MonHocService monHocService = new MonHocService();
+            cbMon.DataSource = monHocService.ListAll();
+            cbMon.DisplayMember = nameof(MonHocViewModel.TenMonHoc);
+            cbMon.ValueMember = nameof(MonHocViewModel.MaMonHoc);
+
+            GiangVienService giangVienService = new GiangVienService();
+            cbGiangVien.DataSource = giangVienService.ListAll();
+            cbGiangVien.DisplayMember = nameof(GiangVienViewModel.HoTen);
+            cbGiangVien.ValueMember = nameof(GiangVienViewModel.MaGiangVien);
+
             LoadGridView();
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            LopService lopService = new LopService();
+            List<LopViewModel> lopViewModels = lopService.Search(txtMaLop.Text, cbHocKy.SelectedValue.ToString(), cbMon.SelectedValue.ToString(), cbGiangVien.SelectedValue.ToString(), "");
+            LoadDSLop(lopViewModels);
         }
     }
 }
