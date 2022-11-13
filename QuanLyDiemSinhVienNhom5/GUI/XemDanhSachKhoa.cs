@@ -23,6 +23,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             KhoaInfo khoaInfo = new KhoaInfo();
+            khoaInfo.khoaViewModel = null;
             khoaInfo.ShowDialog();
             LoadGridView();
         }

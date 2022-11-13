@@ -90,18 +90,21 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         
         private void MonHocInfo_Load(object sender, EventArgs e)
         {
-            cbKhoa.DataSource = this.khoaService.ListAll();
-            cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
-            cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+            if (monHocViewModel != null)
+            {
+                cbKhoa.DataSource = this.khoaService.ListAll();
+                cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
+                cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
 
-            txtMaMonHoc.Text = this.monHocViewModel.MaMonHoc;
-            txtTenMonHoc.Text = this.monHocViewModel.TenMonHoc;
-            txtMoTa.Text = this.monHocViewModel.MoTa;
-            txtSoTinChi.Text = this.monHocViewModel.STC.ToString();
-            txtLoaiHocPhan.Text = this.monHocViewModel.LoaiHocPhan;
+                txtMaMonHoc.Text = this.monHocViewModel.MaMonHoc;
+                txtTenMonHoc.Text = this.monHocViewModel.TenMonHoc;
+                txtMoTa.Text = this.monHocViewModel.MoTa;
+                txtSoTinChi.Text = this.monHocViewModel.STC.ToString();
+                txtLoaiHocPhan.Text = this.monHocViewModel.LoaiHocPhan;
 
-            KhoaViewModel khoaViewModel = khoaService.Search(this.monHocViewModel.MaKhoa, "", "").First();
-            cbKhoa.Text = khoaViewModel.TenKhoa;
+                KhoaViewModel khoaViewModel = khoaService.Search(this.monHocViewModel.MaKhoa, "", "").First();
+                cbKhoa.Text = khoaViewModel.TenKhoa;
+            }
         }
     }
 }

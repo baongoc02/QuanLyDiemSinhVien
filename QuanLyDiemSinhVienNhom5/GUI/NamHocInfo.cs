@@ -87,8 +87,11 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void NamHocInfo_Load(object sender, EventArgs e)
         {
-            txtMaNamHoc.Text = this.namHocViewModel.MaNamHoc;
-            txtTenNamHoc.Text = this.namHocViewModel.TenNamHoc;
+            if (namHocViewModel != null)
+            {
+                txtMaNamHoc.Text = this.namHocViewModel.MaNamHoc;
+                txtTenNamHoc.Text = this.namHocViewModel.TenNamHoc;
+            }
         }
     }
 }

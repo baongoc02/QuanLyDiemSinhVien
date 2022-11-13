@@ -60,7 +60,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             listNamHoc.Insert(0, new NamHocViewModel()
             {
                 MaNamHoc = null,
-                TenNamHoc = "-- Tất cả khoa --"
+                TenNamHoc = "-- Tất cả học kỳ --"
             });
             cbNamHoc.DataSource = listNamHoc;
             cbNamHoc.DisplayMember = nameof(NamHocViewModel.TenNamHoc);

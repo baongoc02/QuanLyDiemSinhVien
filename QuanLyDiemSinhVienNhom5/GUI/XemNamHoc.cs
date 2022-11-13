@@ -42,6 +42,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             NamHocInfo namHocInfo = new NamHocInfo();
+            namHocInfo.namHocViewModel = null;
             namHocInfo.ShowDialog();
 
             LoadGridView();

@@ -118,10 +118,13 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void KhoaInfo_Load(object sender, EventArgs e)
         {
-            txtMaKhoa.Text = this.khoaViewModel.MaKhoa;
-            txtTenKhoa.Text = this.khoaViewModel.TenKhoa;
-            txtHeDaotao.Text = this.khoaViewModel.HeDaoTao;
-            dtNgayThanhLapInfor.Value = this.khoaViewModel.NgayThanhLap;
+            if (khoaViewModel != null)
+            {
+                txtMaKhoa.Text = this.khoaViewModel.MaKhoa;
+                txtTenKhoa.Text = this.khoaViewModel.TenKhoa;
+                txtHeDaotao.Text = this.khoaViewModel.HeDaoTao;
+                dtNgayThanhLapInfor.Value = this.khoaViewModel.NgayThanhLap;
+            }
         }
     }
 }

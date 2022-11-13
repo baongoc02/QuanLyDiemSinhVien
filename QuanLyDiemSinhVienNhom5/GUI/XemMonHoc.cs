@@ -22,6 +22,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             MonHocInfo monHocInfo = new MonHocInfo();
+            monHocInfo.monHocViewModel = null;
             monHocInfo.ShowDialog();
             LoadGridView();
         }
