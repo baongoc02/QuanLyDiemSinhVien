@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyDiemSinhVienNhom5.DataAccess.Base;
+using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class HomePageAdmin : Form
     {
+        //private static readonly AppSetting _setting;
         public HomePageAdmin()
         {
+            //_setting.Login("sa", "123456");
             InitializeComponent();
         }
 

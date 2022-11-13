@@ -35,7 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaGiangVien = new System.Windows.Forms.TextBox();
-            this.ttxHoTen = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.InfoGiangVien_gridview = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMaGiangVien, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ttxHoTen, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtHoTen, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -121,14 +121,14 @@
             this.txtMaGiangVien.Size = new System.Drawing.Size(612, 38);
             this.txtMaGiangVien.TabIndex = 10;
             // 
-            // ttxHoTen
+            // txtHoTen
             // 
-            this.ttxHoTen.BackColor = System.Drawing.Color.Honeydew;
-            this.ttxHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ttxHoTen.Location = new System.Drawing.Point(233, 49);
-            this.ttxHoTen.Name = "ttxHoTen";
-            this.ttxHoTen.Size = new System.Drawing.Size(612, 38);
-            this.ttxHoTen.TabIndex = 13;
+            this.txtHoTen.BackColor = System.Drawing.Color.Honeydew;
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(233, 49);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(612, 38);
+            this.txtHoTen.TabIndex = 13;
             // 
             // label1
             // 
@@ -191,6 +191,7 @@
             this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
             this.Btn_Tim.TabIndex = 34;
             this.Btn_Tim.UseVisualStyleBackColor = false;
+            this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
             // 
             // label5
             // 
@@ -248,7 +249,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaGiangVien;
-        private System.Windows.Forms.TextBox ttxHoTen;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView InfoGiangVien_gridview;
         private System.Windows.Forms.Label label6;

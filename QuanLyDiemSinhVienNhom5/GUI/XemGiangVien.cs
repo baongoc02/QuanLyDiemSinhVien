@@ -14,6 +14,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class XemGiangVien : UserControl
     {
+
+        private readonly GiangVienService giangVienService = new GiangVienService();
+        private readonly KhoaService khoaService = new KhoaService();
+
         public XemGiangVien()
         {
             InitializeComponent();
@@ -24,14 +28,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             GiangVienInfo giangVienInfo = new GiangVienInfo();
             giangVienInfo.ShowDialog();
 
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            LoadGridView();
         }
         private void LoadDSGiangVien(IEnumerable<GiangVienViewModel> giangVienViewModels)
         {
@@ -50,24 +47,25 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void LoadGridView()
         {
-            GiangVienService giangVienService = new GiangVienService();
             List<GiangVienViewModel> giangVienViewModels = new List<GiangVienViewModel>();
             giangVienViewModels = giangVienService.ListAll();
             LoadDSGiangVien(giangVienViewModels);
         }
 
-
+        [DesignOnly(true)]
         private void XemGiangVien_Load(object sender, EventArgs e)
         {
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                throw;
-                MessageBox.Show(ex.Message);
-            }
+            cbKhoa.DataSource = khoaService.ListAll();
+            cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
+            cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+
+            LoadGridView();
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            List<GiangVienViewModel> giangVienViewModels = giangVienService.Search(txtMaGiangVien.Text, txtHoTen.Text, "", "", "", "", "", "", cbKhoa.SelectedValue.ToString());
+            LoadDSGiangVien(giangVienViewModels);
         }
     }
 }

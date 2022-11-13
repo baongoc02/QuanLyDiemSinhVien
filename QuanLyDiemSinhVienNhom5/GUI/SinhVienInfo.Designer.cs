@@ -41,7 +41,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaSoSinhVien = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
@@ -51,7 +50,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Btn_Sua = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
-            this.Btn_Huy = new System.Windows.Forms.Button();
+            this.Btn_Dong = new System.Windows.Forms.Button();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.10672F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.89328F));
+            this.tableLayoutPanel1.Controls.Add(this.dtNgaySinh, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cbKhoa, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.txtGioiTinh, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -75,7 +76,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.txtMaSoSinhVien, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtHoTen, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtNgaySinh, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtQueQuan, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtSoDienThoai, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtCMND, 1, 4);
@@ -108,7 +108,7 @@
             this.cbKhoa.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(292, 29);
-            this.cbKhoa.TabIndex = 36;
+            this.cbKhoa.TabIndex = 8;
             // 
             // txtGioiTinh
             // 
@@ -117,7 +117,7 @@
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(292, 28);
-            this.txtGioiTinh.TabIndex = 20;
+            this.txtGioiTinh.TabIndex = 4;
             // 
             // label2
             // 
@@ -222,7 +222,7 @@
             this.txtMaSoSinhVien.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.txtMaSoSinhVien.Name = "txtMaSoSinhVien";
             this.txtMaSoSinhVien.Size = new System.Drawing.Size(292, 28);
-            this.txtMaSoSinhVien.TabIndex = 14;
+            this.txtMaSoSinhVien.TabIndex = 1;
             // 
             // txtHoTen
             // 
@@ -231,16 +231,7 @@
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(292, 28);
-            this.txtHoTen.TabIndex = 13;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Location = new System.Drawing.Point(211, 139);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(292, 28);
-            this.txtNgaySinh.TabIndex = 15;
+            this.txtHoTen.TabIndex = 2;
             // 
             // txtQueQuan
             // 
@@ -249,7 +240,7 @@
             this.txtQueQuan.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(292, 28);
-            this.txtQueQuan.TabIndex = 22;
+            this.txtQueQuan.TabIndex = 7;
             // 
             // txtSoDienThoai
             // 
@@ -258,7 +249,7 @@
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(292, 28);
-            this.txtSoDienThoai.TabIndex = 23;
+            this.txtSoDienThoai.TabIndex = 6;
             // 
             // txtCMND
             // 
@@ -267,7 +258,7 @@
             this.txtCMND.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(292, 28);
-            this.txtCMND.TabIndex = 24;
+            this.txtCMND.TabIndex = 5;
             // 
             // label1
             // 
@@ -285,11 +276,11 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(452, 659);
+            this.label12.Location = new System.Drawing.Point(473, 659);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.Size = new System.Drawing.Size(43, 24);
             this.label12.TabIndex = 35;
-            this.label12.Text = "Hủy";
+            this.label12.Text = "Đóng";
             // 
             // label10
             // 
@@ -307,7 +298,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(203, 659);
+            this.label13.Location = new System.Drawing.Point(182, 659);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 24);
             this.label13.TabIndex = 33;
@@ -322,8 +313,9 @@
             this.Btn_Sua.Location = new System.Drawing.Point(276, 649);
             this.Btn_Sua.Name = "Btn_Sua";
             this.Btn_Sua.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Sua.TabIndex = 32;
+            this.Btn_Sua.TabIndex = 9;
             this.Btn_Sua.UseVisualStyleBackColor = true;
+            this.Btn_Sua.Click += new System.EventHandler(this.Btn_Sua_Click);
             // 
             // Btn_Xoa
             // 
@@ -331,24 +323,35 @@
             this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Xoa.FlatAppearance.BorderSize = 0;
             this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Xoa.Location = new System.Drawing.Point(148, 649);
+            this.Btn_Xoa.Location = new System.Drawing.Point(127, 649);
             this.Btn_Xoa.Name = "Btn_Xoa";
             this.Btn_Xoa.Size = new System.Drawing.Size(52, 43);
             this.Btn_Xoa.TabIndex = 31;
             this.Btn_Xoa.UseVisualStyleBackColor = true;
+            this.Btn_Xoa.Click += new System.EventHandler(this.Btn_Xoa_Click);
             // 
-            // Btn_Huy
+            // Btn_Dong
             // 
-            this.Btn_Huy.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
-            this.Btn_Huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Huy.FlatAppearance.BorderSize = 0;
-            this.Btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Huy.Location = new System.Drawing.Point(401, 649);
-            this.Btn_Huy.Name = "Btn_Huy";
-            this.Btn_Huy.Size = new System.Drawing.Size(49, 43);
-            this.Btn_Huy.TabIndex = 30;
-            this.Btn_Huy.UseVisualStyleBackColor = true;
+            this.Btn_Dong.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Button_DeleteIcon;
+            this.Btn_Dong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Dong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Dong.FlatAppearance.BorderSize = 0;
+            this.Btn_Dong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Dong.Location = new System.Drawing.Point(422, 649);
+            this.Btn_Dong.Name = "Btn_Dong";
+            this.Btn_Dong.Size = new System.Drawing.Size(49, 43);
+            this.Btn_Dong.TabIndex = 30;
+            this.Btn_Dong.UseVisualStyleBackColor = true;
+            this.Btn_Dong.Click += new System.EventHandler(this.Btn_Dong_Click);
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgaySinh.Location = new System.Drawing.Point(211, 139);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(292, 28);
+            this.dtNgaySinh.TabIndex = 3;
             // 
             // SinhVienInfo
             // 
@@ -361,11 +364,12 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Btn_Sua);
             this.Controls.Add(this.Btn_Xoa);
-            this.Controls.Add(this.Btn_Huy);
+            this.Controls.Add(this.Btn_Dong);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "SinhVienInfo";
             this.Text = "SinhVienInfo";
+            this.Load += new System.EventHandler(this.SinhVienInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -386,7 +390,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaSoSinhVien;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.TextBox txtCMND;
@@ -396,7 +399,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_Sua;
         private System.Windows.Forms.Button Btn_Xoa;
-        private System.Windows.Forms.Button Btn_Huy;
+        private System.Windows.Forms.Button Btn_Dong;
         private System.Windows.Forms.ComboBox cbKhoa;
+        private System.Windows.Forms.DateTimePicker dtNgaySinh;
     }
 }

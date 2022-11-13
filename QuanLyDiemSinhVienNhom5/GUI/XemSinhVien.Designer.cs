@@ -38,14 +38,14 @@
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SinhVien_gridview = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Btn_Import = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SinhVien_gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -154,20 +154,20 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Danh sách sinh viên";
             // 
-            // dataGridView1
+            // SinhVien_gridview
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SinhVien_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 482);
-            this.dataGridView1.TabIndex = 24;
+            this.SinhVien_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.SinhVien_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SinhVien_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SinhVien_gridview.Location = new System.Drawing.Point(54, 243);
+            this.SinhVien_gridview.Name = "SinhVien_gridview";
+            this.SinhVien_gridview.RowHeadersWidth = 51;
+            this.SinhVien_gridview.RowTemplate.Height = 24;
+            this.SinhVien_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.SinhVien_gridview.TabIndex = 24;
             // 
             // label6
             // 
@@ -194,6 +194,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 44;
             this.Btn_Them.UseVisualStyleBackColor = false;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // Btn_Tim
             // 
@@ -248,12 +249,13 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.SinhVien_gridview);
             this.Name = "XemSinhVien";
             this.Size = new System.Drawing.Size(1130, 750);
+            this.Load += new System.EventHandler(this.XemSinhVien_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SinhVien_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,7 +272,7 @@
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView SinhVien_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Them;
         private System.Windows.Forms.Label label7;

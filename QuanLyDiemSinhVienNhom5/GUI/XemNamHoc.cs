@@ -35,16 +35,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void XemNamHoc_Load(object sender, EventArgs e)
         {
-            try
-            {
-                LoadGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            LoadGridView();
         }
 
+        [DesignOnly(true)]
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             NamHocInfo namHocInfo = new NamHocInfo();

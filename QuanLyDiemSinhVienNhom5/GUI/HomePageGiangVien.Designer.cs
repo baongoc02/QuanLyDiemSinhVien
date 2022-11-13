@@ -352,7 +352,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "HomePageGiangVien";
-            this.Text = "HompageStudent";
+            this.Text = "HompageGiangVien";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);

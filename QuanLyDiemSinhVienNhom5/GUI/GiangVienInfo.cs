@@ -39,7 +39,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void loadTextBox()
+        private void LoadTextBox()
         {
             txtMaGiangVien.Text = "";
             txtHoTen.Text = "";
@@ -71,12 +71,12 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.giangVienService.CheckGiangVienExists(giangVien.MaKhoa))
             {
                 this.giangVienService.Update(giangVien.MaGiangVien, giangVien); ;
-                loadTextBox();
+                LoadTextBox();
             }
             else
             {
                 this.giangVienService.Create(giangVien);
-                loadTextBox();
+                LoadTextBox();
             }
         }
 
@@ -98,7 +98,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (result == DialogResult.Yes)
             {
                 this.giangVienService.Delete(giangVien.MaGiangVien);
-                this.loadTextBox();
+                this.LoadTextBox();
             }
         }
 
