@@ -133,7 +133,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 
                 if (where.Count > 0)
                 {
-                    command.CommandText += " WHERE " + string.Join("AND", where);
+                    command.CommandText += " WHERE " + string.Join(" AND ", where);
                 }
 
                 using (var adapter = new SqlDataAdapter(command))
