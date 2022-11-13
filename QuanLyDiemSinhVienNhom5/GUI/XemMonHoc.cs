@@ -51,5 +51,18 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             LoadGridView();
         }
+
+        private void MonHoc_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (MonHoc_gridview.SelectedRows.Count == 1)
+            {
+                var data = MonHoc_gridview.SelectedRows[0].DataBoundItem as MonHocViewModel;
+
+                MonHocInfo monHocInfo = new MonHocInfo();
+                monHocInfo.monHocViewModel = data;
+                monHocInfo.ShowDialog();
+                LoadGridView();
+            }
+        }
     }
 }

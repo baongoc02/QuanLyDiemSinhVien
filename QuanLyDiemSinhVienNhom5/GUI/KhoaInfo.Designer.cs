@@ -120,8 +120,10 @@
             // dtNgayThanhLapInfor
             // 
             this.dtNgayThanhLapInfor.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgayThanhLapInfor.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayThanhLapInfor.Location = new System.Drawing.Point(211, 236);
             this.dtNgayThanhLapInfor.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.dtNgayThanhLapInfor.MaxDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtNgayThanhLapInfor.Name = "dtNgayThanhLapInfor";
             this.dtNgayThanhLapInfor.Size = new System.Drawing.Size(292, 28);
             this.dtNgayThanhLapInfor.TabIndex = 3;
@@ -268,6 +270,7 @@
             this.Controls.Add(this.label1);
             this.Name = "KhoaInfo";
             this.Text = "KhoaInfo";
+            this.Load += new System.EventHandler(this.KhoaInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

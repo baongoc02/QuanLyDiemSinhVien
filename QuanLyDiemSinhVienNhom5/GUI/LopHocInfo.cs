@@ -19,6 +19,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private readonly HocKyService hocKyService;
         private readonly MonHocService monHocService;
         private readonly GiangVienService giangVienService;
+        public LopViewModel lopViewModel;
 
         public LopHocInfo()
         {
@@ -45,7 +46,14 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void LoadTextBox()
         {
-
+            txtMaLop.Text = "";
+            cbHocKy.Text = "";
+            cbMonHoc.Text = "";
+            cbGiangVien.Text = "";
+            txtLichHoc.Text = "";
+            dtNgayBatDau.Text = "";
+            dtNgayKetThuc.Text = "";
+            txtGioiHan.Text = "";
         }
 
         private void LopHocInfo_Load(object sender, EventArgs e)
@@ -61,6 +69,19 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbMonHoc.DataSource = monHocService.ListAll();
             cbMonHoc.DisplayMember = nameof(MonHocViewModel.TenMonHoc);
             cbMonHoc.ValueMember = nameof(MonHocViewModel.MaMonHoc);
+
+            //HocKyViewModel hocKyViewModel = hocKyService.Search(lopViewModel.MaHocKy, "", "").First();
+            //MonHocViewModel monHocViewModel = monHocService.Search(lopViewModel.MaMonHoc, "", "", "", "").First();
+            //GiangVienViewModel giangVienViewModel = giangVienService.Search(lopViewModel.MaGiangVien, "", "", "", "", "", "", "", "").First();
+
+            txtMaLop.Text = this.lopViewModel.MaLop;
+            cbHocKy.Text = this.lopViewModel.MaHocKy;
+            cbMonHoc.Text = this.lopViewModel.MaMonHoc;
+            cbGiangVien.Text = this.lopViewModel.MaGiangVien;
+            txtLichHoc.Text = this.lopViewModel.LichHoc;
+            dtNgayBatDau.Value = this.lopViewModel.NgayBatDau;
+            dtNgayKetThuc.Value = this.lopViewModel.NgayKetThuc;
+            txtGioiHan.Text = this.lopViewModel.GioiHan.ToString();
         }
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)

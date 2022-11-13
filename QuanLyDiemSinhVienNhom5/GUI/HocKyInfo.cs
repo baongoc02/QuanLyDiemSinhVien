@@ -17,6 +17,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     {
         private readonly HocKyService hocKyService;
         private readonly NamHocService namHocService;
+        public HocKyViewModel hocKyViewModel;
+
         public HocKyInfo()
         {
             this.hocKyService = new HocKyService();
@@ -96,6 +98,15 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbNamHoc.DataSource = namHocService.ListAll();
             cbNamHoc.DisplayMember = nameof(NamHocViewModel.TenNamHoc);
             cbNamHoc.ValueMember = nameof(NamHocViewModel.MaNamHoc);
+
+            txtMaHocKy.Text = this.hocKyViewModel.MaHocKy;
+            txtTenHocKy.Text = this.hocKyViewModel.TenHocKy;
+            dtNgayBatDau.Value = this.hocKyViewModel.NgayBatDau;
+            dtNgayKetThuc.Value = this.hocKyViewModel.NgayKetThuc;
+
+            NamHocViewModel namHocViewModel = namHocService.Search(this.hocKyViewModel.MaNamHoc, "").First();
+
+            cbNamHoc.Text = namHocViewModel.TenNamHoc;
         }
     }
 }

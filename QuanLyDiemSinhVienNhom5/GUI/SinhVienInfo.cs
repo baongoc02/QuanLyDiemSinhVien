@@ -17,6 +17,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     {
         private readonly SinhVienService sinhVienService;
         private readonly KhoaService khoaService;
+        public SinhVienViewModel sinhVienViewModel;
 
         public SinhVienInfo()
         {
@@ -102,6 +103,11 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbKhoa.DataSource = khoaService.ListAll();
             cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
             cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+
+            txtMaSoSinhVien.Text = this.sinhVienViewModel.MaSinhVien;
+            txtHoTen.Text = this.sinhVienViewModel.HoTen;
+            dtNgaySinh.Value = this.sinhVienViewModel.NgaySinh;
+
         }
     }
 }

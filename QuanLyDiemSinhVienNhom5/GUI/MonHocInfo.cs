@@ -17,6 +17,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     {
         private readonly MonHocService monHocService;
         private readonly KhoaService khoaService;
+        public MonHocViewModel monHocViewModel;
+
         public MonHocInfo()
         {
             this.monHocService = new MonHocService();
@@ -91,6 +93,15 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbKhoa.DataSource = this.khoaService.ListAll();
             cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
             cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+
+            txtMaMonHoc.Text = this.monHocViewModel.MaMonHoc;
+            txtTenMonHoc.Text = this.monHocViewModel.TenMonHoc;
+            txtMoTa.Text = this.monHocViewModel.MoTa;
+            txtSoTinChi.Text = this.monHocViewModel.STC.ToString();
+            txtLoaiHocPhan.Text = this.monHocViewModel.LoaiHocPhan;
+
+            KhoaViewModel khoaViewModel = khoaService.Search(this.monHocViewModel.MaKhoa, "", "").First();
+            cbKhoa.Text = khoaViewModel.TenKhoa;
         }
     }
 }

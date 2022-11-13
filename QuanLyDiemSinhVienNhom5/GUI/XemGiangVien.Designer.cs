@@ -163,8 +163,10 @@
             this.InfoGiangVien_gridview.RowHeadersVisible = false;
             this.InfoGiangVien_gridview.RowHeadersWidth = 51;
             this.InfoGiangVien_gridview.RowTemplate.Height = 24;
+            this.InfoGiangVien_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.InfoGiangVien_gridview.Size = new System.Drawing.Size(1029, 482);
             this.InfoGiangVien_gridview.TabIndex = 29;
+            this.InfoGiangVien_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InfoGiangVien_gridview_CellClick);
             // 
             // label6
             // 

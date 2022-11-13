@@ -48,6 +48,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbHocKy.DataSource = hocKyService.ListAll();
             cbHocKy.DisplayMember = nameof(HocKyViewModel.TenHocKy);
             cbHocKy.ValueMember = nameof(HocKyViewModel.MaHocKy);
+            
 
             MonHocService monHocService = new MonHocService();
             cbMon.DataSource = monHocService.ListAll();
@@ -67,6 +68,19 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             LopService lopService = new LopService();
             List<LopViewModel> lopViewModels = lopService.Search(txtMaLop.Text, cbHocKy.SelectedValue.ToString(), cbMon.SelectedValue.ToString(), cbGiangVien.SelectedValue.ToString(), "");
             LoadDSLop(lopViewModels);
+        }
+
+        private void Lop_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Lop_gridview.SelectedRows.Count == 1)
+            {
+                var data = Lop_gridview.SelectedRows[0].DataBoundItem as LopViewModel;
+
+                LopHocInfo lopHocInfo = new LopHocInfo();
+                lopHocInfo.lopViewModel = data;
+                lopHocInfo.ShowDialog();
+                LoadGridView();
+            }
         }
     }
 }
