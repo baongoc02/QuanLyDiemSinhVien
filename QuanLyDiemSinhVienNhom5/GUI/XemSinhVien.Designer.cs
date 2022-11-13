@@ -212,6 +212,7 @@
             this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
             this.Btn_Tim.TabIndex = 26;
             this.Btn_Tim.UseVisualStyleBackColor = false;
+            this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
             // 
             // label7
             // 

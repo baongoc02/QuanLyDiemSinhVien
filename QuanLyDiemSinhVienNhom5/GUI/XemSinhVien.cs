@@ -14,6 +14,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class XemSinhVien : UserControl
     {
+        private readonly SinhVienService sinhVienService = new SinhVienService();
+
         public XemSinhVien()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             SinhVienInfo sinhVienInfo = new SinhVienInfo();
+            sinhVienInfo.sinhVienViewModel = null;
             sinhVienInfo.ShowDialog();
             LoadGridView();
         }
@@ -34,7 +37,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         public void LoadGridView()
         {
-            SinhVienService sinhVienService = new SinhVienService();
             List<SinhVienViewModel> sinhVienViewModels = new List<SinhVienViewModel>();
             sinhVienViewModels = sinhVienService.ListAll();
             LoadDSSinhVien(sinhVienViewModels);
@@ -43,6 +45,16 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemSinhVien_Load(object sender, EventArgs e)
         {
+            KhoaService khoaService = new KhoaService();
+            var listKhoa = khoaService.ListAll();
+            listKhoa.Insert(0, new KhoaViewModel()
+            {
+                MaKhoa = null,
+                TenKhoa = "-- Tất cả khoa --"
+            });
+            cbKhoa.DataSource = listKhoa;
+            cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
+            cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
 
             LoadGridView();
         }
@@ -59,6 +71,12 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
                 LoadGridView();
             }
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            List<SinhVienViewModel> sinhVienViewModels = sinhVienService.Search(txtMSSV.Text, txtHoTen.Text, "", "", "", "", cbKhoa.Text);
+            LoadDSSinhVien(sinhVienViewModels);
         }
     }
 }

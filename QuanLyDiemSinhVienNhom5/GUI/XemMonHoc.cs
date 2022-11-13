@@ -49,6 +49,17 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemMonHoc_Load(object sender, EventArgs e)
         {
+            KhoaService khoaService = new KhoaService();
+            var listKhoa = khoaService.ListAll();
+            listKhoa.Insert(0, new KhoaViewModel()
+            {
+                MaKhoa = null,
+                TenKhoa = "-- Tất cả khoa --"
+            });
+            cbKhoa.DataSource = listKhoa;
+            cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
+            cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+
             LoadGridView();
         }
 

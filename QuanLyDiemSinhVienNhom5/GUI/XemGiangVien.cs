@@ -26,6 +26,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             GiangVienInfo giangVienInfo = new GiangVienInfo();
+            giangVienInfo.giangVienViewModel = null;
             giangVienInfo.ShowDialog();
 
             LoadGridView();
@@ -55,7 +56,14 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemGiangVien_Load(object sender, EventArgs e)
         {
-            cbKhoa.DataSource = khoaService.ListAll();
+            KhoaService khoaService = new KhoaService();
+            var listKhoa = khoaService.ListAll();
+            listKhoa.Insert(0, new KhoaViewModel()
+            {
+                MaKhoa = null,
+                TenKhoa = "-- Tất cả khoa --"
+            });
+            cbKhoa.DataSource = listKhoa;
             cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
             cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
 

@@ -108,20 +108,21 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbKhoa.DataSource = this.khoaService.ListAll();
             cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
             cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+            if (this.giangVienViewModel != null)
+            {
+                txtMaGiangVien.Text = this.giangVienViewModel.MaGiangVien;
+                txtHoTen.Text = this.giangVienViewModel.HoTen;
+                dtNgaySinh.Value = this.giangVienViewModel.NgaySinh;
+                txtSoDienThoai.Text = this.giangVienViewModel.SDT;
+                txtGioiTinh.Text = this.giangVienViewModel.GioiTinh;
+                txtQueQuan.Text = this.giangVienViewModel.QueQuan;
+                txtCMND.Text = this.giangVienViewModel.CMND;
+                txtHocHam.Text = this.giangVienViewModel.HocHam;
+                txtHocVi.Text = this.giangVienViewModel.HocVi;
 
-            txtMaGiangVien.Text = this.giangVienViewModel.MaGiangVien;
-            txtHoTen.Text = this.giangVienViewModel.HoTen;
-            dtNgaySinh.Value = this.giangVienViewModel.NgaySinh;
-            txtSoDienThoai.Text = this.giangVienViewModel.SDT;
-            txtGioiTinh.Text = this.giangVienViewModel.GioiTinh;
-            txtQueQuan.Text = this.giangVienViewModel.QueQuan;
-            txtCMND.Text = this.giangVienViewModel.CMND;
-            txtHocHam.Text = this.giangVienViewModel.HocHam;
-            txtHocVi.Text = this.giangVienViewModel.HocVi;
-
-            KhoaViewModel khoaViewModels = khoaService.Search(this.giangVienViewModel.MaKhoa, "", "").First();
-
-            cbKhoa.Text = khoaViewModels.TenKhoa;
+                KhoaViewModel khoaViewModels = khoaService.Search(this.giangVienViewModel.MaKhoa, "", "").First();
+                cbKhoa.Text = khoaViewModels.TenKhoa;
+            }
         }
     }
 }

@@ -73,15 +73,17 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             //HocKyViewModel hocKyViewModel = hocKyService.Search(lopViewModel.MaHocKy, "", "").First();
             //MonHocViewModel monHocViewModel = monHocService.Search(lopViewModel.MaMonHoc, "", "", "", "").First();
             //GiangVienViewModel giangVienViewModel = giangVienService.Search(lopViewModel.MaGiangVien, "", "", "", "", "", "", "", "").First();
-
-            txtMaLop.Text = this.lopViewModel.MaLop;
-            cbHocKy.Text = this.lopViewModel.MaHocKy;
-            cbMonHoc.Text = this.lopViewModel.MaMonHoc;
-            cbGiangVien.Text = this.lopViewModel.MaGiangVien;
-            txtLichHoc.Text = this.lopViewModel.LichHoc;
-            dtNgayBatDau.Value = this.lopViewModel.NgayBatDau;
-            dtNgayKetThuc.Value = this.lopViewModel.NgayKetThuc;
-            txtGioiHan.Text = this.lopViewModel.GioiHan.ToString();
+            if (this.lopViewModel != null)
+            {
+                txtMaLop.Text = this.lopViewModel.MaLop;
+                cbHocKy.Text = this.lopViewModel.MaHocKy;
+                cbMonHoc.Text = this.lopViewModel.MaMonHoc;
+                cbGiangVien.Text = this.lopViewModel.MaGiangVien;
+                txtLichHoc.Text = this.lopViewModel.LichHoc;
+                dtNgayBatDau.Value = this.lopViewModel.NgayBatDau;
+                dtNgayKetThuc.Value = this.lopViewModel.NgayKetThuc;
+                txtGioiHan.Text = this.lopViewModel.GioiHan.ToString();
+            }
         }
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)

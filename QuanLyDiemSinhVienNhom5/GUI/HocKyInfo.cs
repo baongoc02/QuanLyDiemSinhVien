@@ -98,15 +98,17 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbNamHoc.DataSource = namHocService.ListAll();
             cbNamHoc.DisplayMember = nameof(NamHocViewModel.TenNamHoc);
             cbNamHoc.ValueMember = nameof(NamHocViewModel.MaNamHoc);
+            if (this.hocKyViewModel != null)
+            {
+                txtMaHocKy.Text = this.hocKyViewModel.MaHocKy;
+                txtTenHocKy.Text = this.hocKyViewModel.TenHocKy;
+                dtNgayBatDau.Value = this.hocKyViewModel.NgayBatDau;
+                dtNgayKetThuc.Value = this.hocKyViewModel.NgayKetThuc;
 
-            txtMaHocKy.Text = this.hocKyViewModel.MaHocKy;
-            txtTenHocKy.Text = this.hocKyViewModel.TenHocKy;
-            dtNgayBatDau.Value = this.hocKyViewModel.NgayBatDau;
-            dtNgayKetThuc.Value = this.hocKyViewModel.NgayKetThuc;
+                NamHocViewModel namHocViewModel = namHocService.Search(this.hocKyViewModel.MaNamHoc, "").First();
 
-            NamHocViewModel namHocViewModel = namHocService.Search(this.hocKyViewModel.MaNamHoc, "").First();
-
-            cbNamHoc.Text = namHocViewModel.TenNamHoc;
+                cbNamHoc.Text = namHocViewModel.TenNamHoc;
+            }
         }
     }
 }

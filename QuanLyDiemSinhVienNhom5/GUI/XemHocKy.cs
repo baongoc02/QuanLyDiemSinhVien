@@ -1,4 +1,5 @@
 ﻿using QuanLyDiemSinhVienNhom5.Core.Services;
+using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
 using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             HocKyInfo hocKyInfo = new HocKyInfo();
+            hocKyInfo.hocKyViewModel = null;
             hocKyInfo.ShowDialog();
             LoadGridView();
         }
@@ -52,7 +54,15 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemHocKy_Load(object sender, EventArgs e)
         {
-            cbNamHoc.DataSource = namHocService.ListAll();
+
+            NamHocService namHocService = new NamHocService();
+            var listNamHoc = namHocService.ListAll();
+            listNamHoc.Insert(0, new NamHocViewModel()
+            {
+                MaNamHoc = null,
+                TenNamHoc = "-- Tất cả khoa --"
+            });
+            cbNamHoc.DataSource = listNamHoc;
             cbNamHoc.DisplayMember = nameof(NamHocViewModel.TenNamHoc);
             cbNamHoc.ValueMember = nameof(NamHocViewModel.MaNamHoc);
 

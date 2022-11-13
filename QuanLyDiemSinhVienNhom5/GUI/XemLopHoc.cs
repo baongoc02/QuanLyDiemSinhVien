@@ -23,6 +23,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Them_Click(object sender, EventArgs e)
         {
             LopHocInfo lopHocInfo = new LopHocInfo();
+            lopHocInfo.lopViewModel = null;
             lopHocInfo.ShowDialog();
             LoadGridView();
         }
@@ -71,7 +72,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             listGiangVien.Insert(0, new GiangVienViewModel()
             {
                 MaGiangVien = null,
-                HoTen = "-- Tất cả --"
+                HoTen = "-- Tất cả giảng viên --"
             });
             cbGiangVien.DataSource = listGiangVien;
             cbGiangVien.DisplayMember = nameof(GiangVienViewModel.HoTen);
