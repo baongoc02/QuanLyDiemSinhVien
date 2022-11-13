@@ -218,6 +218,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NamHocInfo";
             this.Text = "NamHocInfo";
+            this.Load += new System.EventHandler(this.NamHocInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

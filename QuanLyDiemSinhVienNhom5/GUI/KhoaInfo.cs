@@ -1,5 +1,6 @@
 ﻿using QuanLyDiemSinhVienNhom5.Core.Services;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
+using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     public partial class KhoaInfo : Form
     {
         private readonly KhoaService khoaService;
+        public KhoaViewModel khoaViewModel;
+
         public KhoaInfo()
         {
             this.khoaService = new KhoaService();
@@ -111,6 +114,14 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void KhoaInfo_Load(object sender, EventArgs e)
+        {
+            txtMaKhoa.Text = this.khoaViewModel.MaKhoa;
+            txtTenKhoa.Text = this.khoaViewModel.TenKhoa;
+            txtHeDaotao.Text = this.khoaViewModel.HeDaoTao;
+            dtNgayThanhLapInfor.Value = this.khoaViewModel.NgayThanhLap;
         }
     }
 }

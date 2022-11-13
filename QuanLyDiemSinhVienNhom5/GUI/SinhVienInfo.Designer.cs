@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.Btn_Sua = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Dong = new System.Windows.Forms.Button();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 496);
             this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgaySinh.Location = new System.Drawing.Point(211, 139);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(292, 28);
+            this.dtNgaySinh.TabIndex = 3;
             // 
             // cbKhoa
             // 
@@ -344,15 +353,6 @@
             this.Btn_Dong.UseVisualStyleBackColor = true;
             this.Btn_Dong.Click += new System.EventHandler(this.Btn_Dong_Click);
             // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.dtNgaySinh.Location = new System.Drawing.Point(211, 139);
-            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(292, 28);
-            this.dtNgaySinh.TabIndex = 3;
-            // 
             // SinhVienInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -368,7 +368,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "SinhVienInfo";
-            this.Text = "SinhVienInfo";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.SinhVienInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

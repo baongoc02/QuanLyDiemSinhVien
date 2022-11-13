@@ -166,8 +166,10 @@
             this.SinhVien_gridview.Name = "SinhVien_gridview";
             this.SinhVien_gridview.RowHeadersWidth = 51;
             this.SinhVien_gridview.RowTemplate.Height = 24;
+            this.SinhVien_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SinhVien_gridview.Size = new System.Drawing.Size(1029, 482);
             this.SinhVien_gridview.TabIndex = 24;
+            this.SinhVien_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SinhVien_gridview_CellClick);
             // 
             // label6
             // 

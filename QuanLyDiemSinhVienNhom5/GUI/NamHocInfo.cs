@@ -1,5 +1,6 @@
 ﻿using QuanLyDiemSinhVienNhom5.Core.Services;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
+using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     public partial class NamHocInfo : Form
     {
         private readonly NamHocService namHocService;
+        public NamHocViewModel namHocViewModel;
+
         public NamHocInfo()
         {
             this.namHocService = new NamHocService();
@@ -80,6 +83,12 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Dong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void NamHocInfo_Load(object sender, EventArgs e)
+        {
+            txtMaNamHoc.Text = this.namHocViewModel.MaNamHoc;
+            txtTenNamHoc.Text = this.namHocViewModel.TenNamHoc;
         }
     }
 }

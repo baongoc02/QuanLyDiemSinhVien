@@ -64,5 +64,17 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             List<HocKyViewModel> hocKyViewModels = hocKyService.Search(txtHocKy.Text, "", cbNamHoc.SelectedValue.ToString());
             LoadDSHocKy(hocKyViewModels);
         }
+
+        private void HocKy_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (HocKy_gridview.SelectedRows.Count == 1)
+            {
+                var data = HocKy_gridview.SelectedRows[0].DataBoundItem as HocKyViewModel;
+                HocKyInfo hocKyInfo = new HocKyInfo();
+                hocKyInfo.hocKyViewModel = data;
+                hocKyInfo.ShowDialog();
+                LoadGridView();
+            }
+        }
     }
 }

@@ -30,8 +30,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             SinhVien_gridview.Columns.Clear();
             SinhVien_gridview.DataSource = sinhVienViewModels;
-
-
         }
 
         public void LoadGridView()
@@ -46,6 +44,20 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void XemSinhVien_Load(object sender, EventArgs e)
         {
             LoadGridView();
+        }
+
+        private void SinhVien_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (SinhVien_gridview.SelectedRows.Count == 1)
+            {
+                var data = SinhVien_gridview.SelectedRows[0].DataBoundItem as SinhVienViewModel;
+
+                SinhVienInfo sinhVienInfo = new SinhVienInfo();
+                sinhVienInfo.sinhVienViewModel = data;
+                sinhVienInfo.ShowDialog();
+
+                LoadGridView();
+            }
         }
     }
 }

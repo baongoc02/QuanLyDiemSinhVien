@@ -152,8 +152,10 @@
             this.MonHoc_gridview.Name = "MonHoc_gridview";
             this.MonHoc_gridview.RowHeadersWidth = 51;
             this.MonHoc_gridview.RowTemplate.Height = 24;
+            this.MonHoc_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MonHoc_gridview.Size = new System.Drawing.Size(1029, 482);
             this.MonHoc_gridview.TabIndex = 34;
+            this.MonHoc_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MonHoc_gridview_CellClick);
             // 
             // label6
             // 

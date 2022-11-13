@@ -72,7 +72,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (InfoKhoa_gridview.SelectedRows.Count == 1)
             {
                 var data = (InfoKhoa_gridview.SelectedRows[0].DataBoundItem as KhoaViewModel);
-                MessageBox.Show(data.MaKhoa);
+                KhoaInfo khoaInfo = new KhoaInfo();
+                khoaInfo.khoaViewModel = data;
+                khoaInfo.ShowDialog();
+                LoadGridView();
             }
         }
     }

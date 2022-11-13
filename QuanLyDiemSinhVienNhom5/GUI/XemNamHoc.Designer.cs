@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtNamHoc, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
@@ -61,15 +61,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 96);
             this.tableLayoutPanel1.TabIndex = 32;
             // 
-            // comboBox2
+            // txtNamHoc
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(233, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(612, 39);
-            this.comboBox2.TabIndex = 37;
+            this.txtNamHoc.BackColor = System.Drawing.Color.Honeydew;
+            this.txtNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamHoc.Location = new System.Drawing.Point(233, 51);
+            this.txtNamHoc.Name = "txtNamHoc";
+            this.txtNamHoc.Size = new System.Drawing.Size(612, 38);
+            this.txtNamHoc.TabIndex = 55;
             // 
             // comboBox1
             // 
@@ -128,8 +127,10 @@
             this.NamHoc_gridview.Name = "NamHoc_gridview";
             this.NamHoc_gridview.RowHeadersWidth = 51;
             this.NamHoc_gridview.RowTemplate.Height = 24;
+            this.NamHoc_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.NamHoc_gridview.Size = new System.Drawing.Size(1029, 482);
             this.NamHoc_gridview.TabIndex = 29;
+            this.NamHoc_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NamHoc_gridview_CellClick);
             // 
             // label6
             // 
@@ -199,6 +200,7 @@
             this.Size = new System.Drawing.Size(1130, 750);
             this.Load += new System.EventHandler(this.XemNamHoc_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NamHoc_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,11 +213,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView NamHoc_gridview;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Them;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Btn_Tim;
+        private System.Windows.Forms.TextBox txtNamHoc;
     }
 }

@@ -130,8 +130,10 @@
             this.HocKy_gridview.Name = "HocKy_gridview";
             this.HocKy_gridview.RowHeadersWidth = 51;
             this.HocKy_gridview.RowTemplate.Height = 24;
+            this.HocKy_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HocKy_gridview.Size = new System.Drawing.Size(1029, 482);
             this.HocKy_gridview.TabIndex = 29;
+            this.HocKy_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HocKy_gridview_CellClick);
             // 
             // label6
             // 

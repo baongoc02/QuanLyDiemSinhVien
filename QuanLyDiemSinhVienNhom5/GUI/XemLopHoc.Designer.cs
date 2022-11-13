@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Lop_gridview = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbMon = new System.Windows.Forms.ComboBox();
+            this.cbGiangVien = new System.Windows.Forms.ComboBox();
             this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.Btn_Them = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
-            this.cbMon = new System.Windows.Forms.ComboBox();
-            this.cbGiangVien = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Lop_gridview)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,8 +70,10 @@
             this.Lop_gridview.Name = "Lop_gridview";
             this.Lop_gridview.RowHeadersWidth = 51;
             this.Lop_gridview.RowTemplate.Height = 24;
+            this.Lop_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Lop_gridview.Size = new System.Drawing.Size(1029, 482);
             this.Lop_gridview.TabIndex = 39;
+            this.Lop_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Lop_gridview_CellClick);
             // 
             // tableLayoutPanel2
             // 
@@ -96,6 +98,26 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(862, 176);
             this.tableLayoutPanel2.TabIndex = 44;
+            // 
+            // cbMon
+            // 
+            this.cbMon.BackColor = System.Drawing.Color.Honeydew;
+            this.cbMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbMon.FormattingEnabled = true;
+            this.cbMon.Location = new System.Drawing.Point(233, 91);
+            this.cbMon.Name = "cbMon";
+            this.cbMon.Size = new System.Drawing.Size(612, 39);
+            this.cbMon.TabIndex = 3;
+            // 
+            // cbGiangVien
+            // 
+            this.cbGiangVien.BackColor = System.Drawing.Color.Honeydew;
+            this.cbGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbGiangVien.FormattingEnabled = true;
+            this.cbGiangVien.Location = new System.Drawing.Point(233, 135);
+            this.cbGiangVien.Name = "cbGiangVien";
+            this.cbGiangVien.Size = new System.Drawing.Size(612, 39);
+            this.cbGiangVien.TabIndex = 4;
             // 
             // cbHocKy
             // 
@@ -217,26 +239,6 @@
             this.Btn_Tim.TabIndex = 46;
             this.Btn_Tim.UseVisualStyleBackColor = false;
             this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
-            // 
-            // cbMon
-            // 
-            this.cbMon.BackColor = System.Drawing.Color.Honeydew;
-            this.cbMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.cbMon.FormattingEnabled = true;
-            this.cbMon.Location = new System.Drawing.Point(233, 91);
-            this.cbMon.Name = "cbMon";
-            this.cbMon.Size = new System.Drawing.Size(612, 39);
-            this.cbMon.TabIndex = 3;
-            // 
-            // cbGiangVien
-            // 
-            this.cbGiangVien.BackColor = System.Drawing.Color.Honeydew;
-            this.cbGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.cbGiangVien.FormattingEnabled = true;
-            this.cbGiangVien.Location = new System.Drawing.Point(233, 135);
-            this.cbGiangVien.Name = "cbGiangVien";
-            this.cbGiangVien.Size = new System.Drawing.Size(612, 39);
-            this.cbGiangVien.TabIndex = 4;
             // 
             // XemLopHoc
             // 
