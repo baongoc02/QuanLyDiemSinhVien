@@ -107,6 +107,13 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             txtMaSoSinhVien.Text = this.sinhVienViewModel.MaSinhVien;
             txtHoTen.Text = this.sinhVienViewModel.HoTen;
             dtNgaySinh.Value = this.sinhVienViewModel.NgaySinh;
+            txtGioiTinh.Text = this.sinhVienViewModel.GioiTinh;
+            txtCMND.Text = this.sinhVienViewModel.CMND;
+            txtSoDienThoai.Text = this.sinhVienViewModel.SDT;
+            txtQueQuan.Text = this.sinhVienViewModel.QueQuan;
+
+            KhoaViewModel khoaViewModel = khoaService.Search(sinhVienViewModel.MaKhoa, "", "").First();
+            cbKhoa.Text = khoaViewModel.TenKhoa;
 
         }
     }

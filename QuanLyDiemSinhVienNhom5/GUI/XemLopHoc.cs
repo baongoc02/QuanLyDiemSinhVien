@@ -45,18 +45,35 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void XemLopHoc_Load(object sender, EventArgs e)
         {
             HocKyService hocKyService = new HocKyService();
-            cbHocKy.DataSource = hocKyService.ListAll();
+            var listHocKy = hocKyService.ListAll();
+            listHocKy.Insert(0, new HocKyViewModel()
+            {
+                MaHocKy = null,
+                TenHocKy = "-- Tất cả học kỳ --"
+            });
+            cbHocKy.DataSource = listHocKy;
             cbHocKy.DisplayMember = nameof(HocKyViewModel.TenHocKy);
             cbHocKy.ValueMember = nameof(HocKyViewModel.MaHocKy);
-            
 
             MonHocService monHocService = new MonHocService();
-            cbMon.DataSource = monHocService.ListAll();
+            var listMonHoc = monHocService.ListAll();
+            listMonHoc.Insert(0, new MonHocViewModel()
+            {
+                MaMonHoc = null,
+                TenMonHoc = "-- Tất cả môn học --"
+            });
+            cbMon.DataSource = listMonHoc;
             cbMon.DisplayMember = nameof(MonHocViewModel.TenMonHoc);
             cbMon.ValueMember = nameof(MonHocViewModel.MaMonHoc);
 
             GiangVienService giangVienService = new GiangVienService();
-            cbGiangVien.DataSource = giangVienService.ListAll();
+            var listGiangVien = giangVienService.ListAll();
+            listGiangVien.Insert(0, new GiangVienViewModel()
+            {
+                MaGiangVien = null,
+                HoTen = "-- Tất cả --"
+            });
+            cbGiangVien.DataSource = listGiangVien;
             cbGiangVien.DisplayMember = nameof(GiangVienViewModel.HoTen);
             cbGiangVien.ValueMember = nameof(GiangVienViewModel.MaGiangVien);
 

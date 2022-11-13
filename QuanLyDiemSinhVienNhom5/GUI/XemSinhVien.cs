@@ -43,6 +43,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void XemSinhVien_Load(object sender, EventArgs e)
         {
+
             LoadGridView();
         }
 

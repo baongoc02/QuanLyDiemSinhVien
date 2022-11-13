@@ -12,9 +12,9 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
     {
         [DisplayName("MaGiangVien")]
         public string MaGiangVien { get; set; }
-        [DisplayName("H? và tên")]
-        public string FullName => $"{this.HocHam}. {this.HocVi}. {this.HoTen}";
-        [Browsable(false)]
+        //[DisplayName("H? và tên")]
+        //public string FullName => $"{this.HocHam}. {this.HocVi}. {this.HoTen}";
+        [DisplayName("HoTen")]
         public string HoTen { get; set; }
         [DisplayName("NgaySinh")]
         public DateTime NgaySinh { get; set; }

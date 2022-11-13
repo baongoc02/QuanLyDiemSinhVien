@@ -35,7 +35,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InfoGiangVien_gridview.Columns.Clear();
             InfoGiangVien_gridview.DataSource = giangVienViewModels;
 
-            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.FullName)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.HoTen)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.NgaySinh)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.GioiTinh)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.SDT)].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
