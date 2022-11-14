@@ -117,21 +117,9 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             using (var command = conn.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM View_ListAllKhoa";
-
-                List<string> where = new List<string>();
-
-                where.Add("[KhoaMaKhoa] LIKE CONCAT('%', @maKhoa, '%')");
-                where.Add("[KhoaTenKhoa] LIKE CONCAT('%', @tenKhoa, '%')");
-                where.Add("[KhoaHeDaoTao] LIKE CONCAT('%', @heDaoTao, '%')");
-
                 command.Parameters.Add(new SqlParameter("@maKhoa", maKhoa));
                 command.Parameters.Add(new SqlParameter("@tenKhoa", tenKhoa));
                 command.Parameters.Add(new SqlParameter("@heDaoTao", heDaoTao));
-                
-                if (where.Count > 0)
-                {
-                    command.CommandText += " WHERE " + string.Join(" AND ", where);
-                }
 
                 using (var adapter = new SqlDataAdapter(command))
                 {

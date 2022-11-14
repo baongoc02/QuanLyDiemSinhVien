@@ -135,19 +135,6 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             using (var command = conn.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM View_ListAllGiangVien";
-
-                List<string> where = new List<string>();
-
-                where.Add("[GiangVienMaGiangVien] LIKE CONCAT('%', @maGiangVien, '%')");
-                where.Add("[GiangVienHoTen] LIKE CONCAT('%', @hoTen, '%')");
-                where.Add("[GiangVienGioiTinh] LIKE CONCAT('%', @gioiTinh, '%')");
-                where.Add("[GiangVienCMND] LIKE CONCAT('%', @cMND, '%')");
-                where.Add("[GiangVienSDT] LIKE CONCAT('%', @sDT, '%')");
-                where.Add("[GiangVienQueQuan] LIKE CONCAT('%', @queQuan, '%')");
-                where.Add("[GiangVienHocHam] LIKE CONCAT('%', @hocHam, '%')");
-                where.Add("[GiangVienHocVi] LIKE CONCAT('%', @hocVi, '%')");
-                where.Add("[GiangVienMaKhoa] = @maKhoa");
-
                 command.Parameters.Add(new SqlParameter("@maGiangVien", maGiangVien));
                 command.Parameters.Add(new SqlParameter("@hoTen", hoTen));
                 command.Parameters.Add(new SqlParameter("@gioiTinh", gioiTinh));
@@ -157,11 +144,6 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@hocHam", hocHam));
                 command.Parameters.Add(new SqlParameter("@hocVi", hocVi));
                 command.Parameters.Add(new SqlParameter("@maKhoa", maKhoa));
-                
-                if (where.Count > 0)
-                {
-                    command.CommandText += " WHERE " + string.Join(" AND ", where);
-                }
 
                 using (var adapter = new SqlDataAdapter(command))
                 {
