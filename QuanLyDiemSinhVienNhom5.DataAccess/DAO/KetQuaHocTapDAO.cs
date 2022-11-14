@@ -118,19 +118,8 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             using (var command = conn.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM View_ListAllKetQuaHocTap";
-
-                List<string> where = new List<string>();
-
-                where.Add("[KetQuaHocTapMaSinhVien] = @maSinhVien");
-                where.Add("[KetQuaHocTapMaLop] = @maLop");
-
                 command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
                 command.Parameters.Add(new SqlParameter("@maLop", maLop));
-                
-                if (where.Count > 0)
-                {
-                    command.CommandText += " WHERE " + string.Join(" AND ", where);
-                }
 
                 using (var adapter = new SqlDataAdapter(command))
                 {

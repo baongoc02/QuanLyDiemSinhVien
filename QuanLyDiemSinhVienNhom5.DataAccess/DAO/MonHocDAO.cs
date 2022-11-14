@@ -123,25 +123,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             using (var command = conn.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM View_ListAllMonHoc";
-
-                List<string> where = new List<string>();
-
-                where.Add("[MonHocMaMonHoc] LIKE CONCAT('%', @maMonHoc, '%')");
-                where.Add("[MonHocTenMonHoc] LIKE CONCAT('%', @tenMonHoc, '%')");
-                where.Add("[MonHocMoTa] LIKE CONCAT('%', @moTa, '%')");
-                where.Add("[MonHocLoaiHocPhan] LIKE CONCAT('%', @loaiHocPhan, '%')");
-                where.Add("[MonHocMaKhoa] = @maKhoa");
-
                 command.Parameters.Add(new SqlParameter("@maMonHoc", maMonHoc));
                 command.Parameters.Add(new SqlParameter("@tenMonHoc", tenMonHoc));
                 command.Parameters.Add(new SqlParameter("@moTa", moTa));
                 command.Parameters.Add(new SqlParameter("@loaiHocPhan", loaiHocPhan));
                 command.Parameters.Add(new SqlParameter("@maKhoa", maKhoa));
-                
-                if (where.Count > 0)
-                {
-                    command.CommandText += " WHERE " + string.Join(" AND ", where);
-                }
 
                 using (var adapter = new SqlDataAdapter(command))
                 {

@@ -129,17 +129,6 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             using (var command = conn.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM View_ListAllSinhVien";
-
-                List<string> where = new List<string>();
-
-                where.Add("[SinhVienMaSinhVien] LIKE CONCAT('%', @maSinhVien, '%')");
-                where.Add("[SinhVienHoTen] LIKE CONCAT('%', @hoTen, '%')");
-                where.Add("[SinhVienGioiTinh] LIKE CONCAT('%', @gioiTinh, '%')");
-                where.Add("[SinhVienCMND] LIKE CONCAT('%', @cMND, '%')");
-                where.Add("[SinhVienSDT] LIKE CONCAT('%', @sDT, '%')");
-                where.Add("[SinhVienQueQuan] LIKE CONCAT('%', @queQuan, '%')");
-                where.Add("[SinhVienMaKhoa] = @maKhoa");
-
                 command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
                 command.Parameters.Add(new SqlParameter("@hoTen", hoTen));
                 command.Parameters.Add(new SqlParameter("@gioiTinh", gioiTinh));
@@ -147,11 +136,6 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.Parameters.Add(new SqlParameter("@sDT", sDT));
                 command.Parameters.Add(new SqlParameter("@queQuan", queQuan));
                 command.Parameters.Add(new SqlParameter("@maKhoa", maKhoa));
-                
-                if (where.Count > 0)
-                {
-                    command.CommandText += " WHERE " + string.Join(" AND ", where);
-                }
 
                 using (var adapter = new SqlDataAdapter(command))
                 {
