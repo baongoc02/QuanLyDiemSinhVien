@@ -61,5 +61,13 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 LoadGridView();
             }
         }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            // TODO: nho fix cai nay
+            NamHocService namHocService = new NamHocService();
+            List<NamHocViewModel> namHocViewModels = namHocService.Search(txtMaNamHoc.Text, txtNamHoc.Text);
+            LoadDSNamHoc(namHocViewModels);
+        }
     }
 }

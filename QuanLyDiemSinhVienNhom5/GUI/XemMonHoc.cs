@@ -54,7 +54,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listKhoa = khoaService.ListAll();
             listKhoa.Insert(0, new KhoaViewModel()
             {
-                MaKhoa = null,
+                MaKhoa = "",
                 TenKhoa = "-- Tất cả khoa --"
             });
             cbKhoa.DataSource = listKhoa;
@@ -75,6 +75,13 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 monHocInfo.ShowDialog();
                 LoadGridView();
             }
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            MonHocService monHocService = new MonHocService();
+            List<MonHocViewModel> monHocViewModels = monHocService.Search(txtMaMon.Text, txtTenMon.Text, "", "", cbKhoa.SelectedValue.ToString());
+            LoadDSMonHoc(monHocViewModels);
         }
     }
 }

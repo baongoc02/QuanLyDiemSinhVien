@@ -49,7 +49,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listHocKy = hocKyService.ListAll();
             listHocKy.Insert(0, new HocKyViewModel()
             {
-                MaHocKy = null,
+                MaHocKy = "",
                 TenHocKy = "-- Tất cả học kỳ --"
             });
             cbHocKy.DataSource = listHocKy;
@@ -60,7 +60,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listMonHoc = monHocService.ListAll();
             listMonHoc.Insert(0, new MonHocViewModel()
             {
-                MaMonHoc = null,
+                MaMonHoc = "",
                 TenMonHoc = "-- Tất cả môn học --"
             });
             cbMon.DataSource = listMonHoc;
@@ -71,7 +71,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listGiangVien = giangVienService.ListAll();
             listGiangVien.Insert(0, new GiangVienViewModel()
             {
-                MaGiangVien = null,
+                MaGiangVien = "",
                 HoTen = "-- Tất cả giảng viên --"
             });
             cbGiangVien.DataSource = listGiangVien;

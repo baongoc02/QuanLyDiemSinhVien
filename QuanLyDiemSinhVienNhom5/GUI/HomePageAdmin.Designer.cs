@@ -41,9 +41,12 @@
             this.thốngKêĐiểmTheoLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_XemNamHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.Btn_XemHocKy = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.Btn_ThongKeDiem = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.Btn_KetQuaHocTap = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.Btn_LopHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.xemHocKy1 = new QuanLyDiemSinhVienNhom5.GUI.XemHocKy();
             this.xemNamHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemNamHoc();
             this.xemDanhSachKhoa1 = new QuanLyDiemSinhVienNhom5.GUI.XemDanhSachKhoa();
@@ -53,11 +56,8 @@
             this.xemMonHoc1 = new QuanLyDiemSinhVienNhom5.GUI.XemMonHoc();
             this.xemGiangVien1 = new QuanLyDiemSinhVienNhom5.GUI.XemGiangVien();
             this.xemSinhVien1 = new QuanLyDiemSinhVienNhom5.GUI.XemSinhVien();
-            this.Btn_XemNamHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_XemHocKy = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_ThongKeDiem = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_KetQuaHocTap = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
-            this.Btn_LopHoc = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusAdmin = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -153,14 +153,14 @@
             // thốngKêĐiểmTheoLớpToolStripMenuItem
             // 
             this.thốngKêĐiểmTheoLớpToolStripMenuItem.Name = "thốngKêĐiểmTheoLớpToolStripMenuItem";
-            this.thốngKêĐiểmTheoLớpToolStripMenuItem.Size = new System.Drawing.Size(300, 28);
-            this.thốngKêĐiểmTheoLớpToolStripMenuItem.Text = "Thống kê điểm theo lớp";
+            this.thốngKêĐiểmTheoLớpToolStripMenuItem.Size = new System.Drawing.Size(406, 28);
+            this.thốngKêĐiểmTheoLớpToolStripMenuItem.Text = "Danh sách sinh viên theo lớp và xếp loại";
             // 
             // thốngKêĐiểmTheoHọcKỳToolStripMenuItem
             // 
             this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem.Name = "thốngKêĐiểmTheoHọcKỳToolStripMenuItem";
-            this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem.Size = new System.Drawing.Size(300, 28);
-            this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem.Text = "Thống kê điểm theo học kỳ";
+            this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem.Size = new System.Drawing.Size(406, 28);
+            this.thốngKêĐiểmTheoHọcKỳToolStripMenuItem.Text = "Danh sách sinh viên không đạt một môn";
             // 
             // panel1
             // 
@@ -177,132 +177,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 750);
             this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.xemHocKy1);
-            this.panel2.Controls.Add(this.xemNamHoc1);
-            this.panel2.Controls.Add(this.xemDanhSachKhoa1);
-            this.panel2.Controls.Add(this.thongKeDiem1);
-            this.panel2.Controls.Add(this.xemKetQuaHocTap1);
-            this.panel2.Controls.Add(this.xemLopHoc1);
-            this.panel2.Controls.Add(this.xemMonHoc1);
-            this.panel2.Controls.Add(this.xemGiangVien1);
-            this.panel2.Controls.Add(this.xemSinhVien1);
-            this.panel2.Location = new System.Drawing.Point(183, 46);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1130, 750);
-            this.panel2.TabIndex = 3;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusAdmin});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 786);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1332, 27);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusAdmin
-            // 
-            this.toolStripStatusAdmin.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusAdmin.Name = "toolStripStatusAdmin";
-            this.toolStripStatusAdmin.Size = new System.Drawing.Size(63, 21);
-            this.toolStripStatusAdmin.Text = "Admin ";
-            // 
-            // xemHocKy1
-            // 
-            this.xemHocKy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemHocKy1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemHocKy1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemHocKy1.Location = new System.Drawing.Point(0, 0);
-            this.xemHocKy1.Name = "xemHocKy1";
-            this.xemHocKy1.Size = new System.Drawing.Size(1130, 750);
-            this.xemHocKy1.TabIndex = 8;
-            // 
-            // xemNamHoc1
-            // 
-            this.xemNamHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemNamHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemNamHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemNamHoc1.Location = new System.Drawing.Point(0, 0);
-            this.xemNamHoc1.Name = "xemNamHoc1";
-            this.xemNamHoc1.Size = new System.Drawing.Size(1130, 750);
-            this.xemNamHoc1.TabIndex = 7;
-            // 
-            // xemDanhSachKhoa1
-            // 
-            this.xemDanhSachKhoa1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemDanhSachKhoa1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemDanhSachKhoa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemDanhSachKhoa1.Location = new System.Drawing.Point(0, 0);
-            this.xemDanhSachKhoa1.Name = "xemDanhSachKhoa1";
-            this.xemDanhSachKhoa1.Size = new System.Drawing.Size(1130, 750);
-            this.xemDanhSachKhoa1.TabIndex = 6;
-            // 
-            // thongKeDiem1
-            // 
-            this.thongKeDiem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.thongKeDiem1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.thongKeDiem1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thongKeDiem1.Location = new System.Drawing.Point(0, 0);
-            this.thongKeDiem1.Name = "thongKeDiem1";
-            this.thongKeDiem1.Size = new System.Drawing.Size(1130, 750);
-            this.thongKeDiem1.TabIndex = 5;
-            // 
-            // xemKetQuaHocTap1
-            // 
-            this.xemKetQuaHocTap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemKetQuaHocTap1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemKetQuaHocTap1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemKetQuaHocTap1.Location = new System.Drawing.Point(0, 0);
-            this.xemKetQuaHocTap1.Name = "xemKetQuaHocTap1";
-            this.xemKetQuaHocTap1.Size = new System.Drawing.Size(1130, 750);
-            this.xemKetQuaHocTap1.TabIndex = 4;
-            // 
-            // xemLopHoc1
-            // 
-            this.xemLopHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemLopHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemLopHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemLopHoc1.Location = new System.Drawing.Point(0, 0);
-            this.xemLopHoc1.Name = "xemLopHoc1";
-            this.xemLopHoc1.Size = new System.Drawing.Size(1130, 750);
-            this.xemLopHoc1.TabIndex = 3;
-            // 
-            // xemMonHoc1
-            // 
-            this.xemMonHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xemMonHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemMonHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemMonHoc1.Location = new System.Drawing.Point(0, 0);
-            this.xemMonHoc1.Name = "xemMonHoc1";
-            this.xemMonHoc1.Size = new System.Drawing.Size(1130, 750);
-            this.xemMonHoc1.TabIndex = 2;
-            // 
-            // xemGiangVien1
-            // 
-            this.xemGiangVien1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.xemGiangVien1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemGiangVien1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemGiangVien1.Location = new System.Drawing.Point(0, 0);
-            this.xemGiangVien1.Name = "xemGiangVien1";
-            this.xemGiangVien1.Size = new System.Drawing.Size(1130, 750);
-            this.xemGiangVien1.TabIndex = 1;
-            // 
-            // xemSinhVien1
-            // 
-            this.xemSinhVien1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.xemSinhVien1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xemSinhVien1.Location = new System.Drawing.Point(0, 0);
-            this.xemSinhVien1.Name = "xemSinhVien1";
-            this.xemSinhVien1.Size = new System.Drawing.Size(1130, 750);
-            this.xemSinhVien1.TabIndex = 0;
             // 
             // Btn_XemNamHoc
             // 
@@ -378,6 +252,133 @@
             this.Btn_LopHoc.Text = "Xem lớp học";
             this.Btn_LopHoc.UseVisualStyleBackColor = false;
             this.Btn_LopHoc.Click += new System.EventHandler(this.Btn_LopHoc_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.xemHocKy1);
+            this.panel2.Controls.Add(this.xemNamHoc1);
+            this.panel2.Controls.Add(this.xemDanhSachKhoa1);
+            this.panel2.Controls.Add(this.thongKeDiem1);
+            this.panel2.Controls.Add(this.xemKetQuaHocTap1);
+            this.panel2.Controls.Add(this.xemLopHoc1);
+            this.panel2.Controls.Add(this.xemMonHoc1);
+            this.panel2.Controls.Add(this.xemGiangVien1);
+            this.panel2.Controls.Add(this.xemSinhVien1);
+            this.panel2.Location = new System.Drawing.Point(183, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1130, 750);
+            this.panel2.TabIndex = 3;
+            // 
+            // xemHocKy1
+            // 
+            this.xemHocKy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemHocKy1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemHocKy1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemHocKy1.Location = new System.Drawing.Point(0, 0);
+            this.xemHocKy1.Name = "xemHocKy1";
+            this.xemHocKy1.Size = new System.Drawing.Size(1130, 750);
+            this.xemHocKy1.TabIndex = 8;
+            // 
+            // xemNamHoc1
+            // 
+            this.xemNamHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemNamHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemNamHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemNamHoc1.Location = new System.Drawing.Point(0, 0);
+            this.xemNamHoc1.Name = "xemNamHoc1";
+            this.xemNamHoc1.Size = new System.Drawing.Size(1130, 750);
+            this.xemNamHoc1.TabIndex = 7;
+            // 
+            // xemDanhSachKhoa1
+            // 
+            this.xemDanhSachKhoa1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemDanhSachKhoa1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemDanhSachKhoa1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemDanhSachKhoa1.Location = new System.Drawing.Point(0, 0);
+            this.xemDanhSachKhoa1.Name = "xemDanhSachKhoa1";
+            this.xemDanhSachKhoa1.Size = new System.Drawing.Size(1130, 750);
+            this.xemDanhSachKhoa1.TabIndex = 6;
+            // 
+            // thongKeDiem1
+            // 
+            this.thongKeDiem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.thongKeDiem1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.thongKeDiem1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thongKeDiem1.Location = new System.Drawing.Point(0, 0);
+            this.thongKeDiem1.Name = "thongKeDiem1";
+            this.thongKeDiem1.Size = new System.Drawing.Size(1130, 750);
+            this.thongKeDiem1.TabIndex = 5;
+            // 
+            // xemKetQuaHocTap1
+            // 
+            this.xemKetQuaHocTap1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemKetQuaHocTap1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemKetQuaHocTap1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemKetQuaHocTap1.ForeColor = System.Drawing.Color.Indigo;
+            this.xemKetQuaHocTap1.Location = new System.Drawing.Point(0, 0);
+            this.xemKetQuaHocTap1.Name = "xemKetQuaHocTap1";
+            this.xemKetQuaHocTap1.Size = new System.Drawing.Size(1130, 750);
+            this.xemKetQuaHocTap1.TabIndex = 4;
+            // 
+            // xemLopHoc1
+            // 
+            this.xemLopHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemLopHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemLopHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemLopHoc1.Location = new System.Drawing.Point(0, 0);
+            this.xemLopHoc1.Name = "xemLopHoc1";
+            this.xemLopHoc1.Size = new System.Drawing.Size(1130, 750);
+            this.xemLopHoc1.TabIndex = 3;
+            // 
+            // xemMonHoc1
+            // 
+            this.xemMonHoc1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xemMonHoc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemMonHoc1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemMonHoc1.Location = new System.Drawing.Point(0, 0);
+            this.xemMonHoc1.Name = "xemMonHoc1";
+            this.xemMonHoc1.Size = new System.Drawing.Size(1130, 750);
+            this.xemMonHoc1.TabIndex = 2;
+            // 
+            // xemGiangVien1
+            // 
+            this.xemGiangVien1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.xemGiangVien1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemGiangVien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemGiangVien1.Location = new System.Drawing.Point(0, 0);
+            this.xemGiangVien1.Name = "xemGiangVien1";
+            this.xemGiangVien1.Size = new System.Drawing.Size(1130, 750);
+            this.xemGiangVien1.TabIndex = 1;
+            // 
+            // xemSinhVien1
+            // 
+            this.xemSinhVien1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.xemSinhVien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xemSinhVien1.Location = new System.Drawing.Point(0, 0);
+            this.xemSinhVien1.Name = "xemSinhVien1";
+            this.xemSinhVien1.Size = new System.Drawing.Size(1130, 750);
+            this.xemSinhVien1.TabIndex = 0;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusAdmin});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 786);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1332, 27);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusAdmin
+            // 
+            this.toolStripStatusAdmin.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusAdmin.Name = "toolStripStatusAdmin";
+            this.toolStripStatusAdmin.Size = new System.Drawing.Size(63, 21);
+            this.toolStripStatusAdmin.Text = "Admin ";
             // 
             // HomePageAdmin
             // 

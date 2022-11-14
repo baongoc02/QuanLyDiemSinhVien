@@ -38,6 +38,8 @@
             this.txtMaMon = new System.Windows.Forms.TextBox();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.roundedButton1 = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
+            this.roundedButton2 = new QuanLyDiemSinhVienNhom5.GUI.RoundedButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(988, 96);
+            this.label5.Location = new System.Drawing.Point(988, 462);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 24);
             this.label5.TabIndex = 43;
@@ -63,7 +65,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMaMon, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 85);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 451);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -146,7 +148,7 @@
             this.Btn_Tim.FlatAppearance.BorderSize = 0;
             this.Btn_Tim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Tim.Location = new System.Drawing.Point(945, 88);
+            this.Btn_Tim.Location = new System.Drawing.Point(945, 454);
             this.Btn_Tim.Name = "Btn_Tim";
             this.Btn_Tim.Size = new System.Drawing.Size(40, 38);
             this.Btn_Tim.TabIndex = 41;
@@ -163,10 +165,42 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Thống kê điểm";
             // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.roundedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundedButton1.FlatAppearance.BorderSize = 0;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.White;
+            this.roundedButton1.Location = new System.Drawing.Point(54, 92);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(387, 50);
+            this.roundedButton1.TabIndex = 44;
+            this.roundedButton1.Text = "Danh sách sinh viên theo môn và xếp loại";
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            // 
+            // roundedButton2
+            // 
+            this.roundedButton2.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.roundedButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundedButton2.FlatAppearance.BorderSize = 0;
+            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton2.ForeColor = System.Drawing.Color.White;
+            this.roundedButton2.Location = new System.Drawing.Point(54, 156);
+            this.roundedButton2.Name = "roundedButton2";
+            this.roundedButton2.Size = new System.Drawing.Size(387, 50);
+            this.roundedButton2.TabIndex = 45;
+            this.roundedButton2.Text = "Danh sách sinh viên không đạt một môn";
+            this.roundedButton2.UseVisualStyleBackColor = false;
+            // 
             // ThongKeDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.roundedButton2);
+            this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Btn_Tim);
@@ -192,5 +226,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbMaHocKy;
         private System.Windows.Forms.ComboBox cbMaLop;
+        private RoundedButton roundedButton1;
+        private RoundedButton roundedButton2;
     }
 }

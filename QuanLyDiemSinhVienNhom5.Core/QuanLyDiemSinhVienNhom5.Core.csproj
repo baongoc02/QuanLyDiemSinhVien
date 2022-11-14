@@ -55,6 +55,7 @@
     <Compile Include="ViewModel\HocKyViewModel.cs" />
     <Compile Include="ViewModel\KetQuaHocTapViewModel.cs" />
     <Compile Include="ViewModel\KhoaViewModel.cs" />
+    <Compile Include="ViewModel\DSKetQuaHocTapByMSSVViewModel.cs" />
     <Compile Include="ViewModel\LopViewModel.cs" />
     <Compile Include="ViewModel\MonHocViewModel.cs" />
     <Compile Include="ViewModel\NamHocViewModel.cs" />

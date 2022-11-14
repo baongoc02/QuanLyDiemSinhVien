@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemKetQuaHocTapPageAdmin));
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.KetQuaHocTap_gridview = new System.Windows.Forms.DataGridView();
@@ -69,29 +67,17 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.cbMaLop, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMSSV, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(54, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 89);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 43);
             this.tableLayoutPanel1.TabIndex = 42;
-            // 
-            // cbMaLop
-            // 
-            this.cbMaLop.BackColor = System.Drawing.Color.Honeydew;
-            this.cbMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.cbMaLop.FormattingEnabled = true;
-            this.cbMaLop.Location = new System.Drawing.Point(233, 47);
-            this.cbMaLop.Name = "cbMaLop";
-            this.cbMaLop.Size = new System.Drawing.Size(612, 39);
-            this.cbMaLop.TabIndex = 48;
             // 
             // label2
             // 
@@ -100,22 +86,10 @@
             this.label2.ForeColor = System.Drawing.Color.Indigo;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 44);
+            this.label2.Size = new System.Drawing.Size(224, 43);
             this.label2.TabIndex = 15;
             this.label2.Text = "Mã số sinh viên:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(3, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(224, 45);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Mã lớp:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtMSSV
             // 
@@ -149,8 +123,10 @@
             this.KetQuaHocTap_gridview.Name = "KetQuaHocTap_gridview";
             this.KetQuaHocTap_gridview.RowHeadersWidth = 51;
             this.KetQuaHocTap_gridview.RowTemplate.Height = 24;
+            this.KetQuaHocTap_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KetQuaHocTap_gridview.Size = new System.Drawing.Size(1029, 482);
             this.KetQuaHocTap_gridview.TabIndex = 39;
+            this.KetQuaHocTap_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KetQuaHocTap_gridview_CellClick);
             // 
             // label6
             // 
@@ -225,7 +201,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label4.Location = new System.Drawing.Point(57, 196);
+            this.label4.Location = new System.Drawing.Point(57, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 24);
             this.label4.TabIndex = 48;
@@ -235,7 +211,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label8.Location = new System.Drawing.Point(334, 196);
+            this.label8.Location = new System.Drawing.Point(334, 172);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(228, 24);
             this.label8.TabIndex = 49;
@@ -245,7 +221,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label9.Location = new System.Drawing.Point(678, 196);
+            this.label9.Location = new System.Drawing.Point(678, 172);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 24);
             this.label9.TabIndex = 50;
@@ -255,7 +231,7 @@
             // 
             this.txtSTCTichLuy.Enabled = false;
             this.txtSTCTichLuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSTCTichLuy.Location = new System.Drawing.Point(229, 196);
+            this.txtSTCTichLuy.Location = new System.Drawing.Point(229, 172);
             this.txtSTCTichLuy.Name = "txtSTCTichLuy";
             this.txtSTCTichLuy.Size = new System.Drawing.Size(52, 28);
             this.txtSTCTichLuy.TabIndex = 51;
@@ -264,7 +240,7 @@
             // 
             this.txtDTBTichLuy.Enabled = false;
             this.txtDTBTichLuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDTBTichLuy.Location = new System.Drawing.Point(568, 196);
+            this.txtDTBTichLuy.Location = new System.Drawing.Point(568, 172);
             this.txtDTBTichLuy.Name = "txtDTBTichLuy";
             this.txtDTBTichLuy.Size = new System.Drawing.Size(52, 28);
             this.txtDTBTichLuy.TabIndex = 52;
@@ -273,7 +249,7 @@
             // 
             this.txtXepLoai.Enabled = false;
             this.txtXepLoai.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXepLoai.Location = new System.Drawing.Point(770, 196);
+            this.txtXepLoai.Location = new System.Drawing.Point(770, 172);
             this.txtXepLoai.Name = "txtXepLoai";
             this.txtXepLoai.Size = new System.Drawing.Size(52, 28);
             this.txtXepLoai.TabIndex = 53;
@@ -314,7 +290,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Button Btn_Them;
         private System.Windows.Forms.Label label1;
@@ -323,7 +298,6 @@
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Btn_Import;
-        private System.Windows.Forms.ComboBox cbMaLop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

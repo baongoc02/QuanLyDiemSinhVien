@@ -49,7 +49,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listKhoa = khoaService.ListAll();
             listKhoa.Insert(0, new KhoaViewModel()
             {
-                MaKhoa = null,
+                MaKhoa = "",
                 TenKhoa = "-- Tất cả khoa --"
             });
             cbKhoa.DataSource = listKhoa;
@@ -75,7 +75,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
-            List<SinhVienViewModel> sinhVienViewModels = sinhVienService.Search(txtMSSV.Text, txtHoTen.Text, "", "", "", "", cbKhoa.Text);
+            List<SinhVienViewModel> sinhVienViewModels = sinhVienService.Search(txtMSSV.Text, txtHoTen.Text, "", "", "", "", cbKhoa.SelectedValue.ToString());
             LoadDSSinhVien(sinhVienViewModels);
         }
     }

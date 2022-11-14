@@ -59,7 +59,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listNamHoc = namHocService.ListAll();
             listNamHoc.Insert(0, new NamHocViewModel()
             {
-                MaNamHoc = null,
+                MaNamHoc = "",
                 TenNamHoc = "-- Tất cả học kỳ --"
             });
             cbNamHoc.DataSource = listNamHoc;

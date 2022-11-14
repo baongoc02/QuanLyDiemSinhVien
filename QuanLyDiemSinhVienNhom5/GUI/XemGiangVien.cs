@@ -36,12 +36,12 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InfoGiangVien_gridview.Columns.Clear();
             InfoGiangVien_gridview.DataSource = giangVienViewModels;
 
-            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.HoTen)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.NgaySinh)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.GioiTinh)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.HoTen)].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.NgaySinh)].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.GioiTinh)].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             //InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.SDT)].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             //InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.QueQuan)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.MaKhoa)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            InfoGiangVien_gridview.Columns[nameof(GiangVienViewModel.MaKhoa)].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
 
             InfoGiangVien_gridview.AllowUserToResizeColumns = true;
         }
@@ -60,7 +60,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             var listKhoa = khoaService.ListAll();
             listKhoa.Insert(0, new KhoaViewModel()
             {
-                MaKhoa = null,
+                MaKhoa = "",
                 TenKhoa = "-- Tất cả khoa --"
             });
             cbKhoa.DataSource = listKhoa;

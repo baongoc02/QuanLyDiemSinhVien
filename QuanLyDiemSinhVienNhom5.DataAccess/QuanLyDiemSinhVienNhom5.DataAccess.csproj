@@ -74,6 +74,7 @@
     <Compile Include="Base\AppSetting.cs" />
     <Compile Include="Base\DataAccessException.cs" />
     <Compile Include="DAO\BaseDAO.cs" />
+    <Compile Include="DAO\DSKetQuaHocTapByMaSinhVien.cs" />
     <Compile Include="DAO\GiangVienDAO.cs" />
     <Compile Include="DAO\HocKyDAO.cs" />
     <Compile Include="DAO\KetQuaHocTapDAO.cs" />

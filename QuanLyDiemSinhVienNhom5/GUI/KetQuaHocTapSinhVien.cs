@@ -17,6 +17,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     {
         private readonly KetQuaHocTapService ketQuaHocTapService;
         private readonly LopService lopService;
+        public KetQuaHocTapViewModel ketQuaHocTapViewModel;
 
         public KetQuaHocTapSinhVien()
         {
