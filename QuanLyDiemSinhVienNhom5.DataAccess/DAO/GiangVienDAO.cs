@@ -134,7 +134,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var conn = SqlServerConnectionSingleon.getInstance();
             using (var command = conn.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM View_ListAllGiangVien";
+                command.CommandText = "SELECT * FROM Proc_ListAllGiangVien";
                 command.Parameters.Add(new SqlParameter("@maGiangVien", maGiangVien));
                 command.Parameters.Add(new SqlParameter("@hoTen", hoTen));
                 command.Parameters.Add(new SqlParameter("@gioiTinh", gioiTinh));
