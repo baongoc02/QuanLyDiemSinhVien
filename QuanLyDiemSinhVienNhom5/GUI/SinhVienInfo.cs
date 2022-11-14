@@ -98,6 +98,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.Close();
         }
 
+        [DesignOnly(true)]
         private void SinhVienInfo_Load(object sender, EventArgs e)
         {
             cbKhoa.DataSource = khoaService.ListAll();

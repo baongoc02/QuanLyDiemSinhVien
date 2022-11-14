@@ -21,6 +21,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InitializeComponent();
         }
 
+        [DesignOnly(true)]
         private void HomePage_Load(object sender, EventArgs e)
         {
             xemGiangVien1.Visible = false;

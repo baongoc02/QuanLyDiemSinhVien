@@ -42,6 +42,12 @@
             this.Btn_Them = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Btn_Import = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtSTCTichLuy = new System.Windows.Forms.TextBox();
+            this.txtDTBTichLuy = new System.Windows.Forms.TextBox();
+            this.txtXepLoai = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KetQuaHocTap_gridview)).BeginInit();
             this.SuspendLayout();
@@ -215,10 +221,73 @@
             this.Btn_Import.TabIndex = 46;
             this.Btn_Import.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.label4.Location = new System.Drawing.Point(57, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 24);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Số tín chỉ tích lũy:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.label8.Location = new System.Drawing.Point(334, 196);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(228, 24);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "Điểm trung bình tích lũy:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.label9.Location = new System.Drawing.Point(678, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 24);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Xếp loại:";
+            // 
+            // txtSTCTichLuy
+            // 
+            this.txtSTCTichLuy.Enabled = false;
+            this.txtSTCTichLuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSTCTichLuy.Location = new System.Drawing.Point(229, 196);
+            this.txtSTCTichLuy.Name = "txtSTCTichLuy";
+            this.txtSTCTichLuy.Size = new System.Drawing.Size(52, 28);
+            this.txtSTCTichLuy.TabIndex = 51;
+            // 
+            // txtDTBTichLuy
+            // 
+            this.txtDTBTichLuy.Enabled = false;
+            this.txtDTBTichLuy.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDTBTichLuy.Location = new System.Drawing.Point(568, 196);
+            this.txtDTBTichLuy.Name = "txtDTBTichLuy";
+            this.txtDTBTichLuy.Size = new System.Drawing.Size(52, 28);
+            this.txtDTBTichLuy.TabIndex = 52;
+            // 
+            // txtXepLoai
+            // 
+            this.txtXepLoai.Enabled = false;
+            this.txtXepLoai.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXepLoai.Location = new System.Drawing.Point(770, 196);
+            this.txtXepLoai.Name = "txtXepLoai";
+            this.txtXepLoai.Size = new System.Drawing.Size(52, 28);
+            this.txtXepLoai.TabIndex = 53;
+            // 
             // XemKetQuaHocTapPageAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtXepLoai);
+            this.Controls.Add(this.txtDTBTichLuy);
+            this.Controls.Add(this.txtSTCTichLuy);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Btn_Import);
             this.Controls.Add(this.label6);
@@ -228,6 +297,7 @@
             this.Controls.Add(this.Btn_Them);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.KetQuaHocTap_gridview);
+            this.ForeColor = System.Drawing.Color.Indigo;
             this.Name = "XemKetQuaHocTapPageAdmin";
             this.Size = new System.Drawing.Size(1130, 750);
             this.Load += new System.EventHandler(this.XemKetQuaHocTapPageAdmin_Load);
@@ -254,5 +324,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Btn_Import;
         private System.Windows.Forms.ComboBox cbMaLop;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtSTCTichLuy;
+        private System.Windows.Forms.TextBox txtDTBTichLuy;
+        private System.Windows.Forms.TextBox txtXepLoai;
     }
 }

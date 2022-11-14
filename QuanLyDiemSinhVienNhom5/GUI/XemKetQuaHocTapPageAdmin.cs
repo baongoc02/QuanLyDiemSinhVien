@@ -41,6 +41,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             LoadDSKetQuaHocTap(ketQuaHocTapViewModels);
         }
 
+        [DesignOnly(true)]
         private void XemKetQuaHocTapPageAdmin_Load(object sender, EventArgs e)
         {
             cbMaLop.DataSource = lopService.ListAll();

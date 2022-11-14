@@ -33,6 +33,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             LoadDSNamHoc(namHocViewModels);
         }
 
+        [DesignOnly(true)]
         private void XemNamHoc_Load(object sender, EventArgs e)
         {
             LoadGridView();

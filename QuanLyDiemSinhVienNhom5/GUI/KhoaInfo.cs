@@ -116,6 +116,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.Close();
         }
 
+        [DesignOnly(true)]
         private void KhoaInfo_Load(object sender, EventArgs e)
         {
             if (khoaViewModel != null)

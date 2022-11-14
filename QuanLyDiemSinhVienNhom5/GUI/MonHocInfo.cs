@@ -87,7 +87,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             this.Close();
         }
-        
+
+        [DesignOnly(true)]
         private void MonHocInfo_Load(object sender, EventArgs e)
         {
             if (monHocViewModel != null)

@@ -56,6 +56,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             txtGioiHan.Text = "";
         }
 
+        [DesignOnly(true)]
         private void LopHocInfo_Load(object sender, EventArgs e)
         {
             cbGiangVien.DataSource = giangVienService.ListAll();

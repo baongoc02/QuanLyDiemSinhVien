@@ -85,6 +85,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.Close();
         }
 
+        [DesignOnly(true)]
         private void NamHocInfo_Load(object sender, EventArgs e)
         {
             if (namHocViewModel != null)

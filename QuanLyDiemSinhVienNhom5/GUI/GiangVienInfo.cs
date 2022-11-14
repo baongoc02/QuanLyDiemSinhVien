@@ -103,6 +103,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             }
         }
 
+        [DesignOnly(true)]
         private void GiangVienInfo_Load(object sender, EventArgs e)
         {
             cbKhoa.DataSource = this.khoaService.ListAll();

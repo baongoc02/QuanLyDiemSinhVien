@@ -93,6 +93,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             }
         }
 
+        [DesignOnly(true)]
         private void HocKyInfo_Load(object sender, EventArgs e)
         {
             cbNamHoc.DataSource = namHocService.ListAll();
