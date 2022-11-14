@@ -110,7 +110,8 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var conn = SqlServerConnectionSingleon.getInstance();
             using (var command = conn.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM Proc_ListAllNamHoc";
+                command.CommandText = "Proc_ListAllNamHoc";
+                command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add(new SqlParameter("@maNamHoc", maNamHoc));
                 command.Parameters.Add(new SqlParameter("@tenNamHoc", tenNamHoc));
 
