@@ -5,9 +5,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDiemSinhVienNhom5.Core.ViewModel;
 using QuanLyDiemSinhVienNhom5.DataAccess.Base;
 using QuanLyDiemSinhVienNhom5.DataAccess.DAO;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
+using QuanLyDiemSinhVienNhom5.DataAccess.Model;
 using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
 using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 
@@ -43,6 +45,30 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
                 this.OnError("Lỗi hệ thống");
                 this.OnError(e.Message);
             }
+        }
+
+        public List<KetQuaHocTapTheoSinhVienViewModel> GetKetQuaHocTapTheoSinhVien(string maSinhVien)
+        {
+            var result = this.ketQuaHocTapDAO.GetKetQuaHocTapTheoSinhVien(maSinhVien);
+            return result.Select(u => new KetQuaHocTapTheoSinhVienViewModel(u)).ToList();
+        }
+
+        public List<TinhSTCAndDiemTrungBinhViewModel> GetTinhSTCAndDiemTrungBinh(string maSinhVien)
+        {
+            var result = this.ketQuaHocTapDAO.GetTinhSTCAndDiemTrungBinh(maSinhVien);
+            return result.Select(u => new TinhSTCAndDiemTrungBinhViewModel(u)).ToList();
+        }
+
+        public List<KetQuaHocTapTheoMaLopVaXepLoaiViewModel> GetKetQuaHocTapTheoMaLopVaXepLoai(string maLop, string tenLoai)
+        {
+            var result = this.ketQuaHocTapDAO.GetKetQuaHocTapTheoMaLopVaXepLoai(maLop, tenLoai);
+            return result.Select(u => new KetQuaHocTapTheoMaLopVaXepLoaiViewModel(u)).ToList();
+        }
+
+        public List<DSSVKhongDatMonHocViewModel> GetDSSVKhongDatMonHoc(string maMon, string maHocKy)
+        {
+            var result = this.ketQuaHocTapDAO.GetDSSVKhongDatMonHoc(maMon, maHocKy);
+            return result.Select(u => new DSSVKhongDatMonHocViewModel(u)).ToList();
         }
 
         public void Update(string maSinhVien, string maLop, KetQuaHocTap ketQuaHocTap)
