@@ -51,7 +51,7 @@
     <Compile Include="Services\MonHocService.cs" />
     <Compile Include="Services\NamHocService.cs" />
     <Compile Include="Services\SinhVienService.cs" />
-    <Compile Include="ViewModel\DSSVKhongDatMonHoc.cs" />
+    <Compile Include="ViewModel\DSSVKhongDatMonHocViewModel.cs" />
     <Compile Include="ViewModel\GiangVienViewModel.cs" />
     <Compile Include="ViewModel\HocKyViewModel.cs" />
     <Compile Include="ViewModel\KetQuaHocTapTheoMaLopVaXepLoaiViewModel.cs" />
@@ -62,6 +62,7 @@
     <Compile Include="ViewModel\MonHocViewModel.cs" />
     <Compile Include="ViewModel\NamHocViewModel.cs" />
     <Compile Include="ViewModel\SinhVienViewModel.cs" />
+    <Compile Include="ViewModel\TimTrongHomePageGiangVienViewModel.cs" />
     <Compile Include="ViewModel\TinhSTCAndDiemTrungBinhViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
