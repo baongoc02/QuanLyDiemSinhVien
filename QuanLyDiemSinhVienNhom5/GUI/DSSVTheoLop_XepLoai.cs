@@ -57,9 +57,5 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbLop.ValueMember = nameof(LopViewModel.MaLop);
         }
 
-        private void DSSV_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

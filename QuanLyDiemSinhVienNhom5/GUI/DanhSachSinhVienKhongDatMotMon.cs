@@ -15,7 +15,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class DanhSachSinhVienKhongDatMotMon : UserControl
     {
-        //TODO: DSSV không đạt một môn theo học kỳ
         public DanhSachSinhVienKhongDatMotMon()
         {
             InitializeComponent();

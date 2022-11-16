@@ -31,13 +31,14 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemKetQuaHocTapPageAdmin));
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.KetQuaHocTap_gridview = new MagicalDataGridView();
+            this.KetQuaHocTap_gridview = new QuanLyDiemSinhVienNhom5.GUI.Components.MagicalDataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.Btn_Them = new System.Windows.Forms.Button();
@@ -116,6 +117,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             // 
             // KetQuaHocTap_gridview
             // 
+            this.KetQuaHocTap_gridview.AllowUserToAddRows = false;
+            this.KetQuaHocTap_gridview.AllowUserToDeleteRows = false;
             this.KetQuaHocTap_gridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -130,8 +133,17 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.KetQuaHocTap_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.KetQuaHocTap_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.KetQuaHocTap_gridview.DefaultCellStyle = dataGridViewCellStyle2;
             this.KetQuaHocTap_gridview.Location = new System.Drawing.Point(54, 243);
             this.KetQuaHocTap_gridview.Name = "KetQuaHocTap_gridview";
+            this.KetQuaHocTap_gridview.ReadOnly = true;
             this.KetQuaHocTap_gridview.RowHeadersVisible = false;
             this.KetQuaHocTap_gridview.RowHeadersWidth = 51;
             this.KetQuaHocTap_gridview.RowTemplate.Height = 24;

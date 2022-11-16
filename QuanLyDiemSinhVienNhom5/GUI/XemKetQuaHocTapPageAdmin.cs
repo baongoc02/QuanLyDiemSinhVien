@@ -30,7 +30,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void LoadDSKetQuaHocTap(IEnumerable<KetQuaHocTapTheoSinhVienViewModel> ketQuaHocTapTheoSinhVienViewModels)
         {
-            //TODO: sau khi cập nhật DAO fix chỗ này
             KetQuaHocTap_gridview.Columns.Clear();
             KetQuaHocTap_gridview.DataSource = ketQuaHocTapTheoSinhVienViewModels;
         }
@@ -42,7 +41,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
-            //TODO: sau khi cập nhật DAO sửa chỗ này thêm hiện lên số tín chỉ tích lũy, điểm trung bình tích lũy, xếp loại của sinh viên
             KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
             List<KetQuaHocTapTheoSinhVienViewModel> ketQuaHocTapTheoSinhVienViewModels = ketQuaHocTapService.GetKetQuaHocTapTheoSinhVien(txtMSSV.Text);
             LoadDSKetQuaHocTap(ketQuaHocTapTheoSinhVienViewModels);

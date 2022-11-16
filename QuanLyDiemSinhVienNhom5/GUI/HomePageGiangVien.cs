@@ -74,7 +74,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void HomePageGiangVien_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //TODO: xử lí chỗ này
             if (HomePageGiangVien_gridview.SelectedRows.Count == 1)
             {
                 var data = HomePageGiangVien_gridview.SelectedRows[0].DataBoundItem as TimTrongHomePageGiangVienViewModel;

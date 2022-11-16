@@ -79,7 +79,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.DSSV_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DSSV_gridview.Size = new System.Drawing.Size(1024, 380);
             this.DSSV_gridview.TabIndex = 59;
-            this.DSSV_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DSSV_gridview_CellClick);
             // 
             // label5
             // 
