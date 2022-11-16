@@ -18,7 +18,20 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         public XemSinhVien()
         {
+            sinhVienService.OnSuccessMessage += SinhVienService_OnSuccessMessage;
+            sinhVienService.OnErrorMessage += SinhVienService_OnErrorMessage;
+
             InitializeComponent();
+        }
+
+        private void SinhVienService_OnErrorMessage(object sender, string message)
+        {
+            MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void SinhVienService_OnSuccessMessage(object sender, string message)
+        {
+            MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Btn_Them_Click(object sender, EventArgs e)
@@ -77,6 +90,19 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             List<SinhVienViewModel> sinhVienViewModels = sinhVienService.Search(txtMSSV.Text, txtHoTen.Text, "", "", "", "", cbKhoa.SelectedValue.ToString());
             LoadDSSinhVien(sinhVienViewModels);
+        }
+
+        private void Btn_Import_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.Filter = "Excel file (*.xls)|*.xls";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    this.sinhVienService.ImportSinhVienFromFile(dialog.FileName);
+                    this.Btn_Tim_Click(null, null);
+                }
+            }
         }
     }
 }
