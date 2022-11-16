@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,24 +10,31 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class LopViewModel
     {
-        [DisplayName("MaLop")]
+        [DisplayName("Mã lớp")]
         public string MaLop { get; set; }
-        [DisplayName("MaHocKy")]
+
+        [DisplayName("Mã học kỳ")]
         public string MaHocKy { get; set; }
-        [DisplayName("MaMonHoc")]
+
+        [DisplayName("Mã môn học")]
         public string MaMonHoc { get; set; }
-        [DisplayName("MaGiangVien")]
+
+        [DisplayName("mã giảng viên")]
         public string MaGiangVien { get; set; }
-        [DisplayName("LichHoc")]
+
+        [DisplayName("Lịch học")]
         public string LichHoc { get; set; }
-        [DisplayName("NgayBatDau")]
+
+        [DisplayName("Ngày bắt đầu")]
         public DateTime NgayBatDau { get; set; }
-        [DisplayName("NgayKetThuc")]
+
+        [DisplayName("Ngày kết thúc")]
         public DateTime NgayKetThuc { get; set; }
-        [DisplayName("GioiHan")]
+
+        [DisplayName("Giới hạn")]
         public int GioiHan { get; set; }
 
-        [DisplayName("Ten lop5")]
+        [DisplayName("Tên lớp")]
         public string TenLop { get; set; }
 
         public LopViewModel()

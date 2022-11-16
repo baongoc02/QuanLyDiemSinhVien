@@ -22,10 +22,10 @@ namespace QuanLyDiemSinhVienNhom5.Core.ViewModel
         [DisplayName("Điểm trung bình")]
         public double DiemTrungBinh { get; set; }
 
-        [DisplayName("Tên học ky")]
+        [DisplayName("Tên học kỳ")]
         public string TenHocKy { get; set; }
 
-        [DisplayName("Tên môn học")]
+        [DisplayName("Tên năm học")]
         public string TenNamHoc { get; set; }
 
         public TimTrongHomePageGiangVienViewModel(TimTrongHomePageGiangVien model)

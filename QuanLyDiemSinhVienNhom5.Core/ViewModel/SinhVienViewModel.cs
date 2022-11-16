@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,21 +10,28 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class SinhVienViewModel
     {
-        [DisplayName("MaSinhVien")]
+        [DisplayName("Mã sinh viên")]
         public string MaSinhVien { get; set; }
-        [DisplayName("HoTen")]
+
+        [DisplayName("Họ tên")]
         public string HoTen { get; set; }
-        [DisplayName("NgaySinh")]
+
+        [DisplayName("Ngày sinh")]
         public DateTime NgaySinh { get; set; }
-        [DisplayName("GioiTinh")]
+
+        [DisplayName("Giới tính")]
         public string GioiTinh { get; set; }
+
         [DisplayName("CMND")]
         public string CMND { get; set; }
-        [DisplayName("SDT")]
+
+        [DisplayName("Số điện thoại")]
         public string SDT { get; set; }
-        [DisplayName("QueQuan")]
+
+        [DisplayName("Quê quán")]
         public string QueQuan { get; set; }
-        [DisplayName("MaKhoa")]
+
+        [DisplayName("Mã khoa")]
         public string MaKhoa { get; set; }
 
         public SinhVienViewModel()

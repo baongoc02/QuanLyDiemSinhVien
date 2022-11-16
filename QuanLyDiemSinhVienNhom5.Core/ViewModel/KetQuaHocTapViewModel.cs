@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +10,13 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class KetQuaHocTapViewModel
     {
-        [DisplayName("MaSinhVien")]
+        [DisplayName("Mã sinh viên")]
         public string MaSinhVien { get; set; }
-        [DisplayName("MaLop")]
+        [DisplayName("Mã lớp")]
         public string MaLop { get; set; }
-        [DisplayName("DiemGiuaKy")]
+        [DisplayName("Điểm giữa kỳ")]
         public float DiemGiuaKy { get; set; }
-        [DisplayName("DiemCuoiKy")]
+        [DisplayName("Điểm giữa kỳ")]
         public float DiemCuoiKy { get; set; }
 
         public KetQuaHocTapViewModel()

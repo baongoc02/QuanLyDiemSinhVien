@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,15 +10,15 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class KhoaViewModel
     {
-        [DisplayName("MaKhoa")]
+        [DisplayName("Mã khoa")]
         public string MaKhoa { get; set; }
-        [DisplayName("TenKhoa")]
+        [DisplayName("Tên Khoa")]
         public string TenKhoa { get; set; }
-        [DisplayName("HeDaoTao")]
+        [DisplayName("Hệ đào tạo")]
         public string HeDaoTao { get; set; }
-        [DisplayName("NgayThanhLap")]
+        [DisplayName("Ngày thành lập")]
         public DateTime NgayThanhLap { get; set; }
-
+        
         public KhoaViewModel()
         {
 

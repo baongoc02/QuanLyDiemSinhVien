@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +10,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class NamHocViewModel
     {
-        [DisplayName("MaNamHoc")]
+        [DisplayName("Mã năm học")]
         public string MaNamHoc { get; set; }
-        [DisplayName("TenNamHoc")]
+
+        [DisplayName("Tên năm học")]
         public string TenNamHoc { get; set; }
 
         public NamHocViewModel()

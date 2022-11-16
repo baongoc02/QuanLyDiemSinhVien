@@ -1,36 +1,44 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class GiangVienViewModel
     {
-        [DisplayName("MaGiangVien")]
+        [DisplayName("Mã giảng viên")]
         public string MaGiangVien { get; set; }
-        //[DisplayName("H? v� t�n")]
-        //public string FullName => $"{this.HocHam}. {this.HocVi}. {this.HoTen}";
-        [DisplayName("HoTen")]
+
+        [DisplayName("Họ tên")]
         public string HoTen { get; set; }
-        [DisplayName("NgaySinh")]
+
+        [DisplayName("Ngày sinh")]
         public DateTime NgaySinh { get; set; }
-        [DisplayName("GioiTinh")]
+
+        [DisplayName("Giới tính")]
         public string GioiTinh { get; set; }
+
         [Browsable(false)]
         public string CMND { get; set; }
+
         [Browsable(false)]
         public string SDT { get; set; }
+
         [Browsable(false)]
         public string QueQuan { get; set; }
+
         [Browsable(false)]
         public string HocHam { get; set; }
+
         [Browsable(false)]
         public string HocVi { get; set; }
-        [DisplayName("MaKhoa")]
+
+        [DisplayName("Mã khoa")]
         public string MaKhoa { get; set; }
 
         public GiangVienViewModel()

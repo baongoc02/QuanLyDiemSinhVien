@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +10,21 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
 {
     public class MonHocViewModel
     {
-        [DisplayName("MaMonHoc")]
+        [DisplayName("Mã môn học")]
         public string MaMonHoc { get; set; }
-        [DisplayName("TenMonHoc")]
+
+        [DisplayName("Tên môn học")]
         public string TenMonHoc { get; set; }
-        [DisplayName("MoTa")]
+
+        [DisplayName("Mô tả")]
         public string MoTa { get; set; }
-        [DisplayName("STC")]
+
+        [DisplayName("Số tín chỉ")]
         public int STC { get; set; }
-        [DisplayName("LoaiHocPhan")]
+        [DisplayName("Loại học phần")]
         public string LoaiHocPhan { get; set; }
-        [DisplayName("MaKhoa")]
+
+        [DisplayName("Mã khoa")]
         public string MaKhoa { get; set; }
 
         public MonHocViewModel()
