@@ -116,10 +116,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     return tempTable.AsEnumerable()
                         .Select(u => new KetQuaHocTapTheoMaLopVaXepLoai()
                         {
+                            TenSinhVien = Convert.ToString(u["TenSinhVien"]),
+                            MaLop = Convert.ToString(u["MaLop"]),
+                            TenMonHoc = Convert.ToString(u["TenMonHoc"]),
                             DiemTrungBinh = Convert.ToDouble(u["DiemTrungBinh"]),
-                            MaSinhVien = Convert.ToString(u["MaSinhVien"]),
-                            HoTen = Convert.ToString(u["HoTen"]),
-                            Khoa = Convert.ToString(u["TenKhoa"])
+                            Loai = Convert.ToString(u["Loai"])
                         }).ToList();
                 }
             }
