@@ -17,6 +17,37 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 
         }
 
+        public void CreateWithPassword(GiangVien giangVien)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "Proc_CreateTeacherWithRole";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@maGiangVien", giangVien.MaGiangVien));
+                command.Parameters.Add(new SqlParameter("@hoTen", giangVien.HoTen));
+                command.Parameters.Add(new SqlParameter("@ngaySinh", giangVien.NgaySinh));
+                command.Parameters.Add(new SqlParameter("@gioiTinh", giangVien.GioiTinh));
+                command.Parameters.Add(new SqlParameter("@cMND", giangVien.CMND));
+                command.Parameters.Add(new SqlParameter("@sDT", giangVien.SDT));
+                command.Parameters.Add(new SqlParameter("@queQuan", giangVien.QueQuan));
+                command.Parameters.Add(new SqlParameter("@hocHam", giangVien.HocHam));
+                command.Parameters.Add(new SqlParameter("@hocVi", giangVien.HocVi));
+                command.Parameters.Add(new SqlParameter("@maKhoa", giangVien.MaKhoa));
+                command.Parameters.Add(new SqlParameter("@matKhau", giangVien.Password));
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    base.ProcessSqlException(e);
+                }
+            }
+        }
+
         public void Create(GiangVien giangVien)
         {
             var conn = SqlServerConnectionSingleon.getInstance();

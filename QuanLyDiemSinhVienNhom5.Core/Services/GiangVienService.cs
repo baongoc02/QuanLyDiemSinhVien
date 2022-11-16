@@ -45,6 +45,29 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             }
         }
 
+        public void CreateWithPassword(GiangVien giangVien)
+        {
+            try
+            {
+                if (this.CheckGiangVienExists(giangVien.MaGiangVien))
+                {
+                    this.OnError("Đã tồn tại giảng viên này trên hệ thống");
+                    return;
+                }
+                this.giangVienDAO.CreateWithPassword(giangVien);
+                this.OnSuccess("Tạo giảng viên thành công");
+            }
+            catch (DataAccessException e)
+            {
+                this.OnError(e.Message);
+            }
+            catch (Exception e)
+            {
+                this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
+            }
+        }
+
         public void Update(string maGiangVien, GiangVien giangVien)
         {
             try

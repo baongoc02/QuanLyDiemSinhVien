@@ -13,13 +13,20 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVienNhom5.GUI
 {
+    public enum DialogState
+    {
+        Create = 0,
+        Update = 1
+    }
+
     public partial class GiangVienInfo : Form
     {
         private readonly GiangVienService giangVienService;
         private readonly KhoaService khoaService;
         public GiangVienViewModel giangVienViewModel;
+        private DialogState currentState;
 
-        public GiangVienInfo()
+        public GiangVienInfo(DialogState state)
         {
             this.giangVienService = new GiangVienService();
             this.khoaService = new KhoaService();
@@ -28,6 +35,9 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.giangVienService.OnErrorMessage += GiangVienService_OnErrorMessage;
 
             InitializeComponent();
+
+            if (state == DialogState.Update)
+                this.txtMatKhau.Enabled = false;
         }
 
         private void GiangVienService_OnErrorMessage(object sender, string message)
@@ -76,7 +86,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             }
             else
             {
-                this.giangVienService.Create(giangVien);
+                giangVien.Password = txtMatKhau.Text;
+                this.giangVienService.CreateWithPassword(giangVien);
                 LoadTextBox();
             }
         }
