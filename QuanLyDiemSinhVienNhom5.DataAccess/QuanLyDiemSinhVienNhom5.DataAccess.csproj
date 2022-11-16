@@ -95,6 +95,7 @@
     <Compile Include="Model\DSSVKhongDatMonHoc.cs" />
     <Compile Include="Model\KetQuaHocTapTheoMaLopVaXepLoai.cs" />
     <Compile Include="Model\KetQuaHocTapTheoSinhVien.cs" />
+    <Compile Include="Model\TimTrongHomePageGiangVien.cs" />
     <Compile Include="Model\TinhSTCAndDiemTrungBinh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServer\SqlServerConnectionSingleon.cs" />

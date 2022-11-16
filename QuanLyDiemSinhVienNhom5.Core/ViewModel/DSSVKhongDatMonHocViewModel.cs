@@ -13,29 +13,21 @@ namespace QuanLyDiemSinhVienNhom5.Core.ViewModel
         [DisplayName("Mã sinh viên")]
         public string MaSinhVien { get; set; }
 
-        [DisplayName("Mã lớp")]
-        public string MaLop { get; set; }
-
-        [DisplayName("Tên môn")]
-        public string TenMon { get; set; }
+        [DisplayName("Họ tên")]
+        public string HoTen { get; set; }
 
         [DisplayName("Điểm trung bình")]
         public double DiemTrungBinh { get; set; }
 
-        [DisplayName("Tên học kỳ")]
-        public string TenHocKy { get; set; }
-
-        [DisplayName("Tên năm học")]
-        public string TenNamHoc { get; set; }
+        [DisplayName("Tên khoa")]
+        public string Khoa { get; set; }
 
         public DSSVKhongDatMonHocViewModel(DSSVKhongDatMonHoc model)
         {
-            this.MaLop = model.MaLop;
             this.MaSinhVien = model.MaSinhVien;
-            this.TenMon = model.TenMon;
             this.DiemTrungBinh = model.DiemTrungBinh;
-            this.TenHocKy = model.TenHocKy;
-            this.TenNamHoc = model.TenNamHoc;
+            this.Khoa = model.Khoa;
+            this.HoTen = model.HoTen;
         }
     }
 }

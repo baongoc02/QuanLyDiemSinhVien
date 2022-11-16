@@ -89,6 +89,12 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             }
         }
 
+        public List<TimTrongHomePageGiangVienViewModel> GetTimTrongHomePageGiangVien(string maMon, string maLop, string maHocKy, string maNamHoc, string maGiangVien)
+        {
+            var result = this.ketQuaHocTapDAO.GetTimTrongHomePageGiangVien(maMon, maLop, maHocKy, maNamHoc, maGiangVien);
+            return result.Select(u => new TimTrongHomePageGiangVienViewModel(u)).ToList();
+        }
+
         public bool CheckKetQuaHocTapExists(string maSinhVien, string maLop)
         {
             return this.ketQuaHocTapDAO.CheckKetQuaHocTapExistsByPrimaryKey(maSinhVien, maLop);
