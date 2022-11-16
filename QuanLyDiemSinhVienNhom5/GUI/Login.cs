@@ -52,11 +52,11 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                     MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 };
 
+                _setting.Login(username, password);
+
                 var result = userService.IsAdmin(this.txtUserName.Text);
                 if (result < 0)
                     return;
-
-                _setting.Login(username, password);
 
                 this.Hide();
 

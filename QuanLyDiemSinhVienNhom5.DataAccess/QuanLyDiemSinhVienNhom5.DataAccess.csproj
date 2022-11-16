@@ -92,6 +92,7 @@
     <Compile Include="Entities\MonHoc.cs" />
     <Compile Include="Entities\NamHoc.cs" />
     <Compile Include="Entities\SinhVien.cs" />
+    <Compile Include="ExcelEngine\NhapDiemSinhVienExcelEngine.cs" />
     <Compile Include="ExcelEngine\SinhVienExcelEngine.cs" />
     <Compile Include="Model\DSSVKhongDatMonHoc.cs" />
     <Compile Include="Model\KetQuaHocTapTheoMaLopVaXepLoai.cs" />

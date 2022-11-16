@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
 using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
 using QuanLyDiemSinhVienNhom5.DataAccess.Model;
+using QuanLyDiemSinhVienNhom5.DataAccess.ExcelEngine;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 {
@@ -40,6 +41,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     base.ProcessSqlException(e);
                 }
             }
+        }
+
+        public void ImportKetQuaHocTap(string fileName)
+        {
+            new NhapDiemSinhVienExcelEngine().LoadFromFile(fileName);
         }
 
         public List<KetQuaHocTapTheoSinhVien> GetKetQuaHocTapTheoSinhVien(string maSinhVien)

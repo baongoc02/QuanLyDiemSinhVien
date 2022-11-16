@@ -47,6 +47,24 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             }
         }
 
+        public void ImportKetQuaHocTap(string fileName)
+        {
+            try
+            {
+                this.ketQuaHocTapDAO.ImportKetQuaHocTap(fileName);
+                this.OnSuccess("Nhập kết quả học tập thành công");
+            }
+            catch (DataAccessException e)
+            {
+                this.OnError(e.Message);
+            }
+            catch (Exception e)
+            {
+                this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
+            }
+        }
+
         public List<KetQuaHocTapTheoSinhVienViewModel> GetKetQuaHocTapTheoSinhVien(string maSinhVien)
         {
             var result = this.ketQuaHocTapDAO.GetKetQuaHocTapTheoSinhVien(maSinhVien);
