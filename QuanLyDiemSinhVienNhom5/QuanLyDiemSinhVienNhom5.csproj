@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Components\MagicalDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\DanhSachSinhVienKhongDatMotMon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +130,7 @@
     <Compile Include="GUI\SinhVienInfo.Designer.cs">
       <DependentUpon>SinhVienInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\StyleGridview.cs" />
     <Compile Include="GUI\ThongKeDiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -314,9 +318,7 @@
   <ItemGroup>
     <Resource Include="resources\LoginBtn.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\QuanLyDiemSinhVienNhom5.Core\QuanLyDiemSinhVienNhom5.Core.csproj">
       <Project>{a3db13fd-f823-4698-a402-4e1ad1b4e2fa}</Project>

@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class XemHocKy
     {
@@ -28,13 +30,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtHocKy = new System.Windows.Forms.TextBox();
             this.cbNamHoc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.HocKy_gridview = new System.Windows.Forms.DataGridView();
+            this.HocKy_gridview = new MagicalDataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
@@ -124,10 +128,27 @@
             this.HocKy_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
             this.HocKy_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HocKy_gridview.CausesValidation = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.HocKy_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.HocKy_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HocKy_gridview.ColumnHeadersVisible = false;
             this.HocKy_gridview.Location = new System.Drawing.Point(54, 243);
             this.HocKy_gridview.Name = "HocKy_gridview";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.HocKy_gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.HocKy_gridview.RowHeadersVisible = false;
             this.HocKy_gridview.RowHeadersWidth = 51;
             this.HocKy_gridview.RowTemplate.Height = 24;
             this.HocKy_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -215,7 +236,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView HocKy_gridview;
+        private MagicalDataGridView HocKy_gridview;
         private System.Windows.Forms.ComboBox cbNamHoc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;

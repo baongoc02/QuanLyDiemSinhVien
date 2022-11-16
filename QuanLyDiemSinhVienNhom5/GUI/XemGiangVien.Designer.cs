@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class XemGiangVien
     {
@@ -29,6 +31,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +40,7 @@
             this.txtMaGiangVien = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.InfoGiangVien_gridview = new System.Windows.Forms.DataGridView();
+            this.InfoGiangVien_gridview = new MagicalDataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -151,7 +154,7 @@
             this.InfoGiangVien_gridview.CausesValidation = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -160,6 +163,14 @@
             this.InfoGiangVien_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InfoGiangVien_gridview.Location = new System.Drawing.Point(54, 243);
             this.InfoGiangVien_gridview.Name = "InfoGiangVien_gridview";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InfoGiangVien_gridview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.InfoGiangVien_gridview.RowHeadersVisible = false;
             this.InfoGiangVien_gridview.RowHeadersWidth = 51;
             this.InfoGiangVien_gridview.RowTemplate.Height = 24;
@@ -253,7 +264,7 @@
         private System.Windows.Forms.TextBox txtMaGiangVien;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView InfoGiangVien_gridview;
+        private MagicalDataGridView InfoGiangVien_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label5;

@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class DanhSachSinhVienKhongDatMotMon
     {
@@ -30,13 +32,13 @@
         {
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DSSV_gridview = new System.Windows.Forms.DataGridView();
+            this.DSSV_gridview = new MagicalDataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbMon = new System.Windows.Forms.ComboBox();
             this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaMon = new System.Windows.Forms.TextBox();
             this.Btn_Tim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DSSV_gridview)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -77,7 +79,6 @@
             this.DSSV_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DSSV_gridview.Size = new System.Drawing.Size(1024, 380);
             this.DSSV_gridview.TabIndex = 53;
-            this.DSSV_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DSSV_gridview_CellClick);
             // 
             // label5
             // 
@@ -95,10 +96,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
+            this.tableLayoutPanel1.Controls.Add(this.cbMon, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbHocKy, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtMaMon, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -108,6 +109,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(660, 92);
             this.tableLayoutPanel1.TabIndex = 51;
+            // 
+            // cbMon
+            // 
+            this.cbMon.BackColor = System.Drawing.Color.Honeydew;
+            this.cbMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbMon.FormattingEnabled = true;
+            this.cbMon.Location = new System.Drawing.Point(179, 3);
+            this.cbMon.Name = "cbMon";
+            this.cbMon.Size = new System.Drawing.Size(478, 39);
+            this.cbMon.TabIndex = 56;
             // 
             // cbHocKy
             // 
@@ -143,15 +154,6 @@
             this.label3.Text = "Học kỳ:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtMaMon
-            // 
-            this.txtMaMon.BackColor = System.Drawing.Color.Honeydew;
-            this.txtMaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMon.Location = new System.Drawing.Point(179, 3);
-            this.txtMaMon.Name = "txtMaMon";
-            this.txtMaMon.Size = new System.Drawing.Size(478, 38);
-            this.txtMaMon.TabIndex = 13;
-            // 
             // Btn_Tim
             // 
             this.Btn_Tim.BackColor = System.Drawing.SystemColors.Control;
@@ -183,7 +185,6 @@
             this.Load += new System.EventHandler(this.DanhSachSinhVienKhongDatMotMon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DSSV_gridview)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,13 +194,13 @@
 
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView DSSV_gridview;
+        private MagicalDataGridView DSSV_gridview;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox cbHocKy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMaMon;
         private System.Windows.Forms.Button Btn_Tim;
+        private System.Windows.Forms.ComboBox cbMon;
     }
 }

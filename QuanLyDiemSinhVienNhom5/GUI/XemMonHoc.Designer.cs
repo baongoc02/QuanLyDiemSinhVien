@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class XemMonHoc
     {
@@ -36,7 +38,7 @@
             this.txtMaMon = new System.Windows.Forms.TextBox();
             this.txtTenMon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.MonHoc_gridview = new System.Windows.Forms.DataGridView();
+            this.MonHoc_gridview = new MagicalDataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -150,6 +152,7 @@
             this.MonHoc_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MonHoc_gridview.Location = new System.Drawing.Point(54, 243);
             this.MonHoc_gridview.Name = "MonHoc_gridview";
+            this.MonHoc_gridview.RowHeadersVisible = false;
             this.MonHoc_gridview.RowHeadersWidth = 51;
             this.MonHoc_gridview.RowTemplate.Height = 24;
             this.MonHoc_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -241,7 +244,7 @@
         private System.Windows.Forms.TextBox txtMaMon;
         private System.Windows.Forms.TextBox txtTenMon;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView MonHoc_gridview;
+        private MagicalDataGridView MonHoc_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label5;

@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class XemLopHoc
     {
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.Lop_gridview = new System.Windows.Forms.DataGridView();
+            this.Lop_gridview = new MagicalDataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cbMon = new System.Windows.Forms.ComboBox();
             this.cbGiangVien = new System.Windows.Forms.ComboBox();
@@ -68,6 +70,7 @@
             this.Lop_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Lop_gridview.Location = new System.Drawing.Point(54, 243);
             this.Lop_gridview.Name = "Lop_gridview";
+            this.Lop_gridview.RowHeadersVisible = false;
             this.Lop_gridview.RowHeadersWidth = 51;
             this.Lop_gridview.RowTemplate.Height = 24;
             this.Lop_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -264,7 +267,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView Lop_gridview;
+        private MagicalDataGridView Lop_gridview;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class XemSinhVien
     {
@@ -38,7 +40,7 @@
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.SinhVien_gridview = new System.Windows.Forms.DataGridView();
+            this.SinhVien_gridview = new MagicalDataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
             this.Btn_Tim = new System.Windows.Forms.Button();
@@ -164,10 +166,11 @@
             this.SinhVien_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SinhVien_gridview.Location = new System.Drawing.Point(54, 243);
             this.SinhVien_gridview.Name = "SinhVien_gridview";
+            this.SinhVien_gridview.RowHeadersVisible = false;
             this.SinhVien_gridview.RowHeadersWidth = 51;
             this.SinhVien_gridview.RowTemplate.Height = 24;
             this.SinhVien_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SinhVien_gridview.Size = new System.Drawing.Size(1029, 482);
+            this.SinhVien_gridview.Size = new System.Drawing.Size(1073, 482);
             this.SinhVien_gridview.TabIndex = 24;
             this.SinhVien_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SinhVien_gridview_CellClick);
             // 
@@ -239,6 +242,7 @@
             this.Btn_Import.Size = new System.Drawing.Size(40, 40);
             this.Btn_Import.TabIndex = 48;
             this.Btn_Import.UseVisualStyleBackColor = false;
+            this.Btn_Import.Click += new System.EventHandler(this.Btn_Import_Click);
             // 
             // XemSinhVien
             // 
@@ -254,7 +258,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SinhVien_gridview);
             this.Name = "XemSinhVien";
-            this.Size = new System.Drawing.Size(1130, 750);
+            this.Size = new System.Drawing.Size(1174, 750);
             this.Load += new System.EventHandler(this.XemSinhVien_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -275,7 +279,7 @@
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Button Btn_Tim;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView SinhVien_gridview;
+        private MagicalDataGridView SinhVien_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Them;
         private System.Windows.Forms.Label label7;

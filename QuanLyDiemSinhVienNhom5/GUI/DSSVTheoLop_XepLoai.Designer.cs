@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class DSSVTheoLop_XepLoai
     {
@@ -30,14 +32,14 @@
         {
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DSSV_gridview = new System.Windows.Forms.DataGridView();
+            this.DSSV_gridview = new MagicalDataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbXepLoai = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtLop = new System.Windows.Forms.TextBox();
             this.Btn_Tim = new System.Windows.Forms.Button();
+            this.cbLop = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DSSV_gridview)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,10 +97,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79814F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.20186F));
+            this.tableLayoutPanel1.Controls.Add(this.cbLop, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cbXepLoai, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtLop, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -143,15 +145,6 @@
             this.label3.Text = "Xếp loại:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtLop
-            // 
-            this.txtLop.BackColor = System.Drawing.Color.Honeydew;
-            this.txtLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLop.Location = new System.Drawing.Point(179, 3);
-            this.txtLop.Name = "txtLop";
-            this.txtLop.Size = new System.Drawing.Size(478, 38);
-            this.txtLop.TabIndex = 13;
-            // 
             // Btn_Tim
             // 
             this.Btn_Tim.BackColor = System.Drawing.SystemColors.Control;
@@ -168,6 +161,16 @@
             this.Btn_Tim.UseVisualStyleBackColor = false;
             this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
             // 
+            // cbLop
+            // 
+            this.cbLop.BackColor = System.Drawing.Color.Honeydew;
+            this.cbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.cbLop.FormattingEnabled = true;
+            this.cbLop.Location = new System.Drawing.Point(179, 3);
+            this.cbLop.Name = "cbLop";
+            this.cbLop.Size = new System.Drawing.Size(478, 39);
+            this.cbLop.TabIndex = 62;
+            // 
             // DSSVTheoLop_XepLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -183,7 +186,6 @@
             this.Load += new System.EventHandler(this.DSSVTheoLop_XepLoai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DSSV_gridview)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,13 +195,13 @@
 
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView DSSV_gridview;
+        private MagicalDataGridView DSSV_gridview;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox cbXepLoai;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtLop;
         private System.Windows.Forms.Button Btn_Tim;
+        private System.Windows.Forms.ComboBox cbLop;
     }
 }

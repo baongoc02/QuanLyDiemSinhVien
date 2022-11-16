@@ -1,4 +1,6 @@
-﻿namespace QuanLyDiemSinhVienNhom5.GUI
+﻿using QuanLyDiemSinhVienNhom5.GUI.Components;
+
+namespace QuanLyDiemSinhVienNhom5.GUI
 {
     partial class XemNamHoc
     {
@@ -29,16 +31,16 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtMaNamHoc = new System.Windows.Forms.TextBox();
             this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.NamHoc_gridview = new System.Windows.Forms.DataGridView();
+            this.NamHoc_gridview = new MagicalDataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Them = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
-            this.txtMaNamHoc = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NamHoc_gridview)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +62,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 96);
             this.tableLayoutPanel1.TabIndex = 32;
+            // 
+            // txtMaNamHoc
+            // 
+            this.txtMaNamHoc.BackColor = System.Drawing.Color.Honeydew;
+            this.txtMaNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNamHoc.Location = new System.Drawing.Point(233, 3);
+            this.txtMaNamHoc.Name = "txtMaNamHoc";
+            this.txtMaNamHoc.Size = new System.Drawing.Size(612, 38);
+            this.txtMaNamHoc.TabIndex = 56;
             // 
             // txtNamHoc
             // 
@@ -115,6 +126,7 @@
             this.NamHoc_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.NamHoc_gridview.Location = new System.Drawing.Point(54, 243);
             this.NamHoc_gridview.Name = "NamHoc_gridview";
+            this.NamHoc_gridview.RowHeadersVisible = false;
             this.NamHoc_gridview.RowHeadersWidth = 51;
             this.NamHoc_gridview.RowTemplate.Height = 24;
             this.NamHoc_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -176,15 +188,6 @@
             this.Btn_Tim.UseVisualStyleBackColor = false;
             this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
             // 
-            // txtMaNamHoc
-            // 
-            this.txtMaNamHoc.BackColor = System.Drawing.Color.Honeydew;
-            this.txtMaNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNamHoc.Location = new System.Drawing.Point(233, 3);
-            this.txtMaNamHoc.Name = "txtMaNamHoc";
-            this.txtMaNamHoc.Size = new System.Drawing.Size(612, 38);
-            this.txtMaNamHoc.TabIndex = 56;
-            // 
             // XemNamHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,7 +215,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView NamHoc_gridview;
+        private MagicalDataGridView NamHoc_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Them;
         private System.Windows.Forms.Label label4;
