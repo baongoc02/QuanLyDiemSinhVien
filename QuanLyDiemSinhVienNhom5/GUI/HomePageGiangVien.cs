@@ -1,4 +1,5 @@
 ﻿using QuanLyDiemSinhVienNhom5.Core.Services;
+using QuanLyDiemSinhVienNhom5.Core.ViewModel;
 using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InitializeComponent();
         }
 
-        [DesignOnly(true)]  
+        [DesignOnly(true)]
         private void HomePageGiangVien_Load(object sender, EventArgs e)
         {
             HocKyService hocKyService = new HocKyService();
@@ -59,7 +60,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbLopHoc.DisplayMember = nameof(LopViewModel.TenLop);
             cbLopHoc.ValueMember = nameof(LopViewModel.MaLop);
 
-            MessageBox.Show(cbLopHoc.SelectedValue.ToString());
         }
 
 
@@ -68,7 +68,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             KetQuaHocTapSinhVien ketQuaHocTapSinhVien = new KetQuaHocTapSinhVien();
             ketQuaHocTapSinhVien.ketQuaHocTapViewModel = null;
             ketQuaHocTapSinhVien.ShowDialog();
-            //LoadGridView();
+            LoadGridView();
 
         }
 
@@ -77,8 +77,31 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             //TODO: xử lí chỗ này
             if (HomePageGiangVien_gridview.SelectedRows.Count == 1)
             {
-
+                var data = HomePageGiangVien_gridview.SelectedRows[0].DataBoundItem as TimTrongHomePageGiangVienViewModel;
+                KetQuaHocTapSinhVien ketQuaHocTapSinhVien = new KetQuaHocTapSinhVien();
+                ketQuaHocTapSinhVien.mssv = data.MaSinhVien;
+                ketQuaHocTapSinhVien.maLop = data.MaLop;
+                ketQuaHocTapSinhVien.ShowDialog();
+                LoadGridView();
             }
+        }
+
+        public void LoadGridView()
+        {
+            KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
+            List<TimTrongHomePageGiangVienViewModel> timTrongHomePageGiangVienViewModels = ketQuaHocTapService.GetTimTrongHomePageGiangVien(txtMonHoc.Text, cbLopHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), "teacher11");
+            LoadDSSV(timTrongHomePageGiangVienViewModels);
+        }
+
+        public void LoadDSSV(IEnumerable<TimTrongHomePageGiangVienViewModel> timTrongHomePageGiangVienViewModels)
+        {
+            HomePageGiangVien_gridview.Columns.Clear();
+            HomePageGiangVien_gridview.DataSource = timTrongHomePageGiangVienViewModels;
+        }
+
+        private void Btn_Tim_Click(object sender, EventArgs e)
+        {
+            LoadGridView();
         }
     }
 }
