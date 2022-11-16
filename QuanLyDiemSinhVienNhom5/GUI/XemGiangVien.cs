@@ -25,7 +25,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void Btn_Them_Click(object sender, EventArgs e)
         {
-            GiangVienInfo giangVienInfo = new GiangVienInfo();
+            GiangVienInfo giangVienInfo = new GiangVienInfo(DialogState.Create);
             giangVienInfo.giangVienViewModel = null;
             giangVienInfo.ShowDialog();
 
@@ -81,7 +81,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (InfoGiangVien_gridview.SelectedRows.Count == 1)
             {
                 var data = InfoGiangVien_gridview.SelectedRows[0].DataBoundItem as GiangVienViewModel;
-                GiangVienInfo giangVienInfo = new GiangVienInfo();
+                GiangVienInfo giangVienInfo = new GiangVienInfo(DialogState.Update);
                 giangVienInfo.giangVienViewModel = data;
                 giangVienInfo.ShowDialog();
                 LoadGridView();
