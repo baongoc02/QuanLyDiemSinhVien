@@ -46,7 +46,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void LoadGridView()
         {
             KhoaService khoaService = new KhoaService();
-            List<KhoaViewModel> khoaViewModels = khoaService.ListAll();
+            List<KhoaViewModel> khoaViewModels = khoaService.Search(txtMaKhoa.Text, txtTenKhoa.Text, txtHeDaoTao.Text);
             LoadDSKhoa(khoaViewModels);
         }
 
@@ -58,9 +58,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
-            KhoaService khoaService = new KhoaService();
-            List<KhoaViewModel> khoaViewModels = khoaService.Search(txtMaKhoa.Text, txtTenKhoa.Text, txtHeDaoTao.Text);
-            LoadDSKhoa(khoaViewModels);
+            LoadGridView();
         }
 
         private void InfoKhoa_gridview_SelectionChanged(object sender, EventArgs e)
