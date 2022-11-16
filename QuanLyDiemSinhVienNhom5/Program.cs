@@ -18,9 +18,9 @@ namespace QuanLyDiemSinhVienNhom5
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            _setting.Login("sa", "123456");
+            _setting.Login("sa", "0393276601Duy");
 
-            bool ok = SqlServerConnectionSingleon.testConnection("sa", "123456");
+            bool ok = SqlServerConnectionSingleon.testConnection("sa", "0393276601Duy");
             if (!ok)
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu DBMS sai");
