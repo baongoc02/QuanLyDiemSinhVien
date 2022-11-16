@@ -79,7 +79,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 if (checktxt)
                 {
                     this.khoaService.Update(khoa.MaKhoa, khoa);
-                    this.loadTextBox();
                 }
             }
             else
@@ -88,7 +87,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 if (checktxt)
                 {
                     this.khoaService.Create(khoa);
-                    this.loadTextBox();
                 }
             }
 

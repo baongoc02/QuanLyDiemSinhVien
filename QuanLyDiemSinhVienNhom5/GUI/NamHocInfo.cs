@@ -52,12 +52,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.namHocService.CheckNamHocExists(namHoc.MaNamHoc))
             {
                 this.namHocService.Update(namHoc.MaNamHoc, namHoc);
-                LoadTextBox();
             }
             else
             {
                 this.namHocService.Create(namHoc);
-                LoadTextBox();
             }
         }
 

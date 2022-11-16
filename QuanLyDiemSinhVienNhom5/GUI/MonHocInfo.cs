@@ -58,12 +58,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.monHocService.CheckMonHocExists(monHoc.MaMonHoc))
             {
                 this.monHocService.Update(monHoc.MaMonHoc, monHoc);
-                LoadTextBox();
             }
             else
             {
                 this.monHocService.Create(monHoc);
-                LoadTextBox();
             }
         }
 

@@ -61,12 +61,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.hocKyService.CheckHocKyExists(hocKy.MaHocKy))
             {
                 this.hocKyService.Update(hocKy.MaHocKy, hocKy);
-                LoadTextBox();
             }
             else
             {
                 this.hocKyService.Create(hocKy);
-                LoadTextBox();
             }
 
         }

@@ -82,13 +82,11 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.giangVienService.CheckGiangVienExists(giangVien.MaGiangVien))
             {
                 this.giangVienService.Update(giangVien.MaGiangVien, giangVien); 
-                LoadTextBox();
             }
             else
             {
                 giangVien.Password = txtMatKhau.Text;
                 this.giangVienService.CreateWithPassword(giangVien);
-                LoadTextBox();
             }
         }
 

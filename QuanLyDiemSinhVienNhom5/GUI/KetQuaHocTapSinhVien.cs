@@ -96,12 +96,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.ketQuaHocTapService.CheckKetQuaHocTapExists(ketQuaHocTap.MaSinhVien, ketQuaHocTap.MaLop))
             {
                 this.ketQuaHocTapService.Update(ketQuaHocTap.MaSinhVien, ketQuaHocTap.MaLop, ketQuaHocTap);
-                LoadTextBox();
             }
             else
             {
                 this.ketQuaHocTapService.Create(ketQuaHocTap);
-                LoadTextBox();
             }
         }
 

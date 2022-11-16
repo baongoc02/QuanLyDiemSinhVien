@@ -67,12 +67,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.sinhVienService.CheckSinhVienExists(sinhVien.MaSinhVien))
             {
                 this.sinhVienService.Update(sinhVien.MaSinhVien, sinhVien);
-                this.LoadTextBox();
             }
             else
             {
                 this.sinhVienService.Create(sinhVien);
-                this.LoadTextBox();
             }
         }
 
