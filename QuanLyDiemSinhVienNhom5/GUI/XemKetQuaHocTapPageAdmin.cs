@@ -1,4 +1,5 @@
 ﻿using QuanLyDiemSinhVienNhom5.Core.Services;
+using QuanLyDiemSinhVienNhom5.Core.ViewModel;
 using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -25,37 +26,38 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             KetQuaHocTapSinhVien ketQuaHocTapSinhVien = new KetQuaHocTapSinhVien();
             ketQuaHocTapSinhVien.ShowDialog();
-            LoadGridView();
         }
 
-        private void LoadDSKetQuaHocTap(IEnumerable<KetQuaHocTapViewModel> ketQuaHocTapViewModels)
+        private void LoadDSKetQuaHocTap(IEnumerable<KetQuaHocTapTheoSinhVienViewModel> ketQuaHocTapTheoSinhVienViewModels)
         {
             //TODO: sau khi cập nhật DAO fix chỗ này
             KetQuaHocTap_gridview.Columns.Clear();
-            KetQuaHocTap_gridview.DataSource = ketQuaHocTapViewModels;
-        }
-
-        private void LoadGridView()
-        {
-            //TODO: sau khi cập nhật DAO fix chỗ này
-            //KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
-            //List<KetQuaHocTapViewModel> ketQuaHocTapViewModels = ketQuaHocTapService.ListAll();
-            //LoadDSKetQuaHocTap(ketQuaHocTapViewModels);
+            KetQuaHocTap_gridview.DataSource = ketQuaHocTapTheoSinhVienViewModels;
         }
 
         [DesignOnly(true)]
         private void XemKetQuaHocTapPageAdmin_Load(object sender, EventArgs e)
         {
-
-            //TODO: sau khi cập nhật DAO fix chỗ này
-            LoadGridView();
         }
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
             //TODO: sau khi cập nhật DAO sửa chỗ này thêm hiện lên số tín chỉ tích lũy, điểm trung bình tích lũy, xếp loại của sinh viên
-            //List<KetQuaHocTapViewModel> ketQuaHocTapViewModels = ketQuaHocTapService.Search(txtMSSV.Text);
-            //LoadDSKetQuaHocTap(ketQuaHocTapViewModels);
+            KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
+            List<KetQuaHocTapTheoSinhVienViewModel> ketQuaHocTapTheoSinhVienViewModels = ketQuaHocTapService.GetKetQuaHocTapTheoSinhVien(txtMSSV.Text);
+            LoadDSKetQuaHocTap(ketQuaHocTapTheoSinhVienViewModels);
+
+            TinhSTCAndDiemTrungBinhViewModel tinhSTCAndDiemTrungBinhViewModel = ketQuaHocTapService.GetTinhSTCAndDiemTrungBinh(txtMSSV.Text).FirstOrDefault();
+            if (tinhSTCAndDiemTrungBinhViewModel != null)
+            {
+                txtDTBTichLuy.Text = tinhSTCAndDiemTrungBinhViewModel.DiemTrungBinh.ToString();
+                txtSTCTichLuy.Text = tinhSTCAndDiemTrungBinhViewModel.STC.ToString();
+                txtXepLoai.Text = tinhSTCAndDiemTrungBinhViewModel.Loai.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy sinh viên này", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void KetQuaHocTap_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -66,8 +68,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 KetQuaHocTapSinhVien ketQuaHocTapSinhVien = new KetQuaHocTapSinhVien();
                 ketQuaHocTapSinhVien.ketQuaHocTapViewModel = data;
                 ketQuaHocTapSinhVien.ShowDialog();
-                LoadGridView();
             }
         }
+
     }
 }
