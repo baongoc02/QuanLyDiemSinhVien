@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
 using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
+using QuanLyDiemSinhVienNhom5.DataAccess.Model;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
 {
@@ -37,6 +38,118 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 catch (Exception e)
                 {
                     base.ProcessSqlException(e);
+                }
+            }
+        }
+
+        public List<KetQuaHocTapTheoSinhVien> GetKetQuaHocTapTheoSinhVien(string maSinhVien)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "Proc_KetQuaHocTapTheoSinhVien";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    DataTable tempTable = new DataTable();
+                    adapter.Fill(tempTable);
+                    return tempTable.AsEnumerable()
+                        .Select(u => new KetQuaHocTapTheoSinhVien()
+                        {
+                            MaSinhVien = Convert.ToString("MaSinhVien"),
+                            TenSinhVien = Convert.ToString("TenSinhVien"),
+                            MaLop = Convert.ToString("MaLop"),
+                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
+                            Loai = Convert.ToString("Loai"),
+                            TenMonHoc = Convert.ToString("TenMonHoc")
+                        }).ToList();
+                }
+            }
+        }
+
+        public List<TinhSTCAndDiemTrungBinh> GetTinhSTCAndDiemTrungBinh(string maSinhVien)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "proc_TinhSTCAndDiemTrungBinh";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
+
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    DataTable tempTable = new DataTable();
+                    adapter.Fill(tempTable);
+                    return tempTable.AsEnumerable()
+                        .Select(u => new TinhSTCAndDiemTrungBinh()
+                        {
+                            TenSinhVien = Convert.ToString("TenSinhVien"),
+                            MaLop = Convert.ToString("MaLop"),
+                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
+                            Loai = Convert.ToString("Loai"),
+                            TenMonHoc = Convert.ToString("TenMonHoc")
+                        }).ToList();
+                }
+            }
+        }
+
+        public List<KetQuaHocTapTheoMaLopVaXepLoai> GetKetQuaHocTapTheoMaLopVaXepLoai(string maLop, string tenLoai)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "Proc_KetQuaHocTapTheoMaLopVaXepLoai";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@maLop", maLop));
+                command.Parameters.Add(new SqlParameter("@tenLoai", tenLoai));
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    DataTable tempTable = new DataTable();
+                    adapter.Fill(tempTable);
+                    return tempTable.AsEnumerable()
+                        .Select(u => new KetQuaHocTapTheoMaLopVaXepLoai()
+                        {
+                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
+                            MaSinhVien = Convert.ToString("MaSinhVien"),
+                            HoTen = Convert.ToString("HoTen"),
+                            Khoa = Convert.ToString("TenKhoa")
+                        }).ToList();
+                }
+            }
+        }
+
+        public List<DSSVKhongDatMonHoc> GetDSSVKhongDatMonHoc(string maMon, string maHocKy)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "Proc_DSSVKhongDatMonHoc";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@maMon", maMon));
+                command.Parameters.Add(new SqlParameter("@maHocKy", maHocKy));
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    DataTable tempTable = new DataTable();
+                    adapter.Fill(tempTable);
+                    return tempTable.AsEnumerable()
+                        .Select(u => new DSSVKhongDatMonHoc()
+                        {
+                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
+                            MaSinhVien = Convert.ToString("MaSinhVien"),
+                            MaLop = Convert.ToString("MaLop"),
+                            TenHocKy = Convert.ToString("TenHocKy"),
+                            TenMon = Convert.ToString("TenMon"),
+                            TenNamHoc = Convert.ToString("TenNamHoc")
+                        }).ToList();
                 }
             }
         }
