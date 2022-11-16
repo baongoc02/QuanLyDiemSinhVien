@@ -18,6 +18,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.Entities
         public string HocHam { get; set; }
         public string HocVi { get; set; }
         public string MaKhoa { get; set; }
+        public string Password { get; set; }
 
         public GiangVien()
         {
