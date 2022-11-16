@@ -163,6 +163,7 @@
             this.Btn_Tim.Size = new System.Drawing.Size(40, 40);
             this.Btn_Tim.TabIndex = 52;
             this.Btn_Tim.UseVisualStyleBackColor = false;
+            this.Btn_Tim.Click += new System.EventHandler(this.Btn_Tim_Click);
             // 
             // label5
             // 
@@ -355,6 +356,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "HomePageGiangVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HompageGiangVien";
             this.Load += new System.EventHandler(this.HomePageGiangVien_Load);
             this.menuStrip1.ResumeLayout(false);

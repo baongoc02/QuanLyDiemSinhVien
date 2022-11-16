@@ -32,6 +32,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbNamHoc = new System.Windows.Forms.ComboBox();
+            this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.txtMaHocKy = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenHocKy = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.cbNamHoc = new System.Windows.Forms.ComboBox();
             this.Btn_XacNhan = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Dong = new System.Windows.Forms.Button();
@@ -120,6 +120,37 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 360);
             this.tableLayoutPanel1.TabIndex = 46;
+            // 
+            // cbNamHoc
+            // 
+            this.cbNamHoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.cbNamHoc.FormattingEnabled = true;
+            this.cbNamHoc.Location = new System.Drawing.Point(211, 308);
+            this.cbNamHoc.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.cbNamHoc.Name = "cbNamHoc";
+            this.cbNamHoc.Size = new System.Drawing.Size(292, 29);
+            this.cbNamHoc.TabIndex = 52;
+            // 
+            // dtNgayBatDau
+            // 
+            this.dtNgayBatDau.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
+            this.dtNgayBatDau.Location = new System.Drawing.Point(211, 164);
+            this.dtNgayBatDau.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.dtNgayBatDau.Name = "dtNgayBatDau";
+            this.dtNgayBatDau.Size = new System.Drawing.Size(292, 28);
+            this.dtNgayBatDau.TabIndex = 53;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.label6.ForeColor = System.Drawing.Color.Indigo;
+            this.label6.Location = new System.Drawing.Point(3, 288);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(202, 72);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Năm học:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtNgayKetThuc
             // 
@@ -207,37 +238,6 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Thông tin học kỳ";
             // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label6.ForeColor = System.Drawing.Color.Indigo;
-            this.label6.Location = new System.Drawing.Point(3, 288);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 72);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Năm học:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dtNgayBatDau
-            // 
-            this.dtNgayBatDau.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.dtNgayBatDau.Location = new System.Drawing.Point(211, 164);
-            this.dtNgayBatDau.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.dtNgayBatDau.Name = "dtNgayBatDau";
-            this.dtNgayBatDau.Size = new System.Drawing.Size(292, 28);
-            this.dtNgayBatDau.TabIndex = 53;
-            // 
-            // cbNamHoc
-            // 
-            this.cbNamHoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F);
-            this.cbNamHoc.FormattingEnabled = true;
-            this.cbNamHoc.Location = new System.Drawing.Point(211, 308);
-            this.cbNamHoc.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.cbNamHoc.Name = "cbNamHoc";
-            this.cbNamHoc.Size = new System.Drawing.Size(292, 29);
-            this.cbNamHoc.TabIndex = 52;
-            // 
             // Btn_XacNhan
             // 
             this.Btn_XacNhan.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.updateIconBtn;
@@ -293,7 +293,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "HocKyInfo";
-            this.Text = "HocKyInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thông tin học kỳ";
             this.Load += new System.EventHandler(this.HocKyInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
