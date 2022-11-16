@@ -27,6 +27,9 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ViewModel
         [DisplayName("GioiHan")]
         public int GioiHan { get; set; }
 
+        [DisplayName("Ten lop5")]
+        public string TenLop { get; set; }
+
         public LopViewModel()
         {
 

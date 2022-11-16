@@ -88,5 +88,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             xemHocKy1.Visible = true;
             xemHocKy1.BringToFront();
         }
+
+        private void MenuStrip_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

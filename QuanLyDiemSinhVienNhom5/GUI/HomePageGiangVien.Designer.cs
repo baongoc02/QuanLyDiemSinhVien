@@ -52,13 +52,13 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusStudent = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.HomePageGiangVien_gridview = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePageGiangVien_gridview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -299,6 +299,7 @@
             this.Btn_Them.Size = new System.Drawing.Size(40, 40);
             this.Btn_Them.TabIndex = 49;
             this.Btn_Them.UseVisualStyleBackColor = false;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // statusStrip1
             // 
@@ -323,23 +324,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.HomePageGiangVien_gridview);
             this.panel1.Location = new System.Drawing.Point(35, 231);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1261, 533);
             this.panel1.TabIndex = 7;
             // 
-            // dataGridView1
+            // HomePageGiangVien_gridview
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SeaShell;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1259, 531);
-            this.dataGridView1.TabIndex = 0;
+            this.HomePageGiangVien_gridview.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.HomePageGiangVien_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HomePageGiangVien_gridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HomePageGiangVien_gridview.Location = new System.Drawing.Point(0, 0);
+            this.HomePageGiangVien_gridview.Name = "HomePageGiangVien_gridview";
+            this.HomePageGiangVien_gridview.RowHeadersWidth = 51;
+            this.HomePageGiangVien_gridview.RowTemplate.Height = 24;
+            this.HomePageGiangVien_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.HomePageGiangVien_gridview.Size = new System.Drawing.Size(1259, 531);
+            this.HomePageGiangVien_gridview.TabIndex = 0;
+            this.HomePageGiangVien_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HomePageGiangVien_gridview_CellClick);
             // 
             // HomePageGiangVien
             // 
@@ -353,6 +356,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "HomePageGiangVien";
             this.Text = "HompageGiangVien";
+            this.Load += new System.EventHandler(this.HomePageGiangVien_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -362,7 +366,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePageGiangVien_gridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,6 +397,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLopHoc;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView HomePageGiangVien_gridview;
     }
 }

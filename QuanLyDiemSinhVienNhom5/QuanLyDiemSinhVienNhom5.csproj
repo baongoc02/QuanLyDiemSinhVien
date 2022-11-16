@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\DanhSachSinhVienKhongDatMotMon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhSachSinhVienKhongDatMotMon.Designer.cs">
+      <DependentUpon>DanhSachSinhVienKhongDatMotMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DSSVTheoLop_XepLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DSSVTheoLop_XepLoai.Designer.cs">
+      <DependentUpon>DSSVTheoLop_XepLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GiangVienInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DanhSachSinhVienKhongDatMotMon.resx">
+      <DependentUpon>DanhSachSinhVienKhongDatMotMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DSSVTheoLop_XepLoai.resx">
+      <DependentUpon>DSSVTheoLop_XepLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GiangVienInfo.resx">
       <DependentUpon>GiangVienInfo.cs</DependentUpon>
     </EmbeddedResource>

@@ -91,12 +91,12 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void MonHocInfo_Load(object sender, EventArgs e)
         {
+            cbKhoa.DataSource = this.khoaService.ListAll();
+            cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
+            cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
+
             if (monHocViewModel != null)
             {
-                cbKhoa.DataSource = this.khoaService.ListAll();
-                cbKhoa.DisplayMember = nameof(KhoaViewModel.TenKhoa);
-                cbKhoa.ValueMember = nameof(KhoaViewModel.MaKhoa);
-
                 txtMaMonHoc.Text = this.monHocViewModel.MaMonHoc;
                 txtTenMonHoc.Text = this.monHocViewModel.TenMonHoc;
                 txtMoTa.Text = this.monHocViewModel.MoTa;

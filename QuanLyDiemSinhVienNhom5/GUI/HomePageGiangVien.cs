@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyDiemSinhVienNhom5.Core.Services;
+using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,68 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         public HomePageGiangVien()
         {
             InitializeComponent();
+        }
+
+        [DesignOnly(true)]  
+        private void HomePageGiangVien_Load(object sender, EventArgs e)
+        {
+            HocKyService hocKyService = new HocKyService();
+            var listHocKy = hocKyService.ListAll();
+            listHocKy.Insert(0, new HocKyViewModel()
+            {
+                MaHocKy = "",
+                TenHocKy = "-- Tất cả học kỳ --"
+            });
+            cbHocKy.DataSource = listHocKy;
+            cbHocKy.DisplayMember = nameof(HocKyViewModel.TenHocKy);
+            cbHocKy.ValueMember = nameof(HocKyViewModel.MaHocKy);
+
+            NamHocService namHocService = new NamHocService();
+            var listNamHoc = namHocService.ListAll();
+            listNamHoc.Insert(0, new NamHocViewModel()
+            {
+                MaNamHoc = "",
+                TenNamHoc = "-- Tất cả năm học --"
+            });
+            cbNamHoc.DataSource = listNamHoc;
+            cbNamHoc.DisplayMember = nameof(NamHocViewModel.TenNamHoc);
+            cbNamHoc.ValueMember = nameof(NamHocViewModel.MaNamHoc);
+
+            LopService lopService = new LopService();
+            var listLop = lopService.ListAll();
+            foreach (var lop in listLop)
+            {
+                lop.TenLop = lop.MaLop;
+            }
+            listLop.Insert(0, new LopViewModel()
+            {
+                MaLop = "",
+                TenLop = "-- Tất cả các lớp --"
+            });
+            cbLopHoc.DataSource = listLop;
+            cbLopHoc.DisplayMember = nameof(LopViewModel.TenLop);
+            cbLopHoc.ValueMember = nameof(LopViewModel.MaLop);
+
+            MessageBox.Show(cbLopHoc.SelectedValue.ToString());
+        }
+
+
+        private void Btn_Them_Click(object sender, EventArgs e)
+        {
+            KetQuaHocTapSinhVien ketQuaHocTapSinhVien = new KetQuaHocTapSinhVien();
+            ketQuaHocTapSinhVien.ketQuaHocTapViewModel = null;
+            ketQuaHocTapSinhVien.ShowDialog();
+            //LoadGridView();
+
+        }
+
+        private void HomePageGiangVien_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //TODO: xử lí chỗ này
+            if (HomePageGiangVien_gridview.SelectedRows.Count == 1)
+            {
+
+            }
         }
     }
 }
