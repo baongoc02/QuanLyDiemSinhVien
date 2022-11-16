@@ -158,10 +158,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             var conn = SqlServerConnectionSingleon.getInstance();
             using (var command = conn.CreateCommand())
             {
-                command.CommandText = "Proc_DSSVKhongDatMonHoc";
+                command.CommandText = "Proc_TimTrongHomePageGiangVien";
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add(new SqlParameter("@maMon", maMon));
+                command.Parameters.Add(new SqlParameter("@monHoc", maMon));
                 command.Parameters.Add(new SqlParameter("@maLop", maLop));
                 command.Parameters.Add(new SqlParameter("@maHocKy", maHocKy));
                 command.Parameters.Add(new SqlParameter("@maNamHoc", maNamHoc));
@@ -178,7 +178,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                             MaSinhVien = Convert.ToString(u["MaSinhVien"]),
                             MaLop = Convert.ToString(u["MaLop"]),
                             TenHocKy = Convert.ToString(u["TenHocKy"]),
-                            TenMon = Convert.ToString(u["TenMon"]),
+                            TenMon = Convert.ToString(u["TenMonHoc"]),
                             TenNamHoc = Convert.ToString(u["TenNamHoc"])
                         }).ToList();
                 }
