@@ -83,6 +83,7 @@
     <Compile Include="DAO\MonHocDAO.cs" />
     <Compile Include="DAO\NamHocDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Entities\GiangVien.cs" />
     <Compile Include="Entities\HocKy.cs" />
     <Compile Include="Entities\KetQuaHocTap.cs" />
