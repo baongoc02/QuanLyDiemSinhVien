@@ -32,7 +32,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemKetQuaHocTapPageAdmin));
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +41,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.Btn_Them = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Btn_Import = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -195,32 +192,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.Btn_Them.UseVisualStyleBackColor = false;
             this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Indigo;
-            this.label7.Location = new System.Drawing.Point(988, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 24);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Import";
-            // 
-            // Btn_Import
-            // 
-            this.Btn_Import.BackColor = System.Drawing.SystemColors.Control;
-            this.Btn_Import.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Import.BackgroundImage")));
-            this.Btn_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Import.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Import.FlatAppearance.BorderSize = 0;
-            this.Btn_Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Import.Location = new System.Drawing.Point(945, 180);
-            this.Btn_Import.Name = "Btn_Import";
-            this.Btn_Import.Size = new System.Drawing.Size(40, 40);
-            this.Btn_Import.TabIndex = 46;
-            this.Btn_Import.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -288,8 +259,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.Btn_Import);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Btn_Tim);
             this.Controls.Add(this.label5);
@@ -320,8 +289,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private MagicalDataGridView KetQuaHocTap_gridview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Tim;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button Btn_Import;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
