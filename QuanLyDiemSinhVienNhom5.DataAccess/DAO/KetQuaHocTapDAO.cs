@@ -145,6 +145,36 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                         {
                             DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
                             MaSinhVien = Convert.ToString("MaSinhVien"),
+                            HoTen = Convert.ToString("HoTen"),
+                            Khoa = Convert.ToString("Khoa")
+                        }).ToList();
+                }
+            }
+        }
+
+        public List<TimTrongHomePageGiangVien> GetTimTrongHomePageGiangVien(string maMon, string maLop, string maHocKy, string maNamHoc, string maGiangVien)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "Proc_DSSVKhongDatMonHoc";
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@maMon", maMon));
+                command.Parameters.Add(new SqlParameter("@maLop", maLop));
+                command.Parameters.Add(new SqlParameter("@maHocKy", maHocKy));
+                command.Parameters.Add(new SqlParameter("@maNamHoc", maNamHoc));
+                command.Parameters.Add(new SqlParameter("@maGiangVien", maGiangVien));
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    DataTable tempTable = new DataTable();
+                    adapter.Fill(tempTable);
+                    return tempTable.AsEnumerable()
+                        .Select(u => new TimTrongHomePageGiangVien()
+                        {
+                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
+                            MaSinhVien = Convert.ToString("MaSinhVien"),
                             MaLop = Convert.ToString("MaLop"),
                             TenHocKy = Convert.ToString("TenHocKy"),
                             TenMon = Convert.ToString("TenMon"),
