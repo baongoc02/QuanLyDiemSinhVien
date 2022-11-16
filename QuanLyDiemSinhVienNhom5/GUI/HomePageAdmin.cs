@@ -14,79 +14,75 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class HomePageAdmin : Form
     {
-        //private static readonly AppSetting _setting;
+        private static readonly AppSetting _setting = AppSettingSingleton.getSetting();
+
         public HomePageAdmin()
         {
-            //_setting.Login("sa", "123456");
             InitializeComponent();
+            this.tbLoginedUsername.Text = _setting.SqlServerDatabaseUsername;
         }
 
         [DesignOnly(true)]
         private void HomePage_Load(object sender, EventArgs e)
         {
-            xemGiangVien1.Visible = false;
-            xemSinhVien1.Visible = false;
-            xemMonHoc1.Visible = false;
-            xemLopHoc1.Visible = false;
-            xemKetQuaHocTap1.Visible = false;
-            thongKeDiem1.Visible = false;
-            xemDanhSachKhoa1.Visible = false;
-            xemNamHoc1.Visible = false;
-            xemHocKy1.Visible = false;
+
+        }
+
+        private void AddViewToPanelMain(UserControl control)
+        {
+            if (this.pnMain.Controls.Count > 0)
+            {
+                var temp = this.pnMain.Controls[0];
+                this.pnMain.Controls.Clear();
+                temp.Dispose();
+            }
+            control.Dock = DockStyle.Fill;
+            this.pnMain.Controls.Add(control);
         }
 
         private void Btn_LopHoc_Click(object sender, EventArgs e)
         {
-            xemLopHoc1.Visible = true;
-            xemLopHoc1.BringToFront();
+            this.AddViewToPanelMain(new XemLopHoc());
         }
 
         private void Btn_KetQuaHocTap_Click(object sender, EventArgs e)
         {
-            xemKetQuaHocTap1.Visible = true;
-            xemKetQuaHocTap1.BringToFront();
+            this.AddViewToPanelMain(new XemKetQuaHocTapPageAdmin());
         }
 
         private void Btn_ThongKeDiem_Click(object sender, EventArgs e)
         {
-            thongKeDiem1.Visible = true;
-            thongKeDiem1.BringToFront();
+            this.AddViewToPanelMain(new ThongKeDiem());
         }
 
         private void Btn_DSKhoa_Click(object sender, EventArgs e)
         {
-            xemDanhSachKhoa1.Visible = true;
-            xemDanhSachKhoa1.BringToFront();
+            this.AddViewToPanelMain(new XemDanhSachKhoa());
         }
 
         private void Btn_DSGiangVien_Click(object sender, EventArgs e)
         {
-            xemGiangVien1.Visible = true;
-            xemGiangVien1.BringToFront();
+            this.AddViewToPanelMain(new XemGiangVien());
         }
 
         private void Btn_DSMonHoc_Click(object sender, EventArgs e)
         {
-            xemMonHoc1.Visible = true;
-            xemMonHoc1.BringToFront();
+            this.AddViewToPanelMain(new XemMonHoc());
         }
 
         private void Btn_DSSinhVien_Click(object sender, EventArgs e)
         {
-            xemSinhVien1.Visible = true;
-            xemSinhVien1.BringToFront();
+            this.AddViewToPanelMain(new XemSinhVien());
         }
 
         private void Btn_XemNamHoc_Click(object sender, EventArgs e)
         {
-            xemNamHoc1.Visible = true;
-            xemNamHoc1.BringToFront();
+            this.AddViewToPanelMain(new XemNamHoc());
         }
 
         private void Btn_XemHocKy_Click(object sender, EventArgs e)
         {
-            xemHocKy1.Visible = true;
-            xemHocKy1.BringToFront();
+            this.AddViewToPanelMain(new XemHocKy());
         }
 
         private void MenuStrip_Thoat_Click(object sender, EventArgs e)

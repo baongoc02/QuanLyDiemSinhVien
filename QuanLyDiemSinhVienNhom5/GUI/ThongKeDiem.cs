@@ -20,20 +20,28 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         [DesignOnly(true)]
         private void ThongKeDiem_Load(object sender, EventArgs e)
         {
-            dssvTheoLop_XepLoai1.Visible = false;
-            danhSachSinhVienKhongDatMotMon1.Visible = false;
+        }
+
+        private void AddViewToPanelMain(UserControl control)
+        {
+            if (this.pnMain.Controls.Count > 0)
+            {
+                var temp = this.pnMain.Controls[0];
+                this.pnMain.Controls.Clear();
+                temp.Dispose();
+            }
+            control.Dock = DockStyle.Fill;
+            this.pnMain.Controls.Add(control);
         }
 
         private void Btn_DSSVTheoMonVaXepLoai_Click(object sender, EventArgs e)
         {
-            dssvTheoLop_XepLoai1.Visible = true;
-            dssvTheoLop_XepLoai1.BringToFront();
+            this.AddViewToPanelMain(new DSSVTheoLop_XepLoai());
         }
 
         private void Btn_DSSVKhongDat_Click(object sender, EventArgs e)
         {
-            danhSachSinhVienKhongDatMotMon1.Visible = true;
-            danhSachSinhVienKhongDatMotMon1.BringToFront();
+            this.AddViewToPanelMain(new DanhSachSinhVienKhongDatMotMon());
         }
     }
 }
