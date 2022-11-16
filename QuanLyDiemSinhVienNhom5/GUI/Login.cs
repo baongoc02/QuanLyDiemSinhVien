@@ -22,6 +22,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             InitializeComponent();
             this.txtUserName.Text = "sa";
             this.txtPassword.Text = "123456";
+            this.txtPassword.PasswordChar = '*';
         }
 
         private void Btn_Login_Click(object sender, EventArgs e)
