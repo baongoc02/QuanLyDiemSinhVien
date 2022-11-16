@@ -59,12 +59,12 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     return tempTable.AsEnumerable()
                         .Select(u => new KetQuaHocTapTheoSinhVien()
                         {
-                            MaSinhVien = Convert.ToString("MaSinhVien"),
-                            TenSinhVien = Convert.ToString("TenSinhVien"),
-                            MaLop = Convert.ToString("MaLop"),
-                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
-                            Loai = Convert.ToString("Loai"),
-                            TenMonHoc = Convert.ToString("TenMonHoc")
+                            MaSinhVien = Convert.ToString(u["MaSinhVien"]),
+                            TenSinhVien = Convert.ToString(u["TenSinhVien"]),
+                            MaLop = Convert.ToString(u["MaLop"]),
+                            DiemTrungBinh = Convert.ToDouble(u["DiemTrungBinh"]),
+                            Loai = Convert.ToString(u["Loai"]),
+                            TenMonHoc = Convert.ToString(u["TenMonHoc"])
                         }).ToList();
                 }
             }
@@ -88,11 +88,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     return tempTable.AsEnumerable()
                         .Select(u => new TinhSTCAndDiemTrungBinh()
                         {
-                            TenSinhVien = Convert.ToString("TenSinhVien"),
-                            MaLop = Convert.ToString("MaLop"),
-                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
-                            Loai = Convert.ToString("Loai"),
-                            TenMonHoc = Convert.ToString("TenMonHoc")
+                            TenSinhVien = Convert.ToString(u["TenSinhVien"]),
+                            MaLop = Convert.ToString(u["MaLop"]),
+                            DiemTrungBinh = Convert.ToDouble(u["DiemTrungBinh"]),
+                            Loai = Convert.ToString(u["Loai"]),
+                            TenMonHoc = Convert.ToString(u["TenMonHoc"])
                         }).ToList();
                 }
             }
@@ -116,10 +116,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     return tempTable.AsEnumerable()
                         .Select(u => new KetQuaHocTapTheoMaLopVaXepLoai()
                         {
-                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
-                            MaSinhVien = Convert.ToString("MaSinhVien"),
-                            HoTen = Convert.ToString("HoTen"),
-                            Khoa = Convert.ToString("TenKhoa")
+                            DiemTrungBinh = Convert.ToDouble(u["DiemTrungBinh"]),
+                            MaSinhVien = Convert.ToString(u["MaSinhVien"]),
+                            HoTen = Convert.ToString(u["HoTen"]),
+                            Khoa = Convert.ToString(u["TenKhoa"])
                         }).ToList();
                 }
             }
@@ -133,7 +133,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                 command.CommandText = "Proc_DSSVKhongDatMonHoc";
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add(new SqlParameter("@maMon", maMon));
+                command.Parameters.Add(new SqlParameter("@maMonHoc", maMon));
                 command.Parameters.Add(new SqlParameter("@maHocKy", maHocKy));
 
                 using (SqlDataAdapter adapter = new SqlDataAdapter(command))
@@ -143,10 +143,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     return tempTable.AsEnumerable()
                         .Select(u => new DSSVKhongDatMonHoc()
                         {
-                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
-                            MaSinhVien = Convert.ToString("MaSinhVien"),
-                            HoTen = Convert.ToString("HoTen"),
-                            Khoa = Convert.ToString("Khoa")
+                            DiemTrungBinh = Convert.ToDouble(u["DiemTrungBinh"]),
+                            MaSinhVien = Convert.ToString(u["MaSinhVien"]),
+                            HoTen = Convert.ToString(u["HoTen"]),
+                            Khoa = Convert.ToString(u["Khoa"])
                         }).ToList();
                 }
             }
@@ -173,12 +173,12 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     return tempTable.AsEnumerable()
                         .Select(u => new TimTrongHomePageGiangVien()
                         {
-                            DiemTrungBinh = Convert.ToDouble("DiemTrungBinh"),
-                            MaSinhVien = Convert.ToString("MaSinhVien"),
-                            MaLop = Convert.ToString("MaLop"),
-                            TenHocKy = Convert.ToString("TenHocKy"),
-                            TenMon = Convert.ToString("TenMon"),
-                            TenNamHoc = Convert.ToString("TenNamHoc")
+                            DiemTrungBinh = Convert.ToDouble(u["DiemTrungBinh"]),
+                            MaSinhVien = Convert.ToString(u["MaSinhVien"]),
+                            MaLop = Convert.ToString(u["MaLop"]),
+                            TenHocKy = Convert.ToString(u["TenHocKy"]),
+                            TenMon = Convert.ToString(u["TenMon"]),
+                            TenNamHoc = Convert.ToString(u["TenNamHoc"])
                         }).ToList();
                 }
             }
