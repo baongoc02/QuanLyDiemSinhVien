@@ -217,7 +217,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "NamHocInfo";
-            this.Text = "NamHocInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thông tin năm học";
             this.Load += new System.EventHandler(this.NamHocInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

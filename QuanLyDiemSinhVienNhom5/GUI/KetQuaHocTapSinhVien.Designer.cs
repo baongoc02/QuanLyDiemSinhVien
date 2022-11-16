@@ -268,7 +268,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "KetQuaHocTapSinhVien";
-            this.Text = "KetQuaHocTapSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Kết quả học tập";
             this.Load += new System.EventHandler(this.KetQuaHocTapSinhVien_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
