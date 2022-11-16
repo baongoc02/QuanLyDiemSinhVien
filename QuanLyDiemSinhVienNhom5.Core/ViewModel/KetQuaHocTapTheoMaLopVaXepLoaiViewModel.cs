@@ -27,6 +27,8 @@ namespace QuanLyDiemSinhVienNhom5.Core.ViewModel
 
         public KetQuaHocTapTheoMaLopVaXepLoaiViewModel(KetQuaHocTapTheoMaLopVaXepLoai model)
         {
+            this.TenSinhVien = model.TenSinhVien;
+            this.Loai = model.Loai;
             this.TenMonHoc = model.TenMonHoc;
             this.MaLop = model.MaLop;
             this.TenMonHoc = model.TenMonHoc;
