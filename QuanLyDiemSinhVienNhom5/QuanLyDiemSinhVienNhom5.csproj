@@ -130,7 +130,6 @@
     <Compile Include="GUI\SinhVienInfo.Designer.cs">
       <DependentUpon>SinhVienInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\StyleGridview.cs" />
     <Compile Include="GUI\ThongKeDiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
