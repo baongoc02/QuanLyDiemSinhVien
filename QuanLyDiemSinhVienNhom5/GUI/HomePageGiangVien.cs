@@ -1,5 +1,6 @@
 ﻿using QuanLyDiemSinhVienNhom5.Core.Services;
 using QuanLyDiemSinhVienNhom5.Core.ViewModel;
+using QuanLyDiemSinhVienNhom5.DataAccess.Base;
 using QuanLyDiemSinhVienNhom5.DataAccess.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 {
     public partial class HomePageGiangVien : Form
     {
+        private static readonly AppSetting _setting = AppSettingSingleton.getSetting();
         public HomePageGiangVien()
         {
             InitializeComponent();
@@ -88,7 +90,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         public void LoadGridView()
         {
             KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
-            List<TimTrongHomePageGiangVienViewModel> timTrongHomePageGiangVienViewModels = ketQuaHocTapService.GetTimTrongHomePageGiangVien(txtMonHoc.Text, cbLopHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), "teacher11");
+            List<TimTrongHomePageGiangVienViewModel> timTrongHomePageGiangVienViewModels = ketQuaHocTapService.GetTimTrongHomePageGiangVien(txtMonHoc.Text, cbLopHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), _setting.SqlServerDatabaseUsername);
             LoadDSSV(timTrongHomePageGiangVienViewModels);
         }
 

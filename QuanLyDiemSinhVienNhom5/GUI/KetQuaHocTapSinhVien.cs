@@ -79,7 +79,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             {
                 this.ketQuaHocTapViewModel = ketQuaHocTapService.Search(this.mssv, this.maLop).FirstOrDefault();
                 txtMaSinhVien.Text = ketQuaHocTapViewModel.MaSinhVien.ToString();
-                //cbLop.Text = ketQuaHocTapViewModel.MaLop.ToString();
+                cbLop.Text = ketQuaHocTapViewModel.MaLop.ToString();
                 txtDiemGiuaKy.Text = ketQuaHocTapViewModel.DiemGiuaKy.ToString();
                 txtDiemCuoiKy.Text = ketQuaHocTapViewModel.DiemCuoiKy.ToString();
             }

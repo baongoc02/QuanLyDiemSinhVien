@@ -24,7 +24,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private readonly GiangVienService giangVienService;
         private readonly KhoaService khoaService;
         public GiangVienViewModel giangVienViewModel;
-        private DialogState currentState;
 
         public GiangVienInfo(DialogState state)
         {

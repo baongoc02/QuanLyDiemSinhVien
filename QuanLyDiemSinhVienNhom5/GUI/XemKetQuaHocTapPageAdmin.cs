@@ -62,9 +62,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         {
             if (KetQuaHocTap_gridview.SelectedRows.Count == 1)
             {
-                var data = KetQuaHocTap_gridview.SelectedRows[0].DataBoundItem as KetQuaHocTapViewModel;
+                var data = KetQuaHocTap_gridview.SelectedRows[0].DataBoundItem as KetQuaHocTapTheoSinhVienViewModel;
                 KetQuaHocTapSinhVien ketQuaHocTapSinhVien = new KetQuaHocTapSinhVien();
-                ketQuaHocTapSinhVien.ketQuaHocTapViewModel = data;
+                ketQuaHocTapSinhVien.mssv = data.MaSinhVien;
+                ketQuaHocTapSinhVien.maLop = data.MaLop;
                 ketQuaHocTapSinhVien.ShowDialog();
             }
         }
