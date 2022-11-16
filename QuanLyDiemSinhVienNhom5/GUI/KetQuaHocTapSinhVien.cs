@@ -77,7 +77,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
             if (this.mssv != null && this.maLop != null)
             {
-                this.ketQuaHocTapViewModel = ketQuaHocTapService.Search(this.mssv, this.maLop).First();
+                this.ketQuaHocTapViewModel = ketQuaHocTapService.Search(this.mssv, this.maLop).FirstOrDefault();
                 txtMaSinhVien.Text = ketQuaHocTapViewModel.MaSinhVien.ToString();
                 //cbLop.Text = ketQuaHocTapViewModel.MaLop.ToString();
                 txtDiemGiuaKy.Text = ketQuaHocTapViewModel.DiemGiuaKy.ToString();

@@ -130,7 +130,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 txtHocHam.Text = this.giangVienViewModel.HocHam;
                 txtHocVi.Text = this.giangVienViewModel.HocVi;
 
-                KhoaViewModel khoaViewModels = khoaService.Search(this.giangVienViewModel.MaKhoa, "", "").First();
+                KhoaViewModel khoaViewModels = khoaService.Search(this.giangVienViewModel.MaKhoa, "", "").FirstOrDefault();
                 cbKhoa.Text = khoaViewModels.TenKhoa;
             }
         }

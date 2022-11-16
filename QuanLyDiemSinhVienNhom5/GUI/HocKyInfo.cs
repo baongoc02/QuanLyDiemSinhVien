@@ -104,7 +104,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 dtNgayBatDau.Value = this.hocKyViewModel.NgayBatDau;
                 dtNgayKetThuc.Value = this.hocKyViewModel.NgayKetThuc;
 
-                NamHocViewModel namHocViewModel = namHocService.Search(this.hocKyViewModel.MaNamHoc, "").First();
+                NamHocViewModel namHocViewModel = namHocService.Search(this.hocKyViewModel.MaNamHoc, "").FirstOrDefault();
 
                 cbNamHoc.Text = namHocViewModel.TenNamHoc;
             }
