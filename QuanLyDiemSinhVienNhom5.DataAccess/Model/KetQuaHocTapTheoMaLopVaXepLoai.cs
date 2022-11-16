@@ -8,9 +8,10 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.Model
 {
     public class KetQuaHocTapTheoMaLopVaXepLoai
     {
-        public string MaSinhVien { get; set; }
-        public string HoTen { get; set; }
+        public string TenSinhVien { get; set; }
+        public string MaLop { get; set; }
+        public string TenMonHoc { get; set; }
         public double DiemTrungBinh { get; set; }
-        public string Khoa { get; set; }
+        public string Loai { get; set; }
     }
 }
