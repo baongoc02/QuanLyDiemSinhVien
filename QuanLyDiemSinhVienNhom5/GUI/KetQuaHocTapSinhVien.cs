@@ -18,6 +18,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private readonly KetQuaHocTapService ketQuaHocTapService;
         private readonly LopService lopService;
         public KetQuaHocTapViewModel ketQuaHocTapViewModel;
+        public string mssv;
+        public string maLop;
 
         public KetQuaHocTapSinhVien()
         {
@@ -72,6 +74,15 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbLop.DataSource = lopService.ListAll();
             cbLop.DisplayMember = nameof(LopViewModel.MaLop);
             cbLop.ValueMember = nameof(LopViewModel.MaLop);
+
+            if (this.mssv != null && this.maLop != null)
+            {
+                this.ketQuaHocTapViewModel = ketQuaHocTapService.Search(this.mssv, this.maLop).First();
+                txtMaSinhVien.Text = ketQuaHocTapViewModel.MaSinhVien.ToString();
+                //cbLop.Text = ketQuaHocTapViewModel.MaLop.ToString();
+                txtDiemGiuaKy.Text = ketQuaHocTapViewModel.DiemGiuaKy.ToString();
+                txtDiemCuoiKy.Text = ketQuaHocTapViewModel.DiemCuoiKy.ToString();
+            }
         }
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)
