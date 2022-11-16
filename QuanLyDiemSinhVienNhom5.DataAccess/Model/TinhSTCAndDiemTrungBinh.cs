@@ -8,10 +8,8 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.Model
 {
     public class TinhSTCAndDiemTrungBinh
     {
-        public string TenSinhVien { get; set; }
-        public string MaLop { get; set; }
-        public string TenMonHoc { get; set; }
         public double DiemTrungBinh { get; set; }
+        public int STC { get; set; }
         public string Loai { get; set; }
     }
 }
