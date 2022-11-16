@@ -45,6 +45,23 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             }
         }
 
+        public void ImportSinhVienFromFile(string fileName)
+        {
+            try
+            {
+                this.sinhVienDAO.ImportSinhVienFromFile(fileName);
+            }
+            catch (DataAccessException e)
+            {
+                this.OnError(e.Message);
+            }
+            catch (Exception e)
+            {
+                this.OnError("Lỗi hệ thống");
+                this.OnError(e.Message);
+            }
+        }
+
         public void Update(string maSinhVien, SinhVien sinhVien)
         {
             try

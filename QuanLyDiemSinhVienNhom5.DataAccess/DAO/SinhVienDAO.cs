@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyDiemSinhVienNhom5.DataAccess.Entities;
+using QuanLyDiemSinhVienNhom5.DataAccess.ExcelEngine;
 using QuanLyDiemSinhVienNhom5.DataAccess.SqlServer;
 
 namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
@@ -43,6 +44,11 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
                     base.ProcessSqlException(e);
                 }
             }
+        }
+
+        public void ImportSinhVienFromFile(string fileName)
+        {
+            new SinhVienExcelEngine().LoadFromFile(fileName);
         }
 
         public void Update(string maSinhVien, SinhVien sinhVien)
