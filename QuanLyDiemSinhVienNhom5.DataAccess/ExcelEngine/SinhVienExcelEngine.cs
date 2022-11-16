@@ -32,21 +32,24 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ExcelEngine
                     {
                         SinhVien sinhVien = new SinhVien();
 
-                        sinhVien.MaSinhVien = string.Format("{0}", sheet.GetCellAt(i, 1).Value);
-                        sinhVien.HoTen = string.Format("{0}", sheet.GetCellAt(i, 2).Value);
+                        if (sheet.GetCellAt(i, 0) == null)
+                            break;
+
+                        sinhVien.MaSinhVien = string.Format("{0}", sheet.GetCellAt(i, 1));
+                        sinhVien.HoTen = string.Format("{0}", sheet.GetCellAt(i, 2));
 
                         DateTime temp;
-                        if (!DateTime.TryParse(string.Format("{0}", sheet.GetCellAt(i, 3).Value), out temp))
+                        if (!DateTime.TryParse(string.Format("{0}", sheet.GetCellAt(i, 3)), out temp))
                             throw new Exception(string.Format("Dòng {0} - Ngày tháng năm không đúng định dạng", i + 1));
                         sinhVien.NgaySinh = temp;
 
-                        sinhVien.GioiTinh = string.Format("{0}", sheet.GetCellAt(i, 4).Value);
-                        sinhVien.CMND = string.Format("{0}", sheet.GetCellAt(i, 5).Value);
-                        sinhVien.SDT = string.Format("{0}", sheet.GetCellAt(i, 6).Value);
-                        sinhVien.QueQuan = string.Format("{0}", sheet.GetCellAt(i, 7).Value);
+                        sinhVien.GioiTinh = string.Format("{0}", sheet.GetCellAt(i, 4));
+                        sinhVien.CMND = string.Format("{0}", sheet.GetCellAt(i, 5));
+                        sinhVien.SDT = string.Format("{0}", sheet.GetCellAt(i, 6));
+                        sinhVien.QueQuan = string.Format("{0}", sheet.GetCellAt(i, 7));
 
                         //sinhVienMaKhoa
-                        string tenKhoa = (string)sheet.GetCellAt(i, 8).Value;
+                        string tenKhoa = string.Format("{0}", sheet.GetCellAt(i, 8));
 
                         using (var command = conn.CreateCommand())
                         {
