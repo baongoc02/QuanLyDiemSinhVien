@@ -18,12 +18,13 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ExcelEngine
             
         }
 
-        public void LoadFromFile(string excelFile)
+        public int LoadFromFile(string excelFile)
         {
             var conn = SqlServer.SqlServerConnectionSingleon.getInstance();
             using (var transaction = conn.BeginTransaction())
             {
                 int i = 0;
+                int counter = 0;
                 try
                 {
                     var workbook = WorkBook.Load(excelFile);
@@ -67,10 +68,13 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.ExcelEngine
 
                             command.Transaction = transaction;
                             command.ExecuteNonQuery();
+                            counter++;
                         }
                     }
 
                     transaction.Commit();
+
+                    return counter;
                 }
                 catch (Exception e)
                 {

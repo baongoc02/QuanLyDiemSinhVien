@@ -46,9 +46,9 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             }
         }
 
-        public void ImportSinhVienFromFile(string fileName)
+        public int ImportSinhVienFromFile(string fileName)
         {
-            new SinhVienExcelEngine().LoadFromFile(fileName);
+            return new SinhVienExcelEngine().LoadFromFile(fileName);
         }
 
         public void Update(string maSinhVien, SinhVien sinhVien)

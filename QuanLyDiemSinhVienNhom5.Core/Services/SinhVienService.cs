@@ -49,7 +49,8 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
         {
             try
             {
-                this.sinhVienDAO.ImportSinhVienFromFile(fileName);
+                int counter = this.sinhVienDAO.ImportSinhVienFromFile(fileName);
+                this.OnSuccess($"Nhập {counter} sinh viên thành công");
             }
             catch (DataAccessException e)
             {
