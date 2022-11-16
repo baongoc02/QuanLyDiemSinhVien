@@ -58,12 +58,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.monHocService.CheckMonHocExists(monHoc.MaMonHoc))
             {
                 this.monHocService.Update(monHoc.MaMonHoc, monHoc);
-                LoadTextBox();
             }
             else
             {
                 this.monHocService.Create(monHoc);
-                LoadTextBox();
             }
         }
 
@@ -103,7 +101,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 txtSoTinChi.Text = this.monHocViewModel.STC.ToString();
                 txtLoaiHocPhan.Text = this.monHocViewModel.LoaiHocPhan;
 
-                KhoaViewModel khoaViewModel = khoaService.Search(this.monHocViewModel.MaKhoa, "", "").First();
+                KhoaViewModel khoaViewModel = khoaService.Search(this.monHocViewModel.MaKhoa, "", "").FirstOrDefault();
                 cbKhoa.Text = khoaViewModel.TenKhoa;
             }
         }

@@ -71,9 +71,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             cbMonHoc.DisplayMember = nameof(MonHocViewModel.TenMonHoc);
             cbMonHoc.ValueMember = nameof(MonHocViewModel.MaMonHoc);
 
-            //HocKyViewModel hocKyViewModel = hocKyService.Search(lopViewModel.MaHocKy, "", "").First();
-            //MonHocViewModel monHocViewModel = monHocService.Search(lopViewModel.MaMonHoc, "", "", "", "").First();
-            //GiangVienViewModel giangVienViewModel = giangVienService.Search(lopViewModel.MaGiangVien, "", "", "", "", "", "", "", "").First();
             if (this.lopViewModel != null)
             {
                 txtMaLop.Text = this.lopViewModel.MaLop;
@@ -102,12 +99,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.lopService.CheckLopExists(lop.MaLop))
             {
                 this.lopService.Update(lop.MaLop, lop);
-                this.LoadTextBox();
             }
             else
             {
                 this.lopService.Create(lop);
-                this.LoadTextBox();
             }
         }
 

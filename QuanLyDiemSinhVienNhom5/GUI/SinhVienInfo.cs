@@ -67,12 +67,10 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.sinhVienService.CheckSinhVienExists(sinhVien.MaSinhVien))
             {
                 this.sinhVienService.Update(sinhVien.MaSinhVien, sinhVien);
-                this.LoadTextBox();
             }
             else
             {
                 this.sinhVienService.Create(sinhVien);
-                this.LoadTextBox();
             }
         }
 
@@ -114,7 +112,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 txtSoDienThoai.Text = this.sinhVienViewModel.SDT;
                 txtQueQuan.Text = this.sinhVienViewModel.QueQuan;
 
-                KhoaViewModel khoaViewModel = khoaService.Search(sinhVienViewModel.MaKhoa, "", "").First();
+                KhoaViewModel khoaViewModel = khoaService.Search(sinhVienViewModel.MaKhoa, "", "").FirstOrDefault();
                 cbKhoa.Text = khoaViewModel.TenKhoa;
             }
         }

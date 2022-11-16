@@ -1129,9 +1129,6 @@ AS
       [MaSinhVien] = @maSinhVien
 GO
 -- Xóa dữ liệu ở bảng Khoa
-DROP PROCEDURE Proc_DeleteKhoa
-GO
-
 CREATE PROCEDURE Proc_DeleteKhoa(
     @maKhoa NVARCHAR(32) 
 )
@@ -1139,11 +1136,7 @@ AS
   DELETE FROM Khoa
   WHERE
       [MaKhoa] = @maKhoa
-GO
 -- Xóa dữ liệu ở bảng MonHoc
-DROP PROCEDURE Proc_DeleteMonHoc
-GO
-
 CREATE PROCEDURE Proc_DeleteMonHoc(
     @maMonHoc NVARCHAR(32) 
 )
@@ -1151,11 +1144,7 @@ AS
   DELETE FROM MonHoc
   WHERE
       [MaMonHoc] = @maMonHoc
-GO
 -- Xóa dữ liệu ở bảng SinhVien
-DROP PROCEDURE Proc_DeleteSinhVien
-GO
-
 CREATE PROCEDURE Proc_DeleteSinhVien(
     @maSinhVien NVARCHAR(32) 
 )
@@ -1163,11 +1152,7 @@ AS
   DELETE FROM SinhVien
   WHERE
       [MaSinhVien] = @maSinhVien
-GO
 -- Xóa dữ liệu ở bảng GiangVien
-DROP PROCEDURE Proc_DeleteGiangVien
-GO
-
 CREATE PROCEDURE Proc_DeleteGiangVien(
     @maGiangVien NVARCHAR(32) 
 )
@@ -1175,11 +1160,7 @@ AS
   DELETE FROM GiangVien
   WHERE
       [MaGiangVien] = @maGiangVien
-GO
 -- Xóa dữ liệu ở bảng Lop
-DROP PROCEDURE Proc_DeleteLop
-GO
-
 CREATE PROCEDURE Proc_DeleteLop(
     @maLop NVARCHAR(32) 
 )
@@ -1187,11 +1168,7 @@ AS
   DELETE FROM Lop
   WHERE
       [MaLop] = @maLop
-GO
 -- Xóa dữ liệu ở bảng HocKy
-DROP PROCEDURE Proc_DeleteHocKy
-GO
-
 CREATE PROCEDURE Proc_DeleteHocKy(
     @maHocKy NVARCHAR(32) 
 )
@@ -1199,11 +1176,7 @@ AS
   DELETE FROM HocKy
   WHERE
       [MaHocKy] = @maHocKy
-GO
 -- Xóa dữ liệu ở bảng NamHoc 
-DROP PROCEDURE Proc_DeleteNamHoc
-GO
-
 CREATE PROCEDURE Proc_DeleteNamHoc(
     @maNamHoc NVARCHAR(32) 
 )
@@ -1211,11 +1184,7 @@ AS
   DELETE FROM NamHoc
   WHERE
       [MaNamHoc] = @maNamHoc
-GO
 -- Xóa dữ liệu ở bảng KetQuaHocTap
-DROP PROCEDURE Proc_DeleteKetQuaHocTap
-GO
-
 CREATE PROCEDURE Proc_DeleteKetQuaHocTap(
     @maSinhVien NVARCHAR(32) ,
     @maLop NVARCHAR(32) 
@@ -1236,7 +1205,6 @@ AS
       [Khoa].HeDaoTao as 'KhoaHeDaoTao',
       [Khoa].NgayThanhLap as 'KhoaNgayThanhLap'
   FROM Khoa
-GO
 -- Bảng MonHoc
 CREATE VIEW View_ListAllMonHoc
 AS
@@ -1399,7 +1367,7 @@ AS
     WHERE SinhVien.MaSinhVien = @maSV AND Lop.MaHocKy = @maHocKy
 GO
 -- 7. Xem điểm theo mã lớp
-CREATE PROCEDURE prc_XemDiemTheoLop(@maLop NVARCHAR(32))
+	CREATE PROCEDURE prc_XemDiemTheoLop(@maLop NVARCHAR(32))
 AS
     SELECT Lop.MaLop, SinhVien.MaSinhVien, DiemGiuaKy, DiemCuoiKy, (DiemGiuaKy + DiemCuoiKy) / 2 as DTB
     FROM Lop
@@ -1410,7 +1378,7 @@ AS
     WHERE Lop.MaLop = @maLop
 GO
 -- 8. Thống kê điểm theo lớp
-CREATE PROCEDURE fn_ThongKeDiemTheoLop(@maLop NVARCHAR(32))
+	CREATE PROCEDURE fn_ThongKeDiemTheoLop(@maLop NVARCHAR(32))
 AS
 BEGIN
     SELECT KetQua, count(*) AS SoLuong
@@ -1639,8 +1607,8 @@ AS
 GO
 -- xem dssv ko đạt 1 môn học trong một học kỳ cụ thể
 drop procedure Proc_DSSVKhongDatMonHoc
-go
 
+go
 create procedure Proc_DSSVKhongDatMonHoc
 (
 	@maMonHoc nvarchar(32),

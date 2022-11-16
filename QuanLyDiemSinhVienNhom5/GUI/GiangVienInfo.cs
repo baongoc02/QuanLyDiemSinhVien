@@ -82,13 +82,11 @@ namespace QuanLyDiemSinhVienNhom5.GUI
             if (this.giangVienService.CheckGiangVienExists(giangVien.MaGiangVien))
             {
                 this.giangVienService.Update(giangVien.MaGiangVien, giangVien); 
-                LoadTextBox();
             }
             else
             {
                 giangVien.Password = txtMatKhau.Text;
                 this.giangVienService.CreateWithPassword(giangVien);
-                LoadTextBox();
             }
         }
 
@@ -132,7 +130,7 @@ namespace QuanLyDiemSinhVienNhom5.GUI
                 txtHocHam.Text = this.giangVienViewModel.HocHam;
                 txtHocVi.Text = this.giangVienViewModel.HocVi;
 
-                KhoaViewModel khoaViewModels = khoaService.Search(this.giangVienViewModel.MaKhoa, "", "").First();
+                KhoaViewModel khoaViewModels = khoaService.Search(this.giangVienViewModel.MaKhoa, "", "").FirstOrDefault();
                 cbKhoa.Text = khoaViewModels.TenKhoa;
             }
         }
