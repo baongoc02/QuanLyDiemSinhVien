@@ -34,7 +34,9 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.Btn_Import = new System.Windows.Forms.Button();
             this.Btn_Tim = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,8 +53,6 @@
             this.toolStripStatusStudent = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HomePageGiangVien_gridview = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Btn_Import = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -112,6 +112,17 @@
             this.panel2.Size = new System.Drawing.Size(1261, 181);
             this.panel2.TabIndex = 5;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Indigo;
+            this.label7.Location = new System.Drawing.Point(989, 103);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 24);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Import";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -122,6 +133,22 @@
             this.label6.Size = new System.Drawing.Size(34, 24);
             this.label6.TabIndex = 53;
             this.label6.Text = "Tìm";
+            // 
+            // Btn_Import
+            // 
+            this.Btn_Import.BackColor = System.Drawing.Color.Azure;
+            this.Btn_Import.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Import.BackgroundImage")));
+            this.Btn_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Import.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Import.FlatAppearance.BorderSize = 0;
+            this.Btn_Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Import.Location = new System.Drawing.Point(946, 95);
+            this.Btn_Import.Name = "Btn_Import";
+            this.Btn_Import.Size = new System.Drawing.Size(40, 40);
+            this.Btn_Import.TabIndex = 50;
+            this.Btn_Import.UseVisualStyleBackColor = false;
+            this.Btn_Import.Click += new System.EventHandler(this.Btn_Import_Click);
             // 
             // Btn_Tim
             // 
@@ -318,32 +345,6 @@
             this.HomePageGiangVien_gridview.Size = new System.Drawing.Size(1259, 531);
             this.HomePageGiangVien_gridview.TabIndex = 0;
             this.HomePageGiangVien_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HomePageGiangVien_gridview_CellClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Indigo;
-            this.label7.Location = new System.Drawing.Point(989, 103);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 24);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "Import";
-            // 
-            // Btn_Import
-            // 
-            this.Btn_Import.BackColor = System.Drawing.Color.Azure;
-            this.Btn_Import.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Import.BackgroundImage")));
-            this.Btn_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Import.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Import.FlatAppearance.BorderSize = 0;
-            this.Btn_Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Import.Location = new System.Drawing.Point(946, 95);
-            this.Btn_Import.Name = "Btn_Import";
-            this.Btn_Import.Size = new System.Drawing.Size(40, 40);
-            this.Btn_Import.TabIndex = 50;
-            this.Btn_Import.UseVisualStyleBackColor = false;
             // 
             // HomePageGiangVien
             // 
