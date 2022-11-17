@@ -1,3 +1,6 @@
 # Phần mềm quản lý điểm sinh viên - đồ án cuối kỳ môn DBMS
 
-![alt text]('images/MoHinh.png')
+## 1. Thiết kế database
+
+## 2. Sơ đồ thực thể trong phần mềm
+![](images/MoHinh.png)
