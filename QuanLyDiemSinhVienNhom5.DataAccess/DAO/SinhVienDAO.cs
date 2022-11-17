@@ -129,6 +129,28 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.DAO
             }
         }
 
+        public List<SinhVien> SearchTheoKhoa(string maSinhVien, string hoTen, string maKhoa)
+        {
+            var conn = SqlServerConnectionSingleon.getInstance();
+            using (var command = conn.CreateCommand())
+            {
+                command.CommandText = "Proc_ListAllSinhVienTheoKhoa";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@maSinhVien", maSinhVien));
+                command.Parameters.Add(new SqlParameter("@hoTen", hoTen));
+                command.Parameters.Add(new SqlParameter("@maKhoa", maKhoa));
+
+                using (var adapter = new SqlDataAdapter(command))
+                {
+                    DataTable tempTable = new DataTable();
+                    adapter.Fill(tempTable);
+                    var result = this.ConvertDataTableToListSinhVien(tempTable);
+                    tempTable.Dispose();
+                    return result;
+                }
+            }
+        }
+
         public List<SinhVien> Search(string maSinhVien, string hoTen, string gioiTinh, string cMND, string sDT, string queQuan, string maKhoa)
         {
             var conn = SqlServerConnectionSingleon.getInstance();
