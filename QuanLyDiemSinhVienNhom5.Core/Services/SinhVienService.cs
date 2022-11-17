@@ -98,6 +98,12 @@ namespace QuanLyDiemSinhVienNhom5.Core.Services
             return result.Select(u => new SinhVienViewModel(u)).ToList();
         }
 
+        public List<SinhVienViewModel> SearchTheoKhoa(string maSinhVien, string hoTen, string maKhoa)
+        {
+            var result = this.sinhVienDAO.SearchTheoKhoa(maSinhVien, hoTen, maKhoa);
+            return result.Select(u => new SinhVienViewModel(u)).ToList();
+        }
+
         public void Delete(string maSinhVien)
         {
             try

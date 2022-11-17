@@ -88,7 +88,9 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
-            List<SinhVienViewModel> sinhVienViewModels = sinhVienService.Search(txtMSSV.Text, txtHoTen.Text, "", "", "", "", cbKhoa.SelectedValue.ToString());
+            //List<SinhVienViewModel> sinhVienViewModels = sinhVienService.Search(txtMSSV.Text, txtHoTen.Text, "", "", "", "", cbKhoa.SelectedValue.ToString());
+            List<SinhVienViewModel> sinhVienViewModels = sinhVienService.SearchTheoKhoa(txtMSSV.Text, txtHoTen.Text, cbKhoa.SelectedValue.ToString());
+
             LoadDSSinhVien(sinhVienViewModels);
         }
 

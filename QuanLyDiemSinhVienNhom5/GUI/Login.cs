@@ -20,8 +20,6 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         public Login()
         {
             InitializeComponent();
-            this.txtUserName.Text = "sa";
-            this.txtPassword.Text = "123456";
             this.txtPassword.PasswordChar = '*';
         }
 
