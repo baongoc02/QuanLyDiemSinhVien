@@ -17,6 +17,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
     public partial class HomePageGiangVien : Form
     {
         private static readonly AppSetting _setting = AppSettingSingleton.getSetting();
+        private readonly KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
+
         public HomePageGiangVien()
         {
             InitializeComponent();
@@ -89,8 +91,8 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         public void LoadGridView()
         {
-            KetQuaHocTapService ketQuaHocTapService = new KetQuaHocTapService();
-            List<TimTrongHomePageGiangVienViewModel> timTrongHomePageGiangVienViewModels = ketQuaHocTapService.GetTimTrongHomePageGiangVien(txtMonHoc.Text, cbLopHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), _setting.SqlServerDatabaseUsername);
+            List<TimTrongHomePageGiangVienViewModel> timTrongHomePageGiangVienViewModels = 
+                this.ketQuaHocTapService.GetTimTrongHomePageGiangVien(txtMonHoc.Text, cbLopHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), cbNamHoc.SelectedValue.ToString(), _setting.SqlServerDatabaseUsername);
             LoadDSSV(timTrongHomePageGiangVienViewModels);
         }
 
@@ -103,6 +105,18 @@ namespace QuanLyDiemSinhVienNhom5.GUI
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
             LoadGridView();
+        }
+
+        private void Btn_Import_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.Filter = "Excel file (*.xls)|*.xls";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    this.ketQuaHocTapService.ImportKetQuaHocTap(dialog.FileName);
+                }
+            }
         }
     }
 }
