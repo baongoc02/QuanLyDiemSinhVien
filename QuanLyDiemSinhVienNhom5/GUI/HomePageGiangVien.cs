@@ -21,7 +21,20 @@ namespace QuanLyDiemSinhVienNhom5.GUI
 
         public HomePageGiangVien()
         {
+            this.ketQuaHocTapService.OnSuccessMessage += KetQuaHocTapService_OnSuccessMessage;
+            this.ketQuaHocTapService.OnErrorMessage += KetQuaHocTapService_OnErrorMessage;
+
             InitializeComponent();
+        }
+
+        private void KetQuaHocTapService_OnErrorMessage(object sender, string message)
+        {
+            MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void KetQuaHocTapService_OnSuccessMessage(object sender, string message)
+        {
+            MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         [DesignOnly(true)]

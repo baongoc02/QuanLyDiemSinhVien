@@ -409,6 +409,7 @@
             // 
             this.Btn_Xoa.BackgroundImage = global::QuanLyDiemSinhVienNhom5.Properties.Resources.Delete_btn;
             this.Btn_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Xoa.Enabled = false;
             this.Btn_Xoa.FlatAppearance.BorderSize = 0;
             this.Btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Xoa.Location = new System.Drawing.Point(155, 638);
