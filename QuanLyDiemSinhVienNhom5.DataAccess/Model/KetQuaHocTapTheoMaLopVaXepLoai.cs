@@ -8,6 +8,7 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.Model
 {
     public class KetQuaHocTapTheoMaLopVaXepLoai
     {
+        public string MaSinhVien { get; set; }
         public string TenSinhVien { get; set; }
         public string MaLop { get; set; }
         public string TenMonHoc { get; set; }

@@ -8,8 +8,8 @@ namespace QuanLyDiemSinhVienNhom5.DataAccess.Base
 {
     public class AppSetting
     {
-        public string SqlServerDatabaseUsername { get; private set; }
-        public string SqlServerDatabasePassword { get; private set; }
+        public string SqlServerDatabaseUsername { get; private set; } = "sa";
+        public string SqlServerDatabasePassword { get; private set; } = "123456";
 
         public void Login(string username, string password)
         {
